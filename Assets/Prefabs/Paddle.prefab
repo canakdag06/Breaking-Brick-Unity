@@ -97,6 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8864699824162032378}
   - component: {fileID: 3047797958772637073}
+  - component: {fileID: 8937626430479433577}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Untagged
@@ -145,8 +146,21 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &8937626430479433577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562626887401156439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d3dded2ac286646a7ed382a3bbe7f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 4
 --- !u!1 &606428492906565032
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,7 +190,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2733515738140927501}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

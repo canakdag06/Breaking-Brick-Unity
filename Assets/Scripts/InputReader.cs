@@ -51,11 +51,11 @@ public class InputReader : MonoBehaviour
 
     public void ResetInputs()
     {
-        RotateCW = false;
-        RotateCCW = false;
-        HardDrop = false;
-        Hold = false;
-        Escape = false;
+        //RotateCW = false;
+        //RotateCCW = false;
+        //HardDrop = false;
+        //Hold = false;
+        //Escape = false;
     }
 
     public void InitializeBindings()
