@@ -1,0 +1,2569 @@
+fileFormatVersion: 2
+guid: 54b0526411b477548b71b310f9b55638
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7845977501651575310
+    second: spritesheet-breakout_0
+  - first:
+      213: 2806746562520538562
+    second: spritesheet-breakout_1
+  - first:
+      213: 7283220145798234282
+    second: spritesheet-breakout_2
+  - first:
+      213: 5084391071514395960
+    second: spritesheet-breakout_3
+  - first:
+      213: -5341231065668565074
+    second: spritesheet-breakout_4
+  - first:
+      213: -3764422788339885089
+    second: spritesheet-breakout_5
+  - first:
+      213: 7778144325751136126
+    second: spritesheet-breakout_6
+  - first:
+      213: 4565035909591317280
+    second: spritesheet-breakout_7
+  - first:
+      213: 5434503421815277188
+    second: spritesheet-breakout_8
+  - first:
+      213: 7712729371933350276
+    second: spritesheet-breakout_9
+  - first:
+      213: 500528230813358246
+    second: spritesheet-breakout_10
+  - first:
+      213: 8034711697939870330
+    second: spritesheet-breakout_11
+  - first:
+      213: 1809905172944980304
+    second: spritesheet-breakout_12
+  - first:
+      213: -3602617503636897431
+    second: spritesheet-breakout_13
+  - first:
+      213: 863753511322351539
+    second: spritesheet-breakout_14
+  - first:
+      213: 4795267087016231205
+    second: spritesheet-breakout_15
+  - first:
+      213: 2515510782279336241
+    second: spritesheet-breakout_16
+  - first:
+      213: -2037113902570235488
+    second: spritesheet-breakout_17
+  - first:
+      213: 740323300857304807
+    second: spritesheet-breakout_18
+  - first:
+      213: 6081121525837946721
+    second: spritesheet-breakout_19
+  - first:
+      213: 8498935994170373789
+    second: spritesheet-breakout_20
+  - first:
+      213: 1121372170004579972
+    second: spritesheet-breakout_21
+  - first:
+      213: 8174657100230154549
+    second: spritesheet-breakout_22
+  - first:
+      213: -8735194723667663740
+    second: spritesheet-breakout_23
+  - first:
+      213: -3698021611474930596
+    second: spritesheet-breakout_24
+  - first:
+      213: -3081360914923412861
+    second: spritesheet-breakout_25
+  - first:
+      213: -4007282604146587772
+    second: spritesheet-breakout_26
+  - first:
+      213: -2683569525185951714
+    second: spritesheet-breakout_27
+  - first:
+      213: -6636963350620443577
+    second: spritesheet-breakout_28
+  - first:
+      213: -3422870212090021973
+    second: spritesheet-breakout_29
+  - first:
+      213: -3488696398156641554
+    second: spritesheet-breakout_30
+  - first:
+      213: -4420557365393547033
+    second: spritesheet-breakout_31
+  - first:
+      213: 8643768192405819903
+    second: spritesheet-breakout_32
+  - first:
+      213: -7577948933808607497
+    second: spritesheet-breakout_33
+  - first:
+      213: 381225766975932599
+    second: spritesheet-breakout_34
+  - first:
+      213: -6884328768164943495
+    second: spritesheet-breakout_35
+  - first:
+      213: -1688699578919766345
+    second: spritesheet-breakout_36
+  - first:
+      213: -2519672535616343229
+    second: spritesheet-breakout_37
+  - first:
+      213: 96673315070700705
+    second: spritesheet-breakout_38
+  - first:
+      213: -7449865261271860919
+    second: spritesheet-breakout_39
+  - first:
+      213: 3403481604072632785
+    second: spritesheet-breakout_40
+  - first:
+      213: 3411240513433773103
+    second: spritesheet-breakout_41
+  - first:
+      213: -3022359459865662254
+    second: spritesheet-breakout_42
+  - first:
+      213: -4082750868268685447
+    second: spritesheet-breakout_43
+  - first:
+      213: -4439983971200399806
+    second: spritesheet-breakout_44
+  - first:
+      213: 3335382953305442029
+    second: spritesheet-breakout_45
+  - first:
+      213: -5362483145672872981
+    second: spritesheet-breakout_46
+  - first:
+      213: -6956129191162763738
+    second: spritesheet-breakout_47
+  - first:
+      213: -7317652895861947437
+    second: spritesheet-breakout_48
+  - first:
+      213: 868064240699248671
+    second: spritesheet-breakout_49
+  - first:
+      213: 5472062892376491171
+    second: spritesheet-breakout_50
+  - first:
+      213: -7916597000723826829
+    second: spritesheet-breakout_51
+  - first:
+      213: -6068821837884907430
+    second: spritesheet-breakout_52
+  - first:
+      213: 713089459679229422
+    second: spritesheet-breakout_53
+  - first:
+      213: 1253110188545343463
+    second: spritesheet-breakout_54
+  - first:
+      213: 5512340146219508897
+    second: spritesheet-breakout_55
+  - first:
+      213: 8852408402950192345
+    second: spritesheet-breakout_56
+  - first:
+      213: -9097713755249430328
+    second: spritesheet-breakout_57
+  - first:
+      213: 4687972183959042404
+    second: spritesheet-breakout_58
+  - first:
+      213: 7124948468849102524
+    second: spritesheet-breakout_59
+  - first:
+      213: 3759954973532278197
+    second: spritesheet-breakout_60
+  - first:
+      213: 3813000066860221458
+    second: spritesheet-breakout_61
+  - first:
+      213: -9172778861413380628
+    second: spritesheet-breakout_62
+  - first:
+      213: -2560861811549774420
+    second: spritesheet-breakout_63
+  - first:
+      213: 7864860021122246985
+    second: spritesheet-breakout_64
+  - first:
+      213: 933105974486094213
+    second: spritesheet-breakout_65
+  - first:
+      213: -951982529467652093
+    second: spritesheet-breakout_66
+  - first:
+      213: 9075173923264168504
+    second: spritesheet-breakout_67
+  - first:
+      213: 2584375890512316499
+    second: spritesheet-breakout_68
+  - first:
+      213: -5158102367831409605
+    second: spritesheet-breakout_69
+  - first:
+      213: 6458158728128053973
+    second: spritesheet-breakout_70
+  - first:
+      213: -6210634360983330870
+    second: spritesheet-breakout_71
+  - first:
+      213: -5628874620585731892
+    second: spritesheet-breakout_72
+  - first:
+      213: -1246339694109420204
+    second: spritesheet-breakout_73
+  - first:
+      213: -1911141130245588677
+    second: spritesheet-breakout_74
+  - first:
+      213: -4637265580131837582
+    second: spritesheet-breakout_75
+  - first:
+      213: 3071388853920902028
+    second: spritesheet-breakout_76
+  - first:
+      213: -7276743425500710730
+    second: spritesheet-breakout_77
+  - first:
+      213: -269319581728078689
+    second: spritesheet-breakout_78
+  - first:
+      213: 7106638407661757801
+    second: spritesheet-breakout_79
+  - first:
+      213: -8863239687459739389
+    second: spritesheet-breakout_80
+  - first:
+      213: 7115052178460966626
+    second: spritesheet-breakout_81
+  - first:
+      213: 7712599220869250654
+    second: spritesheet-breakout_82
+  - first:
+      213: -7936959554748638428
+    second: spritesheet-breakout_83
+  - first:
+      213: -2715560526688827537
+    second: spritesheet-breakout_84
+  - first:
+      213: 1574882731333756192
+    second: spritesheet-breakout_85
+  - first:
+      213: 7591912061826346992
+    second: spritesheet-breakout_86
+  - first:
+      213: 8482151852852566296
+    second: spritesheet-breakout_87
+  - first:
+      213: 2545140581869895130
+    second: spritesheet-breakout_88
+  - first:
+      213: -2632470111265388961
+    second: spritesheet-breakout_89
+  - first:
+      213: -6480543243725170006
+    second: spritesheet-breakout_90
+  - first:
+      213: 6579060906096640075
+    second: spritesheet-breakout_91
+  - first:
+      213: -3549191334742210096
+    second: spritesheet-breakout_92
+  - first:
+      213: -9096872706258744191
+    second: spritesheet-breakout_93
+  - first:
+      213: -5747889363204590090
+    second: spritesheet-breakout_94
+  - first:
+      213: -1318807658710999420
+    second: spritesheet-breakout_95
+  - first:
+      213: -2970025643581940188
+    second: spritesheet-breakout_96
+  - first:
+      213: 3909330259413099310
+    second: spritesheet-breakout_97
+  - first:
+      213: 4327515063651641478
+    second: spritesheet-breakout_98
+  - first:
+      213: -1289738832342239928
+    second: spritesheet-breakout_99
+  - first:
+      213: 8657363073865017112
+    second: spritesheet-breakout_100
+  - first:
+      213: 1669462160535890286
+    second: spritesheet-breakout_101
+  - first:
+      213: -2283623952343511355
+    second: spritesheet-breakout_102
+  - first:
+      213: -1069121359822535710
+    second: spritesheet-breakout_103
+  - first:
+      213: 7189818383182894674
+    second: spritesheet-breakout_104
+  - first:
+      213: 7933700163488866789
+    second: spritesheet-breakout_105
+  - first:
+      213: 3780224384191538309
+    second: spritesheet-breakout_106
+  - first:
+      213: -1487185262710855943
+    second: spritesheet-breakout_107
+  - first:
+      213: -1797188982865679041
+    second: spritesheet-breakout_108
+  - first:
+      213: -2208565768371167022
+    second: spritesheet-breakout_109
+  - first:
+      213: 7079268909055868639
+    second: spritesheet-breakout_110
+  - first:
+      213: -608751567378367525
+    second: spritesheet-breakout_111
+  - first:
+      213: 7367795785241609593
+    second: spritesheet-breakout_112
+  - first:
+      213: 3483172622621505795
+    second: spritesheet-breakout_113
+  - first:
+      213: 6403027976336073687
+    second: spritesheet-breakout_114
+  - first:
+      213: 2489521029762619284
+    second: spritesheet-breakout_115
+  - first:
+      213: -4694528787061160599
+    second: spritesheet-breakout_116
+  - first:
+      213: -7139858622666735277
+    second: spritesheet-breakout_117
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: petraheim_logo
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 275
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fdd952380d7d1390800000000000000
+      internalID: -7845977501651575310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: made_by_petraheim
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 247
+        width: 256
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cdd599b02193f620800000000000000
+      internalID: 2806746562520538562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shooter_left
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 305
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83588c4cdb26f8640800000000000000
+      internalID: 5084391071514395960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shooter_right
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 305
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea74b8315a220e5b0800000000000000
+      internalID: -5341231065668565074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ball_big
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 289
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 486c1f3a11c3b6b40800000000000000
+      internalID: 5434503421815277188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paddle_part_0
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 294
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4891fceff7e190b60800000000000000
+      internalID: 7712729371933350276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paddle_tiny
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 273
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9614e1ac77ee00ec0800000000000000
+      internalID: -3602617503636897431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paddle_part_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 275
+        width: 48
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52189bc52063c8240800000000000000
+      internalID: 4795267087016231205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paddle_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 259
+        width: 48
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16f5d8ffecb746450800000000000000
+      internalID: 6081121525837946721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paddle_part_2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 261
+        width: 48
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 539d7db4257327170800000000000000
+      internalID: 8174657100230154549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paddle_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 243
+        width: 54
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e02b7e4f7607a2c0800000000000000
+      internalID: -4420557365393547033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paddle_part_3
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 245
+        width: 48
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b883d3b0d26a4500800000000000000
+      internalID: 381225766975932599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paddle_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 227
+        width: 64
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2460c2c2a120262c0800000000000000
+      internalID: -4439983971200399806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paddle_long_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 211
+        width: 162
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee57141e51765e900800000000000000
+      internalID: 713089459679229422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paddle_long_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 197
+        width: 324
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bdcad8902b0e2430800000000000000
+      internalID: 3759954973532278197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paddle_long_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 181
+        width: 486
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acfd0cb34f46fc9a0800000000000000
+      internalID: -6210634360983330870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_brick_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 145
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 819d2387b28a6b570800000000000000
+      internalID: 8482151852852566296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_brick_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 145
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: add39cddfd7225320800000000000000
+      internalID: 2545140581869895130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_brick_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 145
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5681389166977bd0800000000000000
+      internalID: -2632470111265388961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_brick_3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 145
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaa1436514c7016a0800000000000000
+      internalID: -6480543243725170006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_brick_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 145
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b40cc8769058d4b50800000000000000
+      internalID: 6579060906096640075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_brick_5
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 145
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d9cbc4194dbebec0800000000000000
+      internalID: -3549191334742210096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_brick_6
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 145
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18c4080987a61c180800000000000000
+      internalID: -9096872706258744191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_brick_7
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 145
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f5b1f9e3156b30b0800000000000000
+      internalID: -5747889363204590090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_brick_8
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 145
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48e5777fb67a2bde0800000000000000
+      internalID: -1318807658710999420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_brick_9
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 145
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42e5f7cb96958c6d0800000000000000
+      internalID: -2970025643581940188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_brick_10
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 145
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e23e00e882bb04630800000000000000
+      internalID: 3909330259413099310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_brick_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 129
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 688ab11b50c6e0c30800000000000000
+      internalID: 4327515063651641478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_brick_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 129
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 845b6358d5de91ee0800000000000000
+      internalID: -1289738832342239928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_brick_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 129
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 817ee45d8d1252870800000000000000
+      internalID: 8657363073865017112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_brick_3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 129
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e69a2b46dfe1b2710800000000000000
+      internalID: 1669462160535890286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_brick_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 129
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cecdff4d10fe40e0800000000000000
+      internalID: -2283623952343511355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_brick_5
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 129
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e3cef5a9c7b921f0800000000000000
+      internalID: -1069121359822535710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_brick_6
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 129
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2569039e9bd57c360800000000000000
+      internalID: 7189818383182894674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_brick_7
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 129
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e1663f934a2a1e60800000000000000
+      internalID: 7933700163488866789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_brick_8
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 129
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 584a1078c0e067430800000000000000
+      internalID: 3780224384191538309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_brick_9
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 129
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f66cec02e47c5be0800000000000000
+      internalID: -1487185262710855943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_brick_10
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 129
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3dab0a542a1f07e0800000000000000
+      internalID: -1797188982865679041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_brick_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 113
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d0262992299951e0800000000000000
+      internalID: -2208565768371167022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_brick_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 113
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdefdb1b09d9e3260800000000000000
+      internalID: 7079268909055868639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_brick_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 113
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdb33fdbca74d87f0800000000000000
+      internalID: -608751567378367525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_brick_3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 113
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97542fcfa3baf3660800000000000000
+      internalID: 7367795785241609593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_brick_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 113
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30978beab07b65030800000000000000
+      internalID: 3483172622621505795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_brick_5
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 113
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d3666015002cd850800000000000000
+      internalID: 6403027976336073687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_brick_6
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 113
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4979ddfbf2e8c8220800000000000000
+      internalID: 2489521029762619284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_brick_7
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 113
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 965cf5bd0fea9deb0800000000000000
+      internalID: -4694528787061160599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_brick_8
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 113
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 351807949602aec90800000000000000
+      internalID: -7139858622666735277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_brick_9
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 113
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33192dba501f69b4881653824ee23f99
+      internalID: -1816631778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_brick_10
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 113
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a03e8c2870db59e44b014acf853c9307
+      internalID: -337197143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_brick_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 97
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06885570d7e555043869f74d052bf990
+      internalID: -1902530334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_brick_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 97
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e9660117319cb40b4d0adb1bcd41c3
+      internalID: 2004071868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_brick_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 97
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1fc54767fad4b4bb07776441b0c5cf
+      internalID: 1195169143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_brick_3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 97
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd001f2ae7eed4e4eb6a7b5f0394391a
+      internalID: -1061685957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_brick_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 97
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de9825508dd5fa24bbb92b0636fb886d
+      internalID: 695459981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_brick_5
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 97
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb280df345702744e85e77f84a5eaf0e
+      internalID: 2067221513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_brick_6
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 97
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 916ae16e73645a047a77b6f0512537af
+      internalID: 1050386332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_brick_7
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 97
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5694b2b07a6720e4e8e65212b1f3c381
+      internalID: 1952560347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_brick_8
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 97
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dfdfce31ef5609488ae6bdea0912fb2
+      internalID: -740693420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_brick_9
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 97
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 106d6d51f73f0cc4f89319fe2ea7d278
+      internalID: -1697953437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_brick_10
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 97
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 986416a1ab4eec646b7fcd883648c8ae
+      internalID: 49951954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_brick_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 81
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0613d4a2b811f9f49b53195332928a08
+      internalID: 1553562749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_brick_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 81
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17d7c2496819b184991d146574359ebd
+      internalID: 1688451689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_brick_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 81
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 895703ddf6f0c924194f26c8785fce27
+      internalID: -687913419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_brick_3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 81
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd59c3632de59744ba70b8fe489dc55
+      internalID: -146525119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_brick_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 81
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d8b2f85f046054aa8e5a16234091b0
+      internalID: -1626143937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_brick_5
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 81
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b7f4a45e82ec04ab229aa7922b1739
+      internalID: 1682957878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_brick_6
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 81
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3151f74dd4e99741a861e357af4eee8
+      internalID: -162809859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_brick_7
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 81
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e4a7a3aabafadb4ebb8ca3ae5ca7877
+      internalID: 1944890035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_brick_8
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 81
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ac60d624625da499c4d633d7f583d9
+      internalID: 1504279550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_brick_9
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 81
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b244460fd89e27a4faaef3938ee3ac2d
+      internalID: -1338763399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_brick_10
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 81
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1e17a9f33089c4b8cb89132e811cf4
+      internalID: -2108180358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orange_brick_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 65
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aeadcec908de4d43b66fef53692e1a3
+      internalID: -1273948708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orange_brick_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 65
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42016436d4fb7f744a88a0bafdd66232
+      internalID: -1741346766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orange_brick_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 65
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c62b972bbd2584dbdb836388ef7f41
+      internalID: -1144195333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orange_brick_3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 65
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4449af8e80a43274ca5e28af557bc1c7
+      internalID: -983001547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orange_brick_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 65
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9a8f5500bbe84a45a91d54866248d9a
+      internalID: -1422461899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orange_brick_5
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 65
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40202937321e2a64daa76d5938f145a6
+      internalID: -890006323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orange_brick_6
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 65
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca24087ad63866240928b788764aad70
+      internalID: 924227534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orange_brick_7
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 65
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f623f401e1a55643a442967097c26d5
+      internalID: -1128557357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orange_brick_8
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 65
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6aeac804f45eaf4d9a551b52703363f
+      internalID: 1093845193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orange_brick_9
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 65
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ffe5cda669b76d4a912a6ab90fd3694
+      internalID: 1666067781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orange_brick_10
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 65
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9f3e4d4acb360b4186ba451fb957645
+      internalID: 1015447307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wood_brick
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 49
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0543c7a09320b40a0ea21ce0ae04d6
+      internalID: 647875319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_brick
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 49
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21cb7cc0c56b2314d87e82fa0db3d3b1
+      internalID: -439460281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_brick_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 33
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6907d225d330b13408b00a03d1af038c
+      internalID: -917142522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_brick_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 33
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa445c1eed4512428e14eb5c16f3991
+      internalID: 1033771420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ball_small
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 291
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dedeb2f3487fef143b3f588cf59be5c2
+      internalID: -1403847795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ball_big: 5434503421815277188
+      ball_small: -1403847795
+      blue_brick_0: -2208565768371167022
+      blue_brick_1: 7079268909055868639
+      blue_brick_10: -337197143
+      blue_brick_2: -608751567378367525
+      blue_brick_3: 7367795785241609593
+      blue_brick_4: 3483172622621505795
+      blue_brick_5: 6403027976336073687
+      blue_brick_6: 2489521029762619284
+      blue_brick_7: -4694528787061160599
+      blue_brick_8: -7139858622666735277
+      blue_brick_9: -1816631778
+      brown_brick: -439460281
+      green_brick_0: 4327515063651641478
+      green_brick_1: -1289738832342239928
+      green_brick_10: -1797188982865679041
+      green_brick_2: 8657363073865017112
+      green_brick_3: 1669462160535890286
+      green_brick_4: -2283623952343511355
+      green_brick_5: -1069121359822535710
+      green_brick_6: 7189818383182894674
+      green_brick_7: 7933700163488866789
+      green_brick_8: 3780224384191538309
+      green_brick_9: -1487185262710855943
+      made_by_petraheim: 2806746562520538562
+      orange_brick_0: -1273948708
+      orange_brick_1: -1741346766
+      orange_brick_10: 1015447307
+      orange_brick_2: -1144195333
+      orange_brick_3: -983001547
+      orange_brick_4: -1422461899
+      orange_brick_5: -890006323
+      orange_brick_6: 924227534
+      orange_brick_7: -1128557357
+      orange_brick_8: 1093845193
+      orange_brick_9: 1666067781
+      paddle_0: 6081121525837946721
+      paddle_1: -4420557365393547033
+      paddle_2: -4439983971200399806
+      paddle_long_0: 713089459679229422
+      paddle_long_1: 3759954973532278197
+      paddle_long_2: -6210634360983330870
+      paddle_part_0: 7712729371933350276
+      paddle_part_1: 4795267087016231205
+      paddle_part_2: 8174657100230154549
+      paddle_part_3: 381225766975932599
+      paddle_tiny: -3602617503636897431
+      petraheim_logo: -7845977501651575310
+      purple_brick_0: -1902530334
+      purple_brick_1: 2004071868
+      purple_brick_10: 49951954
+      purple_brick_2: 1195169143
+      purple_brick_3: -1061685957
+      purple_brick_4: 695459981
+      purple_brick_5: 2067221513
+      purple_brick_6: 1050386332
+      purple_brick_7: 1952560347
+      purple_brick_8: -740693420
+      purple_brick_9: -1697953437
+      red_brick_0: 8482151852852566296
+      red_brick_1: 2545140581869895130
+      red_brick_10: 3909330259413099310
+      red_brick_2: -2632470111265388961
+      red_brick_3: -6480543243725170006
+      red_brick_4: 6579060906096640075
+      red_brick_5: -3549191334742210096
+      red_brick_6: -9096872706258744191
+      red_brick_7: -5747889363204590090
+      red_brick_8: -1318807658710999420
+      red_brick_9: -2970025643581940188
+      shooter_left: 5084391071514395960
+      shooter_right: -5341231065668565074
+      spritesheet-breakout_10: 500528230813358246
+      spritesheet-breakout_11: 8034711697939870330
+      spritesheet-breakout_12: 1809905172944980304
+      spritesheet-breakout_14: 863753511322351539
+      spritesheet-breakout_16: 2515510782279336241
+      spritesheet-breakout_17: -2037113902570235488
+      spritesheet-breakout_18: 740323300857304807
+      spritesheet-breakout_2: 7283220145798234282
+      spritesheet-breakout_20: 8498935994170373789
+      spritesheet-breakout_21: 1121372170004579972
+      spritesheet-breakout_23: -8735194723667663740
+      spritesheet-breakout_24: -3698021611474930596
+      spritesheet-breakout_25: -3081360914923412861
+      spritesheet-breakout_26: -4007282604146587772
+      spritesheet-breakout_27: -2683569525185951714
+      spritesheet-breakout_28: -6636963350620443577
+      spritesheet-breakout_29: -3422870212090021973
+      spritesheet-breakout_30: -3488696398156641554
+      spritesheet-breakout_32: 8643768192405819903
+      spritesheet-breakout_33: -7577948933808607497
+      spritesheet-breakout_35: -6884328768164943495
+      spritesheet-breakout_36: -1688699578919766345
+      spritesheet-breakout_37: -2519672535616343229
+      spritesheet-breakout_38: 96673315070700705
+      spritesheet-breakout_39: -7449865261271860919
+      spritesheet-breakout_40: 3403481604072632785
+      spritesheet-breakout_41: 3411240513433773103
+      spritesheet-breakout_42: -3022359459865662254
+      spritesheet-breakout_43: -4082750868268685447
+      spritesheet-breakout_45: 3335382953305442029
+      spritesheet-breakout_46: -5362483145672872981
+      spritesheet-breakout_47: -6956129191162763738
+      spritesheet-breakout_48: -7317652895861947437
+      spritesheet-breakout_49: 868064240699248671
+      spritesheet-breakout_5: -3764422788339885089
+      spritesheet-breakout_50: 5472062892376491171
+      spritesheet-breakout_51: -7916597000723826829
+      spritesheet-breakout_52: -6068821837884907430
+      spritesheet-breakout_54: 1253110188545343463
+      spritesheet-breakout_55: 5512340146219508897
+      spritesheet-breakout_56: 8852408402950192345
+      spritesheet-breakout_57: -9097713755249430328
+      spritesheet-breakout_58: 4687972183959042404
+      spritesheet-breakout_59: 7124948468849102524
+      spritesheet-breakout_6: 7778144325751136126
+      spritesheet-breakout_61: 3813000066860221458
+      spritesheet-breakout_62: -9172778861413380628
+      spritesheet-breakout_63: -2560861811549774420
+      spritesheet-breakout_64: 7864860021122246985
+      spritesheet-breakout_65: 933105974486094213
+      spritesheet-breakout_66: -951982529467652093
+      spritesheet-breakout_67: 9075173923264168504
+      spritesheet-breakout_68: 2584375890512316499
+      spritesheet-breakout_69: -5158102367831409605
+      spritesheet-breakout_7: 4565035909591317280
+      spritesheet-breakout_70: 6458158728128053973
+      spritesheet-breakout_72: -5628874620585731892
+      spritesheet-breakout_73: -1246339694109420204
+      spritesheet-breakout_74: -1911141130245588677
+      spritesheet-breakout_75: -4637265580131837582
+      spritesheet-breakout_76: 3071388853920902028
+      spritesheet-breakout_77: -7276743425500710730
+      spritesheet-breakout_78: -269319581728078689
+      spritesheet-breakout_79: 7106638407661757801
+      spritesheet-breakout_80: -8863239687459739389
+      spritesheet-breakout_81: 7115052178460966626
+      spritesheet-breakout_82: 7712599220869250654
+      spritesheet-breakout_83: -7936959554748638428
+      spritesheet-breakout_84: -2715560526688827537
+      spritesheet-breakout_85: 1574882731333756192
+      spritesheet-breakout_86: 7591912061826346992
+      stone_brick_0: -917142522
+      stone_brick_1: 1033771420
+      wood_brick: 647875319
+      yellow_brick_0: 1553562749
+      yellow_brick_1: 1688451689
+      yellow_brick_10: -2108180358
+      yellow_brick_2: -687913419
+      yellow_brick_3: -146525119
+      yellow_brick_4: -1626143937
+      yellow_brick_5: 1682957878
+      yellow_brick_6: -162809859
+      yellow_brick_7: 1944890035
+      yellow_brick_8: 1504279550
+      yellow_brick_9: -1338763399
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
