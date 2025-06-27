@@ -9,13 +9,13 @@ public class Paddle : MonoBehaviour
 
     private void Awake()
     {
-        inputReader = InputReader.Instance;
+
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        inputReader = InputReader.Instance;
     }
 
     // Update is called once per frame
