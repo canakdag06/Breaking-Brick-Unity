@@ -7,7 +7,7 @@ public class InputReader : MonoBehaviour
     public static InputReader Instance { get; private set; }
 
     public Vector2 MoveInput { get; private set; }
-    public bool RotateCW { get; private set; }
+    public bool Throw { get; private set; }
     public bool RotateCCW { get; private set; }
     public bool HardDrop { get; private set; }
     public bool Hold { get; private set; }
@@ -33,7 +33,7 @@ public class InputReader : MonoBehaviour
         input.Gameplay.Move.performed += ctx => MoveInput = ctx.ReadValue<Vector2>();
         input.Gameplay.Move.canceled += ctx => MoveInput = Vector2.zero;
 
-        //input.Gameplay.RotateCW.performed += ctx => RotateCW = true;
+        input.Gameplay.Throw.performed += ctx => Throw = true;
 
         //input.Gameplay.RotateCCW.performed += ctx => RotateCCW = true;
 
@@ -51,7 +51,7 @@ public class InputReader : MonoBehaviour
 
     public void ResetInputs()
     {
-        //RotateCW = false;
+        Throw = false;
         //RotateCCW = false;
         //HardDrop = false;
         //Hold = false;
