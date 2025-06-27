@@ -2,27 +2,20 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public float speed = 5f;
-    public Transform ballLocation, bigBallLocation;
     private Rigidbody2D rb;
-    private bool inPlay = false;
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    public void Launch(Vector2 direction, float speed)
     {
-        if (!inPlay)
-        {
-            transform.position = ballLocation.position;
+        rb.linearVelocity = direction.normalized * speed;
+    }
 
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                inPlay = true;
-                rb.linearVelocity = new Vector2(1f, 1f).normalized * speed;
-            }
-        }
+    public void Stop()
+    {
+        rb.linearVelocity = Vector2.zero;
     }
 }
