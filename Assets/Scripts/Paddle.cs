@@ -16,6 +16,9 @@ public class Paddle : MonoBehaviour
     [SerializeField] private int launchSpeed;
     [SerializeField] private float moveSpeed;
     private bool ballLaunched;
+    private float movementTimer = 0f;
+    private int lastMoveDirection = 0; // -1 = sol, 1 = sağ, 0 = sabit
+    private const float maxInfluenceTime = 0.3f;
 
     private Transform activeVisual;
     private float halfWidth;
@@ -26,7 +29,7 @@ public class Paddle : MonoBehaviour
 
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         inputReader = InputReader.Instance;
@@ -46,15 +49,38 @@ public class Paddle : MonoBehaviour
         //rb.MovePosition(rb.position + Vector2.right * input * speed * Time.deltaTime);
 
         //transform.Translate(moveSpeed * Time.deltaTime * moveInput);
-
         Vector3 pos = transform.position;
         pos.x += moveSpeed * Time.deltaTime * moveInput.x;
+
+        if (moveInput.x != 0)
+        {
+            if (Mathf.Sign(moveInput.x) != lastMoveDirection)
+            {
+                movementTimer = 0f;
+                lastMoveDirection = (int)Mathf.Sign(moveInput.x);
+            }
+
+            movementTimer += Time.deltaTime;
+        }
+        else
+        {
+            movementTimer = 0f;
+            lastMoveDirection = 0;
+        }
+
 
         if (inputReader.Throw && ball != null && !ballLaunched)
         {
             ball.transform.parent = null;
             ballLaunched = true;
-            ball.Launch(new Vector2(1f, 1f), launchSpeed);
+
+            float influence = Mathf.Clamp01(movementTimer / maxInfluenceTime);
+            float xDirection = lastMoveDirection * influence;
+
+            Vector2 dir = new Vector2(xDirection, 1f).normalized;
+            ball.Launch(dir, launchSpeed);
+            Debug.Log(dir);
+            Debug.DrawRay(ball.transform.position, dir * 2f, Color.white, 1f);
         }
 
         pos.x = Mathf.Clamp(pos.x, (leftWall.position.x + halfWallWidth) + halfWidth, (rightWall.position.x - halfWallWidth) - halfWidth);
