@@ -1475,12 +1475,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1188413505}
     - target: {fileID: 8937626430479433577, guid: d8d2f47b2dc131746a7e5872c52031af, type: 3}
+      propertyPath: moveSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937626430479433577, guid: d8d2f47b2dc131746a7e5872c52031af, type: 3}
       propertyPath: rightWall
       value: 
       objectReference: {fileID: 1283606055}
     - target: {fileID: 8937626430479433577, guid: d8d2f47b2dc131746a7e5872c52031af, type: 3}
+      propertyPath: launchSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937626430479433577, guid: d8d2f47b2dc131746a7e5872c52031af, type: 3}
       propertyPath: acceleration
-      value: 25
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8937626430479433577, guid: d8d2f47b2dc131746a7e5872c52031af, type: 3}
       propertyPath: deceleration

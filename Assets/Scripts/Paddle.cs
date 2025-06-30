@@ -24,12 +24,6 @@ public class Paddle : MonoBehaviour
     private float halfWidth;
     private float halfWallWidth;
 
-    private void Awake()
-    {
-
-    }
-
-
     void Start()
     {
         inputReader = InputReader.Instance;
@@ -45,13 +39,25 @@ public class Paddle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PaddleMovement();
+        ControlBall();
+        inputReader.ResetInputs();
+    }
+
+    private void PaddleMovement()
+    {
         moveInput = inputReader.MoveInput;
         //rb.MovePosition(rb.position + Vector2.right * input * speed * Time.deltaTime);
 
         //transform.Translate(moveSpeed * Time.deltaTime * moveInput);
         Vector3 pos = transform.position;
         pos.x += moveSpeed * Time.deltaTime * moveInput.x;
+        pos.x = Mathf.Clamp(pos.x, (leftWall.position.x + halfWallWidth) + halfWidth, (rightWall.position.x - halfWallWidth) - halfWidth);
+        transform.position = pos;
+    }
 
+    private void ControlBall()
+    {
         if (moveInput.x != 0)
         {
             if (Mathf.Sign(moveInput.x) != lastMoveDirection)
@@ -79,14 +85,9 @@ public class Paddle : MonoBehaviour
 
             Vector2 dir = new Vector2(xDirection, 1f).normalized;
             ball.Launch(dir, launchSpeed);
-            Debug.Log(dir);
-            Debug.DrawRay(ball.transform.position, dir * 2f, Color.white, 1f);
+            //Debug.Log(dir);
+            //Debug.DrawRay(ball.transform.position, dir * 2f, Color.white, 1f);
         }
-
-        pos.x = Mathf.Clamp(pos.x, (leftWall.position.x + halfWallWidth) + halfWidth, (rightWall.position.x - halfWallWidth) - halfWidth);
-        transform.position = pos;
-
-        inputReader.ResetInputs();
     }
 
     float GetCurrentPaddleHalfWidth()
