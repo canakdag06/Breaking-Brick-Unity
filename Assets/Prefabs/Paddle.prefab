@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 8937626430479433577}
   m_Layer: 0
   m_Name: Paddle
-  m_TagString: Untagged
+  m_TagString: Paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,6 +195,8 @@ MonoBehaviour:
   ball: {fileID: 0}
   ballLocation: {fileID: 4687081273971331375}
   bigBallLocation: {fileID: 6849044176395332392}
+  leftWall: {fileID: 0}
+  rightWall: {fileID: 0}
   paddleVisuals:
   - {fileID: 606428492906565032}
   - {fileID: 3189859183779807156}
