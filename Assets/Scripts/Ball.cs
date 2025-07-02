@@ -4,7 +4,8 @@ public class Ball : MonoBehaviour
 {
     private Rigidbody2D rb;
     private float speed = 2f;
-    void Awake()
+
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
