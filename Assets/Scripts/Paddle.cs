@@ -3,15 +3,17 @@ using UnityEngine;
 
 public class Paddle : MonoBehaviour
 {
-    public Ball ball;
-    public Transform ballLocation, bigBallLocation;
+    public static Paddle Instance { get; private set; }
+
+    //public Ball ball;
+    public Transform ballLocation/*, bigBallLocation*/;
     public Transform leftWall, rightWall;
     public GameObject[] paddleVisuals;
 
     private InputReader inputReader;
     private Vector2 moveInput;
 
-
+    private Ball ball;
     [SerializeField] private int launchSpeed;
     [SerializeField] private float moveSpeed;
     private bool ballLaunched;
@@ -23,15 +25,22 @@ public class Paddle : MonoBehaviour
     private float halfWidth;
     private float halfWallWidth;
 
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
+
     void Start()
     {
         inputReader = InputReader.Instance;
-        ball.transform.parent = transform;
-        ball.transform.position = ballLocation.position;
 
         BoxCollider2D col = leftWall.GetComponent<BoxCollider2D>();
         halfWallWidth = col.bounds.extents.x;
-
         halfWidth = GetCurrentPaddleHalfWidth();
     }
 
@@ -43,12 +52,17 @@ public class Paddle : MonoBehaviour
         inputReader.ResetInputs();
     }
 
+    public void SetBall(Ball newBall)
+    {
+        ball = newBall;
+        ball.transform.SetParent(transform);
+        ball.transform.position = ballLocation.position;
+        ballLaunched = false;
+    }
+
     private void PaddleMovement()
     {
         moveInput = inputReader.MoveInput;
-        //rb.MovePosition(rb.position + Vector2.right * input * speed * Time.deltaTime);
-
-        //transform.Translate(moveSpeed * Time.deltaTime * moveInput);
         Vector3 pos = transform.position;
         pos.x += moveSpeed * Time.deltaTime * moveInput.x;
         pos.x = Mathf.Clamp(pos.x, (leftWall.position.x + halfWallWidth) + halfWidth, (rightWall.position.x - halfWallWidth) - halfWidth);
@@ -84,8 +98,6 @@ public class Paddle : MonoBehaviour
 
             Vector2 dir = new Vector2(xDirection, 1f).normalized;
             ball.Launch(dir, launchSpeed);
-            //Debug.Log(dir);
-            //Debug.DrawRay(ball.transform.position, dir * 2f, Color.white, 1f);
         }
     }
 
