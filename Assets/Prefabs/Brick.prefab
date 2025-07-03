@@ -105,7 +105,7 @@ MonoBehaviour:
   brickData: {fileID: 11400000, guid: 80aad70979efa52419a30628996ad63f, type: 2}
   brickCollider: {fileID: 3776168759588156999}
   spriteRenderer: {fileID: 677140584448623837}
-  health: 3
+  health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
 --- !u!61 &3776168759588156999
