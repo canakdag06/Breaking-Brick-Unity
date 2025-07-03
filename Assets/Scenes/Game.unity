@@ -483,6 +483,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6821277453919950300, guid: b8152cadc84f1f847b9c89b5a3e62978, type: 3}
   m_PrefabInstance: {fileID: 1197593752427966520}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1631755626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1631755628}
+  - component: {fileID: 1631755627}
+  m_Layer: 0
+  m_Name: Level Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1631755627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631755626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7df1474ae498c45a0ceba4919a4928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelPrefabs:
+  - {fileID: 3731631932456863220, guid: 7f59231aba6429c41b4fa39df74d965f, type: 3}
+  - {fileID: 5490667404744789929, guid: 6b9928f37b6c17a4995ccefcffb80cc4, type: 3}
+--- !u!4 &1631755628
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631755626}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.19286749, y: 0.20532043, z: 0.14009042}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1745591799 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2122694322952380925, guid: d28de7b3cbe19854f9e3f2a26c7fdadb, type: 3}
@@ -859,6 +906,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1121326712}
+  - {fileID: 1631755628}
   - {fileID: 223642716}
   - {fileID: 519420032}
   - {fileID: 619394802}
