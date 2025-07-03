@@ -101,6 +101,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 479c729bd2d3f7d4b97b6b263aa8bfe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  color: 0
+  brickData: {fileID: 11400000, guid: 80aad70979efa52419a30628996ad63f, type: 2}
+  renderer: {fileID: 677140584448623837}
+  hitPoints: 1
+  isBreakable: 1
 --- !u!61 &3776168759588156999
 BoxCollider2D:
   m_ObjectHideFlags: 0

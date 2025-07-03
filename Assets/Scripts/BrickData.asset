@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e715734d8f03e7f4c89015b5daf3db4c, type: 3}
+  m_Name: BrickData
+  m_EditorClassIdentifier: 
+  bricks:
+  - color: 0
+    defaultSprite: {fileID: -2208565768371167022, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    damageSprites:
+    - {fileID: -2208565768371167022, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 7079268909055868639, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -608751567378367525, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 7367795785241609593, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 3483172622621505795, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 6403027976336073687, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 2489521029762619284, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -4694528787061160599, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -7139858622666735277, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -1816631778, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -337197143, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    isBreakable: 1
+  - color: 1
+    defaultSprite: {fileID: -439460281, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    damageSprites: []
+    isBreakable: 0
+  - color: 2
+    defaultSprite: {fileID: 4327515063651641478, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    damageSprites:
+    - {fileID: 4327515063651641478, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -1289738832342239928, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 8657363073865017112, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 1669462160535890286, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -2283623952343511355, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -1069121359822535710, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 7189818383182894674, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 7933700163488866789, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 3780224384191538309, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -1487185262710855943, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -1797188982865679041, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    isBreakable: 1
+  - color: 3
+    defaultSprite: {fileID: -1273948708, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    damageSprites:
+    - {fileID: -1273948708, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -1741346766, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -1144195333, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -983001547, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -1422461899, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -890006323, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 924227534, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -1128557357, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 1093845193, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 1666067781, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 1015447307, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    isBreakable: 1
+  - color: 4
+    defaultSprite: {fileID: -1902530334, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    damageSprites:
+    - {fileID: -1902530334, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 2004071868, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 1195169143, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -1061685957, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 695459981, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 2067221513, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 1050386332, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 1952560347, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -740693420, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -1697953437, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 49951954, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    isBreakable: 1
+  - color: 5
+    defaultSprite: {fileID: 8482151852852566296, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    damageSprites:
+    - {fileID: 8482151852852566296, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 2545140581869895130, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -2632470111265388961, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -6480543243725170006, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 6579060906096640075, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -3549191334742210096, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -9096872706258744191, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -5747889363204590090, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -1318807658710999420, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -2970025643581940188, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 3909330259413099310, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    isBreakable: 1
+  - color: 6
+    defaultSprite: {fileID: -917142522, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    damageSprites: []
+    isBreakable: 0
+  - color: 7
+    defaultSprite: {fileID: 1033771420, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    damageSprites: []
+    isBreakable: 0
+  - color: 8
+    defaultSprite: {fileID: 647875319, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    damageSprites: []
+    isBreakable: 0
+  - color: 9
+    defaultSprite: {fileID: 1553562749, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    damageSprites:
+    - {fileID: 1553562749, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 1688451689, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -687913419, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -146525119, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -1626143937, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 1682957878, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -162809859, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 1944890035, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 1504279550, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -1338763399, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -2108180358, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    isBreakable: 1

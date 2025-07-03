@@ -2,32 +2,43 @@ using UnityEngine;
 
 public class Brick : MonoBehaviour
 {
-    public BrickData data;
-    [SerializeField] private int hitPoints = 1;
-    [SerializeField] private SpriteRenderer renderer;
+    public BrickColor color;
+    public BrickData brickData;
 
+    [SerializeField] private SpriteRenderer renderer;
+    [SerializeField] private int health = 1;
+    [SerializeField] private bool isBreakable;
+    private Sprite[] damageSprites;
+    private int hits = 0;
 
     private void Start()
     {
+        var data = brickData.bricks.Find(b => b.color == color);
+
         if (data == null)
         {
-            Debug.Log("BrickData not assigned", this);
+            Debug.LogError($"No data found for color {color}");
             return;
         }
 
-        renderer.color = data.brickColor;
+        damageSprites = data.damageSprites;
+        isBreakable = data.isBreakable;
+        renderer.sprite = data.defaultSprite;
+
+        //hitPoints = isBreakable ? -1 : damageSprites.Length;
         UpdateSprite();
     }
 
     public void Hit()
     {
-        if(!data.isBreakable)
+        if (!isBreakable)
         {
             return;
         }
 
-        hitPoints--;
-        if(hitPoints <= 0)
+        hits++;
+        health--;
+        if (health <= 0)
         {
             Destroy(gameObject);
         }
@@ -39,15 +50,29 @@ public class Brick : MonoBehaviour
 
     private void UpdateSprite()
     {
-        if (data.damageSprites.Length == 0)
+        if (damageSprites.Length == 0)
             return;
-
-        int spriteIndex = Mathf.Clamp(data.damageSprites.Length - hitPoints, 0, data.damageSprites.Length - 1);
-        renderer.sprite = data.damageSprites[spriteIndex];
+        
+        renderer.sprite = damageSprites[hits];
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
+        Hit();
+    }
+
+    private void OnValidate()
+    {
+        if (brickData == null) return;
+
+        var data = brickData.bricks.Find(b => b.color == color);
+        if (data != null)
+        {
+            renderer = GetComponent<SpriteRenderer>();
+            if (renderer != null)
+            {
+                renderer.sprite = data.defaultSprite;
+            }
+        }
     }
 }
