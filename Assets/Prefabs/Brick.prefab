@@ -103,9 +103,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: 0
   brickData: {fileID: 11400000, guid: 80aad70979efa52419a30628996ad63f, type: 2}
-  renderer: {fileID: 677140584448623837}
-  hitPoints: 1
+  brickCollider: {fileID: 3776168759588156999}
+  spriteRenderer: {fileID: 677140584448623837}
+  health: 3
   isBreakable: 1
+  breakFrameDelay: 0.05
 --- !u!61 &3776168759588156999
 BoxCollider2D:
   m_ObjectHideFlags: 0

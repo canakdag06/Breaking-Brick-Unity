@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Brick : MonoBehaviour
@@ -5,9 +6,11 @@ public class Brick : MonoBehaviour
     public BrickColor color;
     public BrickData brickData;
 
-    [SerializeField] private SpriteRenderer renderer;
+    [SerializeField] private Collider2D brickCollider;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private int health = 1;
     [SerializeField] private bool isBreakable;
+    [SerializeField] private float breakFrameDelay = 0.05f;
     private Sprite[] damageSprites;
     private int hits = 0;
 
@@ -23,9 +26,8 @@ public class Brick : MonoBehaviour
 
         damageSprites = data.damageSprites;
         isBreakable = data.isBreakable;
-        renderer.sprite = data.defaultSprite;
+        spriteRenderer.sprite = data.defaultSprite;
 
-        //hitPoints = isBreakable ? -1 : damageSprites.Length;
         UpdateSprite();
     }
 
@@ -40,7 +42,8 @@ public class Brick : MonoBehaviour
         health--;
         if (health <= 0)
         {
-            Destroy(gameObject);
+            brickCollider.enabled = false;
+            StartCoroutine(PlayBreakAnimation());
         }
         else
         {
@@ -53,12 +56,23 @@ public class Brick : MonoBehaviour
         if (damageSprites.Length == 0)
             return;
         
-        renderer.sprite = damageSprites[hits];
+        spriteRenderer.sprite = damageSprites[hits];
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Hit();
+    }
+
+    private IEnumerator PlayBreakAnimation()
+    {
+        
+        for (int i = hits; i < damageSprites.Length; ++i)
+        {
+            spriteRenderer.sprite = damageSprites[i];
+            yield return new WaitForSeconds(breakFrameDelay);
+        }
+        Destroy(gameObject);
     }
 
     private void OnValidate()
@@ -68,10 +82,10 @@ public class Brick : MonoBehaviour
         var data = brickData.bricks.Find(b => b.color == color);
         if (data != null)
         {
-            renderer = GetComponent<SpriteRenderer>();
-            if (renderer != null)
+            spriteRenderer = GetComponent<SpriteRenderer>();
+            if (spriteRenderer != null)
             {
-                renderer.sprite = data.defaultSprite;
+                spriteRenderer.sprite = data.defaultSprite;
             }
         }
     }
