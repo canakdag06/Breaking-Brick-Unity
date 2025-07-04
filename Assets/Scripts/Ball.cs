@@ -43,4 +43,12 @@ public class Ball : MonoBehaviour
         float currentSpeed = rb.linearVelocity.magnitude;
         rb.linearVelocity = newDirection * currentSpeed;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("DeathWall"))
+        {
+            BallManager.Instance.ReturnBallToPool(this);
+        }
+    }
 }
