@@ -49,6 +49,7 @@ public class Ball : MonoBehaviour
         if(collision.gameObject.CompareTag("DeathWall"))
         {
             BallManager.Instance.ReturnBallToPool(this);
+            GameManager.Instance.UpdateLives(false);
         }
     }
 }
