@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI scoreText;
 
-    private void OnEnable()
+    private void Start()
     {
         if(ScoreManager.Instance != null)
         {
