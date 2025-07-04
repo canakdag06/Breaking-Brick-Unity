@@ -721,7 +721,7 @@ MonoBehaviour:
   brickData: {fileID: 11400000, guid: 80aad70979efa52419a30628996ad63f, type: 2}
   brickCollider: {fileID: 5476355617226232393}
   spriteRenderer: {fileID: 3471513332361126862}
-  health: 2
+  health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
 --- !u!61 &5476355617226232393
@@ -1799,7 +1799,7 @@ MonoBehaviour:
   brickData: {fileID: 11400000, guid: 80aad70979efa52419a30628996ad63f, type: 2}
   brickCollider: {fileID: 251795431696011539}
   spriteRenderer: {fileID: 1960313171835896370}
-  health: 2
+  health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
 --- !u!61 &251795431696011539
@@ -2107,7 +2107,7 @@ MonoBehaviour:
   brickData: {fileID: 11400000, guid: 80aad70979efa52419a30628996ad63f, type: 2}
   brickCollider: {fileID: 9140495015939040014}
   spriteRenderer: {fileID: 5240470993890312814}
-  health: 2
+  health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
 --- !u!61 &9140495015939040014
@@ -2415,7 +2415,7 @@ MonoBehaviour:
   brickData: {fileID: 11400000, guid: 80aad70979efa52419a30628996ad63f, type: 2}
   brickCollider: {fileID: 3613853201520345285}
   spriteRenderer: {fileID: 2883954023415179797}
-  health: 2
+  health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
 --- !u!61 &3613853201520345285
@@ -3185,7 +3185,7 @@ MonoBehaviour:
   brickData: {fileID: 11400000, guid: 80aad70979efa52419a30628996ad63f, type: 2}
   brickCollider: {fileID: 3695346406117877412}
   spriteRenderer: {fileID: 5110865759755648147}
-  health: 2
+  health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
 --- !u!61 &3695346406117877412
@@ -6079,7 +6079,7 @@ MonoBehaviour:
   brickData: {fileID: 11400000, guid: 80aad70979efa52419a30628996ad63f, type: 2}
   brickCollider: {fileID: 7953296985985775805}
   spriteRenderer: {fileID: 1705627027347020468}
-  health: 2
+  health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
 --- !u!61 &7953296985985775805
@@ -6541,7 +6541,7 @@ MonoBehaviour:
   brickData: {fileID: 11400000, guid: 80aad70979efa52419a30628996ad63f, type: 2}
   brickCollider: {fileID: 7879215373328607157}
   spriteRenderer: {fileID: 6008114889319276347}
-  health: 2
+  health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
 --- !u!61 &7879215373328607157
@@ -8235,7 +8235,7 @@ MonoBehaviour:
   brickData: {fileID: 11400000, guid: 80aad70979efa52419a30628996ad63f, type: 2}
   brickCollider: {fileID: 7275461476928012324}
   spriteRenderer: {fileID: 9014303556286420662}
-  health: 2
+  health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
 --- !u!61 &7275461476928012324
@@ -9038,7 +9038,7 @@ MonoBehaviour:
   brickData: {fileID: 11400000, guid: 80aad70979efa52419a30628996ad63f, type: 2}
   brickCollider: {fileID: 5266858296310646081}
   spriteRenderer: {fileID: 6483428995622257318}
-  health: 2
+  health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
 --- !u!61 &5266858296310646081
@@ -11281,7 +11281,7 @@ MonoBehaviour:
   brickData: {fileID: 11400000, guid: 80aad70979efa52419a30628996ad63f, type: 2}
   brickCollider: {fileID: 7280649754444213047}
   spriteRenderer: {fileID: 2687202406707668235}
-  health: 2
+  health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
 --- !u!61 &7280649754444213047
@@ -12513,7 +12513,7 @@ MonoBehaviour:
   brickData: {fileID: 11400000, guid: 80aad70979efa52419a30628996ad63f, type: 2}
   brickCollider: {fileID: 7603274051333887752}
   spriteRenderer: {fileID: 2356815987215565413}
-  health: 2
+  health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
 --- !u!61 &7603274051333887752
@@ -12821,7 +12821,7 @@ MonoBehaviour:
   brickData: {fileID: 11400000, guid: 80aad70979efa52419a30628996ad63f, type: 2}
   brickCollider: {fileID: 2906517842967207237}
   spriteRenderer: {fileID: 2763858650744460901}
-  health: 2
+  health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
 --- !u!61 &2906517842967207237
