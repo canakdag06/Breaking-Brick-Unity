@@ -1,3 +1,4 @@
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
@@ -26,6 +27,9 @@ public class UIManager : MonoBehaviour
         if(scoreText != null)
         {
             scoreText.text = newScore.ToString();
+            scoreText.transform.DOKill();
+            scoreText.transform.localScale = Vector3.one;
+            scoreText.transform.DOScale(1.3f, 0.1f).SetLoops(2, LoopType.Yoyo);
         }
     }
 }
