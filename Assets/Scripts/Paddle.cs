@@ -90,7 +90,7 @@ public class Paddle : MonoBehaviour
 
         if (inputReader.Throw && ball != null && !ballLaunched)
         {
-            ball.transform.parent = null;
+            ball.transform.parent = BallManager.Instance.transform;
             ballLaunched = true;
 
             float influence = Mathf.Clamp01(movementTimer / maxInfluenceTime);

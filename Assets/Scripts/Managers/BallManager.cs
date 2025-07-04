@@ -6,49 +6,93 @@ public class BallManager : MonoBehaviour
 {
     public static BallManager Instance { get; private set; }
 
-    private List<Ball> balls = new();
+    [SerializeField] private GameObject ballPrefab;
+    [SerializeField] private int poolSize = 10;
 
-    [SerializeField] private Ball ballPrefab;
+    private List<Ball> ballPool = new();
+    private List<Ball> activeBalls = new();
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (Instance == null)
+            Instance = this;
+        else
         {
             Destroy(gameObject);
             return;
         }
-        Instance = this;
     }
 
-    void Start()
+    private void Start()
     {
+        InitializePool();
         SpawnInitialBall();
     }
+
+    private void InitializePool()
+    {
+        for (int i = 0; i < poolSize; i++)
+        {
+            GameObject obj = Instantiate(ballPrefab);
+            obj.transform.parent = transform;
+            obj.SetActive(false);
+            Ball ball = obj.GetComponent<Ball>();
+            ballPool.Add(ball);
+        }
+    }
+
     public void SpawnInitialBall()
     {
-        ClearBalls();
-        Ball newBall = Instantiate(ballPrefab, Paddle.Instance.ballLocation.position, Quaternion.identity);
-        Paddle.Instance.SetBall(newBall);
-        AddBall(newBall);
-    }
+        ClearAllBalls();
 
-    public void ClearBalls()
-    {
-        foreach (var ball in balls)
+        Ball ball = GetBallFromPool();
+        if (ball == null)
         {
-            if (ball != null)
-                Destroy(ball.gameObject);
+            Debug.LogError("No available balls in pool!");
+            return;
         }
-        balls.Clear();
+
+        ball.gameObject.SetActive(true);
+        Paddle.Instance.SetBall(ball);
+        activeBalls.Add(ball);
     }
 
-    public void AddBall(Ball newBall)
+    public Ball GetBallFromPool()
     {
-        if(!balls.Contains(newBall))
+        foreach (Ball ball in ballPool)
         {
-            balls.Add(newBall);
+            if (!ball.gameObject.activeInHierarchy)
+                return ball;
         }
+         return InstantiateNewBall();
     }
 
+    public void ReturnBallToPool(Ball ball)
+    {
+        if (ball == null) return;
 
+        ball.Stop();
+        ball.gameObject.SetActive(false);
+        ball.transform.SetParent(this.transform);
+        activeBalls.Remove(ball);
+    }
+
+    public void ClearAllBalls()
+    {
+        foreach (Ball ball in activeBalls.ToArray())
+        {
+            ReturnBallToPool(ball);
+        }
+
+        activeBalls.Clear();
+    }
+
+    private Ball InstantiateNewBall()
+    {
+        GameObject obj = Instantiate(ballPrefab);
+        obj.SetActive(false);
+        Ball ball = obj.GetComponent<Ball>();
+        ballPool.Add(ball);
+        return ball;
+    }
 }
