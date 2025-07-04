@@ -6,6 +6,8 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager Instance { get; private set; }
     public event Action<int> OnScoreChanged;
     public int GetScore() => score;
+
+    [SerializeField] private int scorePerHit;
     private int score = 0;
 
     private void Awake()
@@ -19,9 +21,9 @@ public class ScoreManager : MonoBehaviour
         Instance = this;
     }
 
-    public void AddScore(int amount)
+    public void AddScore(int hits)
     {
-        score += amount;
+        score += hits * scorePerHit;
         OnScoreChanged?.Invoke(score);
     }
 

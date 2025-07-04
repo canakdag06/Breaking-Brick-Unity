@@ -44,6 +44,7 @@ public class Brick : MonoBehaviour
         {
             brickCollider.enabled = false;
             StartCoroutine(PlayBreakAnimation());
+            ScoreManager.Instance.AddScore(hits);
         }
         else
         {
