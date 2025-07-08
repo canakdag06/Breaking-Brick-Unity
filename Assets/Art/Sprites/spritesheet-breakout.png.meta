@@ -741,7 +741,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: paddle_2
+      name: paddle_3
       rect:
         serializedVersion: 2
         x: 32
@@ -2390,6 +2390,160 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: paddle_2
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 227
+        width: 60
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 850b1c1a24776444c83ab43d34c29369
+      internalID: -105948635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power-up_flaming_ball
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 49
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ddda3f9d599da04fab16b866b974675
+      internalID: 1472713016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power-up_expand_paddle
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 49
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cc619fddf108684388d97194b42d94f
+      internalID: 902890723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power-up_extra_life
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 49
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1782617cefc6a0344a97497c11ec179e
+      internalID: -2106090378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power-up_duplicate_ball
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 49
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96c76782430a1344dab0528af62dd236
+      internalID: -1242580433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power-up_laser
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 49
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05564bb69a3667e4ba29ba7e84e56877
+      internalID: 158386366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power-up_magnet
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 49
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c800f898dde5e294ea5a5772372e1746
+      internalID: -335788684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -2443,7 +2597,8 @@ TextureImporter:
       orange_brick_9: 1666067781
       paddle_0: 6081121525837946721
       paddle_1: -4420557365393547033
-      paddle_2: -4439983971200399806
+      paddle_2: -105948635
+      paddle_3: -4439983971200399806
       paddle_long_0: 713089459679229422
       paddle_long_1: 3759954973532278197
       paddle_long_2: -6210634360983330870
@@ -2453,6 +2608,12 @@ TextureImporter:
       paddle_part_3: 381225766975932599
       paddle_tiny: -3602617503636897431
       petraheim_logo: -7845977501651575310
+      power-up_duplicate_ball: -1242580433
+      power-up_expand_paddle: 902890723
+      power-up_extra_life: -2106090378
+      power-up_flaming_ball: 1472713016
+      power-up_laser: 158386366
+      power-up_magnet: -335788684
       purple_brick_0: -1902530334
       purple_brick_1: 2004071868
       purple_brick_10: 49951954
