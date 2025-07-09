@@ -2165,17 +2165,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667031470}
   m_CullTransparentMesh: 1
---- !u!114 &1745591799 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2122694322952380925, guid: d28de7b3cbe19854f9e3f2a26c7fdadb, type: 3}
-  m_PrefabInstance: {fileID: 3506279317748906680}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25af0a724634b3f4cbc000cc44ca6443, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1860392635
 GameObject:
   m_ObjectHideFlags: 0
@@ -2590,14 +2579,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paddle
       objectReference: {fileID: 0}
-    - target: {fileID: 606428492906565032, guid: d8d2f47b2dc131746a7e5872c52031af, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3189859183779807156, guid: d8d2f47b2dc131746a7e5872c52031af, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8864699824162032378, guid: d8d2f47b2dc131746a7e5872c52031af, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2639,33 +2620,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8937626430479433577, guid: d8d2f47b2dc131746a7e5872c52031af, type: 3}
-      propertyPath: ball
-      value: 
-      objectReference: {fileID: 1745591799}
-    - target: {fileID: 8937626430479433577, guid: d8d2f47b2dc131746a7e5872c52031af, type: 3}
       propertyPath: leftWall
       value: 
       objectReference: {fileID: 1188413505}
     - target: {fileID: 8937626430479433577, guid: d8d2f47b2dc131746a7e5872c52031af, type: 3}
-      propertyPath: moveSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8937626430479433577, guid: d8d2f47b2dc131746a7e5872c52031af, type: 3}
       propertyPath: rightWall
       value: 
       objectReference: {fileID: 1283606055}
-    - target: {fileID: 8937626430479433577, guid: d8d2f47b2dc131746a7e5872c52031af, type: 3}
-      propertyPath: launchSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8937626430479433577, guid: d8d2f47b2dc131746a7e5872c52031af, type: 3}
-      propertyPath: acceleration
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 8937626430479433577, guid: d8d2f47b2dc131746a7e5872c52031af, type: 3}
-      propertyPath: deceleration
-      value: 50
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2674,11 +2635,6 @@ PrefabInstance:
 --- !u!4 &2472963646801035496 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8864699824162032378, guid: d8d2f47b2dc131746a7e5872c52031af, type: 3}
-  m_PrefabInstance: {fileID: 2472963646801035495}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &2472963646801035497 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6849044176395332392, guid: d8d2f47b2dc131746a7e5872c52031af, type: 3}
   m_PrefabInstance: {fileID: 2472963646801035495}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &2472963646801035498 stripped
@@ -2762,7 +2718,7 @@ PrefabInstance:
     - target: {fileID: 2122694322952380925, guid: d28de7b3cbe19854f9e3f2a26c7fdadb, type: 3}
       propertyPath: bigBallLocation
       value: 
-      objectReference: {fileID: 2472963646801035497}
+      objectReference: {fileID: 0}
     - target: {fileID: 2122694322952380925, guid: d28de7b3cbe19854f9e3f2a26c7fdadb, type: 3}
       propertyPath: paddleTransform
       value: 
