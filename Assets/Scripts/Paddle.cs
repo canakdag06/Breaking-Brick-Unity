@@ -178,6 +178,17 @@ public class Paddle : MonoBehaviour
         seq.OnComplete(() => BallManager.Instance.SpawnInitialBall());
     }
 
+    // ======================= ENABLE LASER =======================
+    
+    public void EnableLaser()
+    {
+        return;
+    }
+
+    public void EnableMagnet()
+    {
+        return;
+    }
 }
 
 

@@ -95,4 +95,15 @@ public class BallManager : MonoBehaviour
         ballPool.Add(ball);
         return ball;
     }
+
+    // ======================= PowerUps =======================
+    public void DuplicateBalls()
+    {
+        return;
+    }
+
+    public void EnableFlamingBall()
+    {
+        return;
+    }
 }
