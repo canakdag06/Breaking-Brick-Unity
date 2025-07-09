@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public event Action<int> OnLifeChanged;
+    public event Action OnLifeLostEffectRequested;
 
     public int Lives => lives;
     public bool IsPaused => isPaused;
@@ -40,8 +41,18 @@ public class GameManager : MonoBehaviour
         else
         {
             lives--;
+            if (lives <= 0)
+            {
+                HandleGameOver();
+            }
+            OnLifeLostEffectRequested?.Invoke();
         }
         OnLifeChanged?.Invoke(lives);
+    }
+
+    private void HandleGameOver()
+    {
+        throw new NotImplementedException();
     }
 
     private void StartGame()

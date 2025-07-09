@@ -1,30 +1,41 @@
-﻿using Unity.VisualScripting;
+﻿using DG.Tweening;
+using Unity.VisualScripting;
 using UnityEngine;
+using Sequence = DG.Tweening.Sequence;
 
 public class Paddle : MonoBehaviour
 {
     public static Paddle Instance { get; private set; }
 
-    //public Ball ball;
-    public Transform ballLocation/*, bigBallLocation*/;
-    public Transform leftWall, rightWall;
-    public GameObject[] paddleVisuals;
+    [Header("References")]
+    [SerializeField] private Transform ballLocation;
+    [SerializeField] private Transform leftWall, rightWall;
+    [SerializeField] private SpriteRenderer paddleRenderer;
+    [SerializeField] private Transform leftLaser, rightLaser;
+
+    [Header("Movement Settings")]
+    [SerializeField] private int launchSpeed;
+    [SerializeField] private float moveSpeed;
+
+    [Header("Visuals")]
+    [SerializeField] private PaddleVisualData[] visualDatas;
+    private int visualLevel = 0;
 
     private InputReader inputReader;
     private Vector2 moveInput;
 
     private Ball ball;
-    [SerializeField] private int launchSpeed;
-    [SerializeField] private float moveSpeed;
     private bool ballLaunched;
     private float movementTimer = 0f;
-    private int lastMoveDirection = 0; // -1 = sol, 1 = sağ, 0 = sabit
+    private int lastMoveDirection = 0; // -1 = left, 1 = right, 0 = not moving
     private const float maxInfluenceTime = 0.3f;
 
-    private Transform activeVisual;
+    private BoxCollider2D paddleCollider;
     private float halfWidth;
     private float halfWallWidth;
 
+
+    // ======================= LIFECYCLE =======================
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -33,15 +44,29 @@ public class Paddle : MonoBehaviour
             return;
         }
         Instance = this;
+
+        paddleCollider = GetComponent<BoxCollider2D>();
+    }
+
+    private void OnDisable()
+    {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.OnLifeLostEffectRequested -= PlayLifeLostEffect;
+        }
     }
 
     void Start()
     {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.OnLifeLostEffectRequested += PlayLifeLostEffect;
+        }
         inputReader = InputReader.Instance;
 
         BoxCollider2D col = leftWall.GetComponent<BoxCollider2D>();
         halfWallWidth = col.bounds.extents.x;
-        halfWidth = GetCurrentPaddleHalfWidth();
+        UpdatePaddleHalfWidth();
     }
 
     // Update is called once per frame
@@ -52,21 +77,15 @@ public class Paddle : MonoBehaviour
         inputReader.ResetInputs();
     }
 
+
+
+    // ======================= BALL CONTROL =======================
     public void SetBall(Ball newBall)
     {
         ball = newBall;
         ball.transform.SetParent(transform);
         ball.transform.position = ballLocation.position;
         ballLaunched = false;
-    }
-
-    private void PaddleMovement()
-    {
-        moveInput = inputReader.MoveInput;
-        Vector3 pos = transform.position;
-        pos.x += moveSpeed * Time.deltaTime * moveInput.x;
-        pos.x = Mathf.Clamp(pos.x, (leftWall.position.x + halfWallWidth) + halfWidth, (rightWall.position.x - halfWallWidth) - halfWidth);
-        transform.position = pos;
     }
 
     private void ControlBall()
@@ -101,27 +120,73 @@ public class Paddle : MonoBehaviour
         }
     }
 
-    float GetCurrentPaddleHalfWidth()
+    // ======================= MOVEMENT =======================
+    private void PaddleMovement()
     {
-        foreach (GameObject paddle in paddleVisuals)
-        {
-            if (paddle.activeSelf)
-            {
-                activeVisual = paddle.transform;
-            }
-        }
-
-        SpriteRenderer[] renderers = activeVisual.GetComponentsInChildren<SpriteRenderer>();
-
-        if (renderers.Length == 0) return 0f;
-
-        Bounds combinedBounds = renderers[0].bounds;
-
-        for (int i = 1; i < renderers.Length; i++)
-        {
-            combinedBounds.Encapsulate(renderers[i].bounds);
-        }
-
-        return combinedBounds.extents.x;
+        moveInput = inputReader.MoveInput;
+        Vector3 pos = transform.position;
+        pos.x += moveSpeed * Time.deltaTime * moveInput.x;
+        pos.x = Mathf.Clamp(pos.x, (leftWall.position.x + halfWallWidth) + halfWidth, (rightWall.position.x - halfWallWidth) - halfWidth);
+        transform.position = pos;
     }
+
+    // ======================= VISUAL CONTROL =======================
+
+    private void ApplyVisual(int level)
+    {
+        if (level < 0 || level > visualDatas.Length)
+        {
+            Debug.LogWarning($"Invalid paddle visual level: {level}");
+        }
+        visualLevel = level;
+
+        var data = visualDatas[level];
+        paddleRenderer.sprite = data.sprite;
+        leftLaser.localPosition = data.leftLaserPosition;
+        rightLaser.localPosition = data.rightLaserPosition;
+        paddleCollider.size = data.colliderSize;
+        paddleCollider.offset = data.colliderOffset;
+
+        UpdatePaddleHalfWidth();
+    }
+
+
+    private void UpdatePaddleHalfWidth()
+    {
+        halfWidth = paddleRenderer.bounds.extents.x;
+    }
+
+    public void ExpandPaddle()
+    {
+        int nextLevel = Mathf.Min(visualLevel + 1, visualDatas.Length - 1);
+        ApplyVisual(nextLevel);
+    }
+
+    public void ShrinkPaddle()
+    {
+        int nextLevel = Mathf.Max(visualLevel - 1, 0);
+        ApplyVisual(nextLevel);
+    }
+
+    // ======================= EFFECT =======================
+    public void PlayLifeLostEffect()
+    {
+        Sequence seq = DOTween.Sequence();
+        seq.Append(paddleRenderer.DOColor(Color.red, 0.1f));
+        seq.Append(transform.DOPunchPosition(new Vector3(0.1f, 0f, 0f), 0.3f, 30, 0.5f));
+        seq.Append(paddleRenderer.DOColor(Color.white, 0.1f));
+        seq.OnComplete(() => BallManager.Instance.SpawnInitialBall());
+    }
+
+}
+
+
+[System.Serializable]
+public class PaddleVisualData
+{
+    public Sprite sprite;
+    public Vector2 leftLaserPosition;
+    public Vector2 rightLaserPosition;
+    public Vector2 colliderSize;
+    public Vector2 colliderOffset;
 }
