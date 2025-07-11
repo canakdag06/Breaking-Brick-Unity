@@ -10,22 +10,66 @@ public enum PowerUpType
     Magnet
 }
 
-public class PowerUp : MonoBehaviour
+[System.Serializable]
+public class PowerUpData
 {
     public PowerUpType type;
+    public Sprite sprite;
+}
+
+public class PowerUp : MonoBehaviour
+{
+    [SerializeField] private PowerUpData[] powerUpDatas;
+
+    public PowerUpType type { get; private set; }
     public float fallSpeed = 2f;
+
+    private SpriteRenderer sr;
+
+    private void Awake()
+    {
+        sr = GetComponent<SpriteRenderer>();
+    }
+
+    private void Start()
+    {
+        int randIndex = Random.Range(0, powerUpDatas.Length);
+        PowerUpData selectedData = powerUpDatas[randIndex];
+        type = selectedData.type;
+
+        sr.sprite = selectedData.sprite;
+    }
 
     void Update()
     {
         transform.Translate(Vector2.down * fallSpeed * Time.deltaTime);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if(collision.CompareTag("Paddle"))
+        if (other.CompareTag("Paddle"))
         {
-            //PowerUpManager.Instance.ApplyPowerUp(type);
+            // Apply power-up
+            Debug.Log("OnTrigger Paddle");
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+        else if (other.CompareTag("DeathWall"))
+        {
+            Debug.Log("OnTrigger DeathWall");
+            Destroy(gameObject);
+        }
     }
+
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Paddle"))
+    //    {
+    //        //PowerUpManager.Instance.ApplyPowerUp(type);
+    //        Destroy(gameObject);
+    //    }
+    //    else if(collision.gameObject.CompareTag("DeathWall"))
+    //    {
+    //        Destroy(gameObject);
+    //    }
+    //}
 }

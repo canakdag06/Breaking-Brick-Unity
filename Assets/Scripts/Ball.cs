@@ -32,6 +32,11 @@ public class Ball : MonoBehaviour
         {
             HandlePaddleCollision(collision);
         }
+        else if (collision.gameObject.CompareTag("DeathWall"))
+        {
+            BallManager.Instance.ReturnBallToPool(this);
+            GameManager.Instance.UpdateLives(false);
+        }
     }
 
     private void HandlePaddleCollision(Collision2D collision)
@@ -42,14 +47,5 @@ public class Ball : MonoBehaviour
         Vector2 newDirection = new Vector2(offset, 1f).normalized;
         float currentSpeed = rb.linearVelocity.magnitude;
         rb.linearVelocity = newDirection * currentSpeed;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.CompareTag("DeathWall"))
-        {
-            BallManager.Instance.ReturnBallToPool(this);
-            GameManager.Instance.UpdateLives(false);
-        }
     }
 }
