@@ -46,13 +46,6 @@ public class BallManager : MonoBehaviour
         ClearAllBalls();
 
         Ball ball = GetBallFromPool();
-        if (ball == null)
-        {
-            Debug.LogError("No available balls in pool!");
-            return;
-        }
-
-        ball.gameObject.SetActive(true);
         Paddle.Instance.SetBall(ball);
         activeBalls.Add(ball);
     }
@@ -62,7 +55,10 @@ public class BallManager : MonoBehaviour
         foreach (Ball ball in ballPool)
         {
             if (!ball.gameObject.activeInHierarchy)
+            {
+                ball.gameObject.SetActive(true);
                 return ball;
+            }
         }
          return InstantiateNewBall();
     }
@@ -87,6 +83,20 @@ public class BallManager : MonoBehaviour
         activeBalls.Clear();
     }
 
+    public bool HasActiveBalls()
+    {
+        return activeBalls.Count > 0 ? true : false;
+
+        //if(activeBalls.Count == 0)
+        //{
+        //    return false;
+        //}
+        //else
+        //{
+        //    return true;
+        //}
+    }
+
     private Ball InstantiateNewBall()
     {
         GameObject obj = Instantiate(ballPrefab);
@@ -99,7 +109,19 @@ public class BallManager : MonoBehaviour
     // ======================= PowerUps =======================
     public void DuplicateBalls()
     {
-        return;
+        List<Ball> currentBalls = new(activeBalls);
+        foreach (var originalBall in currentBalls)
+        {
+            Ball newBall = GetBallFromPool();
+            newBall.transform.position = originalBall.transform.position;
+
+            float angleOffset = Random.Range(-30f, 30f);
+            Vector2 originalDir = originalBall.CurrentDirection;
+            Vector2 newDir = Quaternion.Euler(0, 0, angleOffset) * originalDir;
+
+            newBall.Launch(newDir, originalBall.CurrentSpeed);
+            activeBalls.Add(newBall);
+        }
     }
 
     public void EnableFlamingBall()

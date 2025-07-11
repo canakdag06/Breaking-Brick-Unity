@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    public Vector2 CurrentDirection => rb.linearVelocity.normalized;
+    public float CurrentSpeed => rb.linearVelocity.magnitude;
+
     private Rigidbody2D rb;
     private float speed = 2f;
 
@@ -35,7 +38,10 @@ public class Ball : MonoBehaviour
         else if (collision.gameObject.CompareTag("DeathWall"))
         {
             BallManager.Instance.ReturnBallToPool(this);
-            GameManager.Instance.UpdateLives(false);
+            if(!BallManager.Instance.HasActiveBalls())
+            {
+                GameManager.Instance.UpdateLives(false);
+            }
         }
     }
 

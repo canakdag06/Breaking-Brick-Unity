@@ -49,7 +49,7 @@ public class PowerUp : MonoBehaviour
     {
         if (other.CompareTag("Paddle"))
         {
-            // Apply power-up
+            PowerUpManager.Instance.ApplyPowerUp(type);
             Destroy(gameObject);
         }
         else if (other.CompareTag("DeathWall"))
