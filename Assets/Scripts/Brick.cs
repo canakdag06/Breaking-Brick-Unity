@@ -11,6 +11,10 @@ public class Brick : MonoBehaviour
     [SerializeField] private int health = 1;
     [SerializeField] private bool isBreakable;
     [SerializeField] private float breakFrameDelay = 0.05f;
+
+    [SerializeField] private GameObject powerUpPrefab;
+    [SerializeField] private float dropChance = 0.2f;
+
     private Sprite[] damageSprites;
     private int hits = 0;
 
@@ -56,7 +60,7 @@ public class Brick : MonoBehaviour
     {
         if (damageSprites.Length == 0)
             return;
-        
+
         spriteRenderer.sprite = damageSprites[hits];
     }
 
@@ -67,7 +71,7 @@ public class Brick : MonoBehaviour
 
     private IEnumerator PlayBreakAnimation()
     {
-        
+        DropPowerUp();
         for (int i = hits; i < damageSprites.Length; ++i)
         {
             spriteRenderer.sprite = damageSprites[i];
@@ -88,6 +92,14 @@ public class Brick : MonoBehaviour
             {
                 spriteRenderer.sprite = data.defaultSprite;
             }
+        }
+    }
+
+    private void DropPowerUp()
+    {
+        if (Random.value <= dropChance)
+        {
+            Instantiate(powerUpPrefab, transform.position, Quaternion.identity);
         }
     }
 }

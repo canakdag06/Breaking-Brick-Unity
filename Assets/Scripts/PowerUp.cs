@@ -50,26 +50,11 @@ public class PowerUp : MonoBehaviour
         if (other.CompareTag("Paddle"))
         {
             // Apply power-up
-            Debug.Log("OnTrigger Paddle");
             Destroy(gameObject);
         }
         else if (other.CompareTag("DeathWall"))
         {
-            Debug.Log("OnTrigger DeathWall");
             Destroy(gameObject);
         }
     }
-
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Paddle"))
-    //    {
-    //        //PowerUpManager.Instance.ApplyPowerUp(type);
-    //        Destroy(gameObject);
-    //    }
-    //    else if(collision.gameObject.CompareTag("DeathWall"))
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //}
 }
