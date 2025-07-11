@@ -115,7 +115,7 @@ public class BallManager : MonoBehaviour
             Ball newBall = GetBallFromPool();
             newBall.transform.position = originalBall.transform.position;
 
-            float angleOffset = Random.Range(-30f, 30f);
+            float angleOffset = Random.Range(-45f, 45f);
             Vector2 originalDir = originalBall.CurrentDirection;
             Vector2 newDir = Quaternion.Euler(0, 0, angleOffset) * originalDir;
 
