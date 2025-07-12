@@ -152,6 +152,7 @@ MonoBehaviour:
     rightLaserPosition: {x: 0.37, y: 0}
     colliderSize: {x: 0.64, y: 0.1}
     colliderOffset: {x: 0, y: 0}
+  expandDuration: 20
 --- !u!1 &1460380861133539004
 GameObject:
   m_ObjectHideFlags: 0

@@ -25,6 +25,9 @@ public class Paddle : MonoBehaviour
     private InputReader inputReader;
     private Vector2 moveInput;
 
+    [SerializeField] private float expandDuration = 20f;
+    private Coroutine shrinkRoutine;
+
     private Ball ball;
     private bool ballLaunched;
     private float movementTimer = 0f;
@@ -164,6 +167,11 @@ public class Paddle : MonoBehaviour
 
         StopAllCoroutines();
         StartCoroutine(PlayExpandAnimation());
+
+        if (shrinkRoutine != null)
+            StopCoroutine(shrinkRoutine);
+
+        shrinkRoutine = StartCoroutine(ShrinkAfterDelay());
     }
 
     private IEnumerator PlayExpandAnimation()
@@ -173,13 +181,30 @@ public class Paddle : MonoBehaviour
         for (int i = visualLevel + 1; i <= targetIndex; i++)
         {
             paddleRenderer.sprite = visualDatas[i].sprite;
-            UpdateLaserPositions(i); // Eğer lazer pozisyonları değişiyorsa
-            UpdateColliderSize(i);   // Eğer collider da sprite'a göre değişiyorsa
+            UpdateLaserPositions(i);
+            UpdateColliderSize(i);
             UpdatePaddleHalfWidth();
             yield return new WaitForSeconds(0.1f);
         }
 
         visualLevel = targetIndex;
+    }
+
+    private IEnumerator ShrinkAfterDelay()
+    {
+        yield return new WaitForSeconds(expandDuration);
+
+        for (int i = visualLevel - 1; i >= 0; i--)
+        {
+            paddleRenderer.sprite = visualDatas[i].sprite;
+            UpdateLaserPositions(i);
+            UpdateColliderSize(i);
+            UpdatePaddleHalfWidth();
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        visualLevel = 0;
+        shrinkRoutine = null;
     }
 
     private void UpdateLaserPositions(int index)
