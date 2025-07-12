@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using Sequence = DG.Tweening.Sequence;
@@ -158,8 +159,39 @@ public class Paddle : MonoBehaviour
 
     public void ExpandPaddle()
     {
-        int nextLevel = Mathf.Min(visualLevel + 1, visualDatas.Length - 1);
-        ApplyVisual(nextLevel);
+        if (visualLevel >= visualDatas.Length - 1)
+            return;
+
+        StopAllCoroutines();
+        StartCoroutine(PlayExpandAnimation());
+    }
+
+    private IEnumerator PlayExpandAnimation()
+    {
+        int targetIndex = visualDatas.Length - 1;
+
+        for (int i = visualLevel + 1; i <= targetIndex; i++)
+        {
+            paddleRenderer.sprite = visualDatas[i].sprite;
+            UpdateLaserPositions(i); // Eğer lazer pozisyonları değişiyorsa
+            UpdateColliderSize(i);   // Eğer collider da sprite'a göre değişiyorsa
+            UpdatePaddleHalfWidth();
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        visualLevel = targetIndex;
+    }
+
+    private void UpdateLaserPositions(int index)
+    {
+        leftLaser.localPosition = visualDatas[index].leftLaserPosition;
+        rightLaser.localPosition = visualDatas[index].rightLaserPosition;
+    }
+
+    private void UpdateColliderSize(int index)
+    {
+        paddleCollider.size = visualDatas[index].colliderSize;
+        paddleCollider.offset = visualDatas[index].colliderOffset;
     }
 
     public void ShrinkPaddle()
