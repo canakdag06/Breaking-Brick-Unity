@@ -54,4 +54,9 @@ public class Ball : MonoBehaviour
         float currentSpeed = rb.linearVelocity.magnitude;
         rb.linearVelocity = newDirection * currentSpeed;
     }
+
+    public void SetFlaming(bool isFlaming)
+    {
+        // trail
+    }
 }

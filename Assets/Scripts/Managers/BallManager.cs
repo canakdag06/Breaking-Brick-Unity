@@ -1,4 +1,5 @@
-using NUnit.Framework;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,11 +7,15 @@ public class BallManager : MonoBehaviour
 {
     public static BallManager Instance { get; private set; }
 
+    public event Action<bool> OnFlamingBallSwitch;
+
     [SerializeField] private GameObject ballPrefab;
     [SerializeField] private int poolSize = 10;
 
     private List<Ball> ballPool = new();
     private List<Ball> activeBalls = new();
+
+    private Coroutine disableFlameRoutine;
 
     private void Awake()
     {
@@ -115,7 +120,7 @@ public class BallManager : MonoBehaviour
             Ball newBall = GetBallFromPool();
             newBall.transform.position = originalBall.transform.position;
 
-            float angleOffset = Random.Range(-45f, 45f);
+            float angleOffset = UnityEngine.Random.Range(-45f, 45f);
             Vector2 originalDir = originalBall.CurrentDirection;
             Vector2 newDir = Quaternion.Euler(0, 0, angleOffset) * originalDir;
 
@@ -124,8 +129,32 @@ public class BallManager : MonoBehaviour
         }
     }
 
-    public void EnableFlamingBall()
+    public void EnableFlamingBall(float flamingBallDuration)
     {
-        return;
+        if (disableFlameRoutine != null)
+            StopCoroutine(disableFlameRoutine);
+
+        OnFlamingBallSwitch?.Invoke(true);
+        SetFlamingStatusOnBalls(true);
+
+        disableFlameRoutine = StartCoroutine(FlamingBallTimer(flamingBallDuration));
+    }
+
+    private void SetFlamingStatusOnBalls(bool isFlaming)
+    {
+        foreach (var ball in activeBalls)
+        {
+            ball.SetFlaming(isFlaming);
+        }
+    }
+
+    private IEnumerator FlamingBallTimer(float flamingBallDuration)
+    {
+        yield return new WaitForSeconds(flamingBallDuration);
+
+        OnFlamingBallSwitch?.Invoke(false);
+        SetFlamingStatusOnBalls(false);
+
+        disableFlameRoutine = null;
     }
 }

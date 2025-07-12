@@ -15,11 +15,19 @@ public class Brick : MonoBehaviour
     [SerializeField] private GameObject powerUpPrefab;
     [SerializeField] private float dropChance = 0.2f;
 
+    private Collider2D col;
     private Sprite[] damageSprites;
     private int hits = 0;
 
+    private void Awake()
+    {
+        col = GetComponent<Collider2D>();
+    }
+
     private void Start()
     {
+        BallManager.Instance.OnFlamingBallSwitch += SwitchColliderMode;
+
         var data = brickData.bricks.Find(b => b.color == color);
 
         if (data == null)
@@ -100,6 +108,37 @@ public class Brick : MonoBehaviour
         if (Random.value <= dropChance)
         {
             Instantiate(powerUpPrefab, transform.position, Quaternion.identity);
+        }
+    }
+
+    private void OnDisable()
+    {
+        BallManager.Instance.OnFlamingBallSwitch -= SwitchColliderMode;
+    }
+
+    private void SwitchColliderMode(bool isEnable)
+    {
+        if(isEnable)
+        {
+            col.isTrigger = true;
+        }
+        else
+        {
+            col.isTrigger = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Ball"))
+        {
+            if (!isBreakable)
+            {
+                return;
+            }
+            brickCollider.enabled = false;
+            StartCoroutine(PlayBreakAnimation());
+            ScoreManager.Instance.AddScore(health);
         }
     }
 }

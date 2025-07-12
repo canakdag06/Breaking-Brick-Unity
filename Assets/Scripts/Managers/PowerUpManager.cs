@@ -4,6 +4,8 @@ public class PowerUpManager : MonoBehaviour
 {
     public static PowerUpManager Instance { get; private set; }
 
+    [SerializeField] private float flamingBallDuration = 20f;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -41,26 +43,23 @@ public class PowerUpManager : MonoBehaviour
 
     private void ApplyDuplicateBalls()
     {
-        Debug.Log("DUPLICATE BALLS APLIED");
         BallManager.Instance.DuplicateBalls();
     }
 
     private void ApplyExpandPaddle()
     {
-        Debug.Log("EXPAND PADDLE APLIED");
         Paddle.Instance.ExpandPaddle();
     }
 
     private void ApplyExtraLife()
     {
-        Debug.Log("EXTRA LIFE APLIED");
         GameManager.Instance.UpdateLives(true);
     }
 
     private void ApplyFlamingBall()
     {
         Debug.Log("FLAMING BALL APLIED");
-        BallManager.Instance.EnableFlamingBall();
+        BallManager.Instance.EnableFlamingBall(flamingBallDuration);
     }
 
     private void ApplyLaser()
