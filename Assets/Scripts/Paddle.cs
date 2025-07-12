@@ -219,11 +219,11 @@ public class Paddle : MonoBehaviour
         paddleCollider.offset = visualDatas[index].colliderOffset;
     }
 
-    public void ShrinkPaddle()
-    {
-        int nextLevel = Mathf.Max(visualLevel - 1, 0);
-        ApplyVisual(nextLevel);
-    }
+    //public void ShrinkPaddle()
+    //{
+    //    int nextLevel = Mathf.Max(visualLevel - 1, 0);
+    //    ApplyVisual(nextLevel);
+    //}
 
     // ======================= EFFECT =======================
     public void PlayLifeLostEffect()
