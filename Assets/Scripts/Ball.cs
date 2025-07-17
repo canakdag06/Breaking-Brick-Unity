@@ -5,6 +5,8 @@ public class Ball : MonoBehaviour
     public Vector2 CurrentDirection => rb.linearVelocity.normalized;
     public float CurrentSpeed => rb.linearVelocity.magnitude;
 
+    [SerializeField] private ParticleSystem flamingParticle;
+
     private Rigidbody2D rb;
     private float speed = 2f;
 
@@ -55,8 +57,11 @@ public class Ball : MonoBehaviour
         rb.linearVelocity = newDirection * currentSpeed;
     }
 
-    public void SetFlaming(bool isFlaming)
+    public void SetFlaming(bool value)
     {
-        // trail
+        if (value)
+            flamingParticle.Play();
+        else
+            flamingParticle.Stop();
     }
 }
