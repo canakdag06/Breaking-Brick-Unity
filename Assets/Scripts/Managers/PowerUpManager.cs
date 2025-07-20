@@ -4,7 +4,8 @@ public class PowerUpManager : MonoBehaviour
 {
     public static PowerUpManager Instance { get; private set; }
 
-    [SerializeField] private float flamingBallDuration = 20f;
+    [SerializeField] private float flamingBallDuration = 10f;
+    [SerializeField] private float laserDuration = 10f;
 
     private void Awake()
     {
@@ -65,7 +66,7 @@ public class PowerUpManager : MonoBehaviour
     private void ApplyLaser()
     {
         Debug.Log("LASER APLIED");
-        Paddle.Instance.EnableLaser();
+        Paddle.Instance.EnableLaser(laserDuration);
     }
 
     private void ApplyMagnet()

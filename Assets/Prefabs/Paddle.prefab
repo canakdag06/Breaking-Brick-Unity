@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1916855800033837430}
   - component: {fileID: 3047797958772637073}
   - component: {fileID: 8937626430479433577}
+  - component: {fileID: 2514353212366405806}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Paddle
@@ -129,6 +130,7 @@ MonoBehaviour:
   paddleRenderer: {fileID: 5852433126577530812}
   leftLaser: {fileID: 5301919366768419135}
   rightLaser: {fileID: 7839145857121009756}
+  lasersEnabledAnimation: {fileID: 2514353212366405806}
   launchSpeed: 2
   moveSpeed: 3
   visualDatas:
@@ -153,6 +155,23 @@ MonoBehaviour:
     colliderSize: {x: 0.64, y: 0.1}
     colliderOffset: {x: 0, y: 0}
   expandDuration: 20
+--- !u!111 &2514353212366405806
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562626887401156439}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 7ff2073174e6c694398ad9473eabce67, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 7ff2073174e6c694398ad9473eabce67, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 1
 --- !u!1 &1460380861133539004
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,7 +392,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5301919366768419135
 Transform:
   m_ObjectHideFlags: 0
@@ -382,7 +401,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3570470648903112723}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.29, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -492,7 +511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7839145857121009756
 Transform:
   m_ObjectHideFlags: 0
@@ -501,7 +520,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7477363621831812849}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.29, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

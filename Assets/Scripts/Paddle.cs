@@ -13,6 +13,7 @@ public class Paddle : MonoBehaviour
     [SerializeField] private Transform leftWall, rightWall;
     [SerializeField] private SpriteRenderer paddleRenderer;
     [SerializeField] private Transform leftLaser, rightLaser;
+    [SerializeField] private Animation lasersEnabledAnimation;
 
     [Header("Movement Settings")]
     [SerializeField] private int launchSpeed;
@@ -37,6 +38,8 @@ public class Paddle : MonoBehaviour
     private BoxCollider2D paddleCollider;
     private float halfWidth;
     private float halfWallWidth;
+
+    private Coroutine disableLaserRoutine;
 
 
     // ======================= LIFECYCLE =======================
@@ -219,12 +222,6 @@ public class Paddle : MonoBehaviour
         paddleCollider.offset = visualDatas[index].colliderOffset;
     }
 
-    //public void ShrinkPaddle()
-    //{
-    //    int nextLevel = Mathf.Max(visualLevel - 1, 0);
-    //    ApplyVisual(nextLevel);
-    //}
-
     // ======================= EFFECT =======================
     public void PlayLifeLostEffect()
     {
@@ -235,11 +232,47 @@ public class Paddle : MonoBehaviour
         seq.OnComplete(() => BallManager.Instance.SpawnInitialBall());
     }
 
-    // ======================= ENABLE LASER =======================
+    // ======================= POWER-UPS =======================
     
-    public void EnableLaser()
+    public void EnableLaser(float laserDuration)
     {
-        return;
+        if (disableLaserRoutine != null)
+        {
+            StopCoroutine(disableLaserRoutine);
+        }
+        else
+        {
+            // Animation
+            lasersEnabledAnimation[lasersEnabledAnimation.clip.name].speed = 1f;
+            lasersEnabledAnimation[lasersEnabledAnimation.clip.name].time = 0f;
+            lasersEnabledAnimation.Play();
+        }
+
+            // Particle ON
+
+            leftLaser.gameObject.SetActive(true);
+        rightLaser.gameObject.SetActive(true);
+
+        disableLaserRoutine = StartCoroutine(LaserTimer(laserDuration));
+    }
+
+    private IEnumerator LaserTimer(float laserDuration)
+    {
+        yield return new WaitForSeconds(laserDuration);
+
+        // Particle OFF
+
+        // Animation
+        lasersEnabledAnimation[lasersEnabledAnimation.clip.name].speed = -1f;
+        lasersEnabledAnimation[lasersEnabledAnimation.clip.name].time = lasersEnabledAnimation[lasersEnabledAnimation.clip.name].length;
+        lasersEnabledAnimation.Play();
+
+        // Wait for animation to end
+        yield return new WaitForSeconds(lasersEnabledAnimation[lasersEnabledAnimation.clip.name].length);
+
+        leftLaser.gameObject.SetActive(false);
+        rightLaser.gameObject.SetActive(false);
+        disableLaserRoutine = null;
     }
 
     public void EnableMagnet()
