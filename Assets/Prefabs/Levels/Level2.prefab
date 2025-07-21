@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7626597949983893130}
   - component: {fileID: 2083344280234541429}
   - component: {fileID: 7587866535397841084}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (78)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,6 +108,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7587866535397841084
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -166,7 +168,7 @@ GameObject:
   - component: {fileID: 611410364096449732}
   - component: {fileID: 4887920299708204599}
   - component: {fileID: 7728656146864144977}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (75)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,6 +264,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7728656146864144977
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -320,7 +324,7 @@ GameObject:
   - component: {fileID: 844669392967023728}
   - component: {fileID: 9130982256167046148}
   - component: {fileID: 2935349269794906048}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (69)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,6 +420,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &2935349269794906048
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -474,7 +480,7 @@ GameObject:
   - component: {fileID: 7197168340338256546}
   - component: {fileID: 4071605291263258710}
   - component: {fileID: 4864562654952558238}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -570,6 +576,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4864562654952558238
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -628,7 +636,7 @@ GameObject:
   - component: {fileID: 3471513332361126862}
   - component: {fileID: 6994860682896148009}
   - component: {fileID: 5476355617226232393}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -724,6 +732,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5476355617226232393
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -782,7 +792,7 @@ GameObject:
   - component: {fileID: 8676310040837976426}
   - component: {fileID: 8665465410947695626}
   - component: {fileID: 845357851677271616}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (66)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -878,6 +888,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &845357851677271616
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -936,7 +948,7 @@ GameObject:
   - component: {fileID: 5241423279404997377}
   - component: {fileID: 4758943670787182106}
   - component: {fileID: 6446699580295357152}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (81)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1032,6 +1044,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &6446699580295357152
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1090,7 +1104,7 @@ GameObject:
   - component: {fileID: 6305539521143273911}
   - component: {fileID: 3096782451714528762}
   - component: {fileID: 2627185309526218214}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (59)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1186,6 +1200,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &2627185309526218214
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1244,7 +1260,7 @@ GameObject:
   - component: {fileID: 7301355219984094023}
   - component: {fileID: 9190359513873597210}
   - component: {fileID: 9170569832690110120}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (45)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1340,6 +1356,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &9170569832690110120
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1398,7 +1416,7 @@ GameObject:
   - component: {fileID: 6583331643066602}
   - component: {fileID: 6389993081449694375}
   - component: {fileID: 2464356771449944729}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (89)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1494,6 +1512,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &2464356771449944729
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1552,7 +1572,7 @@ GameObject:
   - component: {fileID: 7217898451134976589}
   - component: {fileID: 3649520200381172526}
   - component: {fileID: 8448817027789382349}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (70)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1648,6 +1668,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &8448817027789382349
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1706,7 +1728,7 @@ GameObject:
   - component: {fileID: 1960313171835896370}
   - component: {fileID: 9014982402199595131}
   - component: {fileID: 251795431696011539}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1802,6 +1824,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &251795431696011539
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1860,7 +1884,7 @@ GameObject:
   - component: {fileID: 6570084274429035603}
   - component: {fileID: 7277900191543893567}
   - component: {fileID: 4406108740446565605}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1956,6 +1980,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4406108740446565605
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2014,7 +2040,7 @@ GameObject:
   - component: {fileID: 5240470993890312814}
   - component: {fileID: 4601865006517266783}
   - component: {fileID: 9140495015939040014}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2110,6 +2136,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &9140495015939040014
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2168,7 +2196,7 @@ GameObject:
   - component: {fileID: 2282478681669764551}
   - component: {fileID: 6729782782540996920}
   - component: {fileID: 1208087020800158044}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (47)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2264,6 +2292,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &1208087020800158044
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2322,7 +2352,7 @@ GameObject:
   - component: {fileID: 2883954023415179797}
   - component: {fileID: 7598100088724061405}
   - component: {fileID: 3613853201520345285}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2418,6 +2448,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &3613853201520345285
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2476,7 +2508,7 @@ GameObject:
   - component: {fileID: 2715905831156660672}
   - component: {fileID: 1490230417036539696}
   - component: {fileID: 1390921505399828269}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (51)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2572,6 +2604,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &1390921505399828269
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2630,7 +2664,7 @@ GameObject:
   - component: {fileID: 2206691702317187006}
   - component: {fileID: 1668645542346844336}
   - component: {fileID: 4904673828765267695}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2726,6 +2760,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4904673828765267695
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2784,7 +2820,7 @@ GameObject:
   - component: {fileID: 3429923566303827615}
   - component: {fileID: 1006487825143285952}
   - component: {fileID: 5430197054355155881}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (54)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2880,6 +2916,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5430197054355155881
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2938,7 +2976,7 @@ GameObject:
   - component: {fileID: 1063944808443955145}
   - component: {fileID: 7220973018331096645}
   - component: {fileID: 4304708498027097891}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3034,6 +3072,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4304708498027097891
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3092,7 +3132,7 @@ GameObject:
   - component: {fileID: 5110865759755648147}
   - component: {fileID: 588399146990449839}
   - component: {fileID: 3695346406117877412}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3188,6 +3228,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &3695346406117877412
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3246,7 +3288,7 @@ GameObject:
   - component: {fileID: 5318827835271123798}
   - component: {fileID: 5551928680155055438}
   - component: {fileID: 6180168534779704900}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (82)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3342,6 +3384,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &6180168534779704900
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3400,7 +3444,7 @@ GameObject:
   - component: {fileID: 8718196041927371399}
   - component: {fileID: 4263437786081311999}
   - component: {fileID: 8916508608313022644}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (65)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3496,6 +3540,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &8916508608313022644
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3554,7 +3600,7 @@ GameObject:
   - component: {fileID: 4816192139637726911}
   - component: {fileID: 4761747172189188905}
   - component: {fileID: 8270678017216476759}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3650,6 +3696,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &8270678017216476759
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3708,7 +3756,7 @@ GameObject:
   - component: {fileID: 1087196694703532222}
   - component: {fileID: 1282962921648524482}
   - component: {fileID: 7497387909213199027}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (91)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3804,6 +3852,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7497387909213199027
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3862,7 +3912,7 @@ GameObject:
   - component: {fileID: 7921554897158802447}
   - component: {fileID: 304265399790148206}
   - component: {fileID: 5347007556416800311}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (73)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3958,6 +4008,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5347007556416800311
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4016,7 +4068,7 @@ GameObject:
   - component: {fileID: 5108598097885523632}
   - component: {fileID: 5959866318042523327}
   - component: {fileID: 478177013504899967}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4112,6 +4164,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &478177013504899967
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4170,7 +4224,7 @@ GameObject:
   - component: {fileID: 1508427132532862524}
   - component: {fileID: 4452087372307589336}
   - component: {fileID: 1438189428323609254}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (76)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4266,6 +4320,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &1438189428323609254
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4321,7 +4377,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4493671115025117539}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bricks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4446,7 +4502,7 @@ GameObject:
   - component: {fileID: 2653523610057806490}
   - component: {fileID: 9122875739612715199}
   - component: {fileID: 5793334206048327952}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4542,6 +4598,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5793334206048327952
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4600,7 +4658,7 @@ GameObject:
   - component: {fileID: 1674770163828435119}
   - component: {fileID: 7928362521137114978}
   - component: {fileID: 1365815454743504074}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (72)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4696,6 +4754,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &1365815454743504074
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4754,7 +4814,7 @@ GameObject:
   - component: {fileID: 2535425290381162455}
   - component: {fileID: 7351370378065881597}
   - component: {fileID: 188395744270615589}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (71)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4850,6 +4910,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &188395744270615589
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4908,7 +4970,7 @@ GameObject:
   - component: {fileID: 5227200592234573595}
   - component: {fileID: 8131847059871923731}
   - component: {fileID: 1591533244120192099}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (77)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5004,6 +5066,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &1591533244120192099
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5062,7 +5126,7 @@ GameObject:
   - component: {fileID: 8795371960500983635}
   - component: {fileID: 5047090469808350421}
   - component: {fileID: 3143758017318381674}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5158,6 +5222,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &3143758017318381674
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5216,7 +5282,7 @@ GameObject:
   - component: {fileID: 7689315827760920344}
   - component: {fileID: 803729443382919367}
   - component: {fileID: 7290299982472687679}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5312,6 +5378,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7290299982472687679
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5370,7 +5438,7 @@ GameObject:
   - component: {fileID: 8824776092839605110}
   - component: {fileID: 106067464084922749}
   - component: {fileID: 3064801437634269519}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (64)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5466,6 +5534,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &3064801437634269519
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5524,7 +5594,7 @@ GameObject:
   - component: {fileID: 8149096911287464948}
   - component: {fileID: 2988966310693580750}
   - component: {fileID: 3503435719473671117}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (79)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5620,6 +5690,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &3503435719473671117
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5678,7 +5750,7 @@ GameObject:
   - component: {fileID: 6262645701766058189}
   - component: {fileID: 9175317481856854101}
   - component: {fileID: 1904550382967704323}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5774,6 +5846,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &1904550382967704323
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5832,7 +5906,7 @@ GameObject:
   - component: {fileID: 1896079423194610639}
   - component: {fileID: 9060191337427397329}
   - component: {fileID: 2554744224609709748}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5928,6 +6002,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &2554744224609709748
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5986,7 +6062,7 @@ GameObject:
   - component: {fileID: 1705627027347020468}
   - component: {fileID: 1076407874037143809}
   - component: {fileID: 7953296985985775805}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6082,6 +6158,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7953296985985775805
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6140,7 +6218,7 @@ GameObject:
   - component: {fileID: 2254455420356902074}
   - component: {fileID: 6821784544410451306}
   - component: {fileID: 266552048450085133}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (74)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6236,6 +6314,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &266552048450085133
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6294,7 +6374,7 @@ GameObject:
   - component: {fileID: 8464672376936075025}
   - component: {fileID: 8181913484966293320}
   - component: {fileID: 4023971557659491234}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (52)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6390,6 +6470,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4023971557659491234
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6448,7 +6530,7 @@ GameObject:
   - component: {fileID: 6008114889319276347}
   - component: {fileID: 4288014376214414998}
   - component: {fileID: 7879215373328607157}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6544,6 +6626,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7879215373328607157
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6602,7 +6686,7 @@ GameObject:
   - component: {fileID: 281676997714025760}
   - component: {fileID: 1319374814714151249}
   - component: {fileID: 1310909428869237717}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6698,6 +6782,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &1310909428869237717
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6756,7 +6842,7 @@ GameObject:
   - component: {fileID: 8306923268083396497}
   - component: {fileID: 8853912526059783931}
   - component: {fileID: 9161153199159130393}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6852,6 +6938,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &9161153199159130393
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6910,7 +6998,7 @@ GameObject:
   - component: {fileID: 7967559372108438803}
   - component: {fileID: 6180233283116022092}
   - component: {fileID: 4677605953496981471}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7006,6 +7094,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4677605953496981471
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7064,7 +7154,7 @@ GameObject:
   - component: {fileID: 3991333620684746928}
   - component: {fileID: 5370235741414518940}
   - component: {fileID: 2948658808282788173}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7160,6 +7250,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &2948658808282788173
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7218,7 +7310,7 @@ GameObject:
   - component: {fileID: 5802869851018993876}
   - component: {fileID: 8129545659869881264}
   - component: {fileID: 8525299899620140043}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (58)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7314,6 +7406,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &8525299899620140043
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7372,7 +7466,7 @@ GameObject:
   - component: {fileID: 7082531412980060325}
   - component: {fileID: 470389140766519636}
   - component: {fileID: 6505868305245876949}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7468,6 +7562,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &6505868305245876949
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7526,7 +7622,7 @@ GameObject:
   - component: {fileID: 7278261383814061740}
   - component: {fileID: 7560804134633819486}
   - component: {fileID: 6696341461046722907}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (68)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7622,6 +7718,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &6696341461046722907
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7680,7 +7778,7 @@ GameObject:
   - component: {fileID: 8624752144029334382}
   - component: {fileID: 2703912173402812006}
   - component: {fileID: 5366237664943445459}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (44)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7776,6 +7874,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5366237664943445459
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7834,7 +7934,7 @@ GameObject:
   - component: {fileID: 7357734411780469934}
   - component: {fileID: 3346283177279216653}
   - component: {fileID: 4203820350086338933}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (62)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7930,6 +8030,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4203820350086338933
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7988,7 +8090,7 @@ GameObject:
   - component: {fileID: 476731299573312674}
   - component: {fileID: 4980270906160337516}
   - component: {fileID: 5554160100303759251}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (63)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8084,6 +8186,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5554160100303759251
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8142,7 +8246,7 @@ GameObject:
   - component: {fileID: 9014303556286420662}
   - component: {fileID: 622554492993338714}
   - component: {fileID: 7275461476928012324}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8238,6 +8342,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7275461476928012324
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8296,7 +8402,7 @@ GameObject:
   - component: {fileID: 2280868520664089459}
   - component: {fileID: 9108649585864776731}
   - component: {fileID: 4744230757595029934}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (49)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8392,6 +8498,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4744230757595029934
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8483,7 +8591,7 @@ GameObject:
   - component: {fileID: 513271102484886129}
   - component: {fileID: 1370391219641050093}
   - component: {fileID: 4749794290038217931}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8579,6 +8687,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4749794290038217931
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8637,7 +8747,7 @@ GameObject:
   - component: {fileID: 2257720236676760205}
   - component: {fileID: 6416801542070853352}
   - component: {fileID: 750263193714955148}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (86)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8733,6 +8843,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &750263193714955148
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8791,7 +8903,7 @@ GameObject:
   - component: {fileID: 1290788115116476391}
   - component: {fileID: 892613602644968084}
   - component: {fileID: 8972309937631822673}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (67)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8887,6 +8999,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &8972309937631822673
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8945,7 +9059,7 @@ GameObject:
   - component: {fileID: 6483428995622257318}
   - component: {fileID: 5027062355282573178}
   - component: {fileID: 5266858296310646081}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9041,6 +9155,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5266858296310646081
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9099,7 +9215,7 @@ GameObject:
   - component: {fileID: 6880251314019481584}
   - component: {fileID: 2907191636983532128}
   - component: {fileID: 1376776614184180397}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9195,6 +9311,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &1376776614184180397
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9253,7 +9371,7 @@ GameObject:
   - component: {fileID: 5357048275259537387}
   - component: {fileID: 5078423019672463622}
   - component: {fileID: 6959323014406820222}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (57)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9349,6 +9467,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &6959323014406820222
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9407,7 +9527,7 @@ GameObject:
   - component: {fileID: 2440816960174121302}
   - component: {fileID: 8673104043186861240}
   - component: {fileID: 548030491382962336}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (50)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9503,6 +9623,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &548030491382962336
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9561,7 +9683,7 @@ GameObject:
   - component: {fileID: 4242403853337247239}
   - component: {fileID: 2426189957544550765}
   - component: {fileID: 5445980116420138876}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9657,6 +9779,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5445980116420138876
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9715,7 +9839,7 @@ GameObject:
   - component: {fileID: 5778775963138182346}
   - component: {fileID: 7573260347675145887}
   - component: {fileID: 935152205263524400}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (84)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9811,6 +9935,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &935152205263524400
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9869,7 +9995,7 @@ GameObject:
   - component: {fileID: 5845476376199925374}
   - component: {fileID: 1377534509673764657}
   - component: {fileID: 2389197748869037716}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (56)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9965,6 +10091,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &2389197748869037716
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10023,7 +10151,7 @@ GameObject:
   - component: {fileID: 128004145565653597}
   - component: {fileID: 5073610635332652888}
   - component: {fileID: 7551465377172941750}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10119,6 +10247,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7551465377172941750
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10177,7 +10307,7 @@ GameObject:
   - component: {fileID: 8660193594248440932}
   - component: {fileID: 2720055441337033026}
   - component: {fileID: 3417170033194273295}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (88)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10273,6 +10403,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &3417170033194273295
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10331,7 +10463,7 @@ GameObject:
   - component: {fileID: 8751720507088636285}
   - component: {fileID: 4935819272657083808}
   - component: {fileID: 7868948729127775511}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (61)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10427,6 +10559,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7868948729127775511
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10485,7 +10619,7 @@ GameObject:
   - component: {fileID: 6655347543916124037}
   - component: {fileID: 2269234510067553971}
   - component: {fileID: 3178531265091243233}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10581,6 +10715,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &3178531265091243233
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10639,7 +10775,7 @@ GameObject:
   - component: {fileID: 7633320103380063311}
   - component: {fileID: 3443030117482249578}
   - component: {fileID: 5656336595023187654}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (48)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10735,6 +10871,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5656336595023187654
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10880,7 +11018,7 @@ GameObject:
   - component: {fileID: 7288269508749707226}
   - component: {fileID: 2606927832997405441}
   - component: {fileID: 2026262215993874033}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10976,6 +11114,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &2026262215993874033
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11034,7 +11174,7 @@ GameObject:
   - component: {fileID: 6577488855085586544}
   - component: {fileID: 1309737864482499293}
   - component: {fileID: 7314514583942320282}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11130,6 +11270,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7314514583942320282
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11188,7 +11330,7 @@ GameObject:
   - component: {fileID: 2687202406707668235}
   - component: {fileID: 1550242158518320871}
   - component: {fileID: 7280649754444213047}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11284,6 +11426,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7280649754444213047
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11342,7 +11486,7 @@ GameObject:
   - component: {fileID: 4628041201440013275}
   - component: {fileID: 8543419294458128701}
   - component: {fileID: 5014842710798552427}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (55)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11438,6 +11582,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5014842710798552427
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11496,7 +11642,7 @@ GameObject:
   - component: {fileID: 5249394886937472137}
   - component: {fileID: 6856522819343631797}
   - component: {fileID: 4993782120256576229}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11592,6 +11738,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4993782120256576229
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11650,7 +11798,7 @@ GameObject:
   - component: {fileID: 77787055640438563}
   - component: {fileID: 2239805617212815124}
   - component: {fileID: 2307020070905704148}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11746,6 +11894,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &2307020070905704148
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11804,7 +11954,7 @@ GameObject:
   - component: {fileID: 5731607509893489199}
   - component: {fileID: 6406644370731334592}
   - component: {fileID: 7364618036045844262}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (80)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11900,6 +12050,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7364618036045844262
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11958,7 +12110,7 @@ GameObject:
   - component: {fileID: 2495987400901718394}
   - component: {fileID: 6266478553229400784}
   - component: {fileID: 4895433911665830161}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12054,6 +12206,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4895433911665830161
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12112,7 +12266,7 @@ GameObject:
   - component: {fileID: 6948564067042453488}
   - component: {fileID: 8839054934210121201}
   - component: {fileID: 986151838852567549}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12208,6 +12362,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &986151838852567549
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12266,7 +12422,7 @@ GameObject:
   - component: {fileID: 1286746132981155490}
   - component: {fileID: 324746093563003485}
   - component: {fileID: 3968691719227172417}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12362,6 +12518,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &3968691719227172417
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12420,7 +12578,7 @@ GameObject:
   - component: {fileID: 2356815987215565413}
   - component: {fileID: 2608782483906656975}
   - component: {fileID: 7603274051333887752}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12516,6 +12674,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7603274051333887752
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12574,7 +12734,7 @@ GameObject:
   - component: {fileID: 3856639816614495925}
   - component: {fileID: 9107866347627672297}
   - component: {fileID: 1279977532425523883}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12670,6 +12830,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &1279977532425523883
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12728,7 +12890,7 @@ GameObject:
   - component: {fileID: 2763858650744460901}
   - component: {fileID: 3401539169898763238}
   - component: {fileID: 2906517842967207237}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12824,6 +12986,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &2906517842967207237
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12882,7 +13046,7 @@ GameObject:
   - component: {fileID: 2150181208394463962}
   - component: {fileID: 3832920612957052729}
   - component: {fileID: 5277229803635870684}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (60)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12978,6 +13142,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5277229803635870684
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13036,7 +13202,7 @@ GameObject:
   - component: {fileID: 8009833424882224480}
   - component: {fileID: 5070224159762838153}
   - component: {fileID: 4354626330432383923}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13132,6 +13298,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4354626330432383923
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13190,7 +13358,7 @@ GameObject:
   - component: {fileID: 5854891761421205100}
   - component: {fileID: 2272696068178816290}
   - component: {fileID: 3865883867229848675}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (83)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13286,6 +13454,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &3865883867229848675
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13344,7 +13514,7 @@ GameObject:
   - component: {fileID: 8761591209955022339}
   - component: {fileID: 8699317180833549666}
   - component: {fileID: 5961220574791428893}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (85)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13440,6 +13610,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5961220574791428893
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13498,7 +13670,7 @@ GameObject:
   - component: {fileID: 8341542995769862824}
   - component: {fileID: 1288500809234712048}
   - component: {fileID: 2917324179545735855}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13594,6 +13766,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &2917324179545735855
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13652,7 +13826,7 @@ GameObject:
   - component: {fileID: 6296085575785682303}
   - component: {fileID: 7184113378505370689}
   - component: {fileID: 3009715436860031252}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (46)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13748,6 +13922,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &3009715436860031252
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13806,7 +13982,7 @@ GameObject:
   - component: {fileID: 2001697773319240626}
   - component: {fileID: 4220986719553629369}
   - component: {fileID: 7271495888364733048}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (90)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13902,6 +14078,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7271495888364733048
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13960,7 +14138,7 @@ GameObject:
   - component: {fileID: 7796180867195025922}
   - component: {fileID: 8244419235252854658}
   - component: {fileID: 8699887637990149001}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (87)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14056,6 +14234,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &8699887637990149001
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14114,7 +14294,7 @@ GameObject:
   - component: {fileID: 1665566927008189139}
   - component: {fileID: 3235261989830066492}
   - component: {fileID: 470416169862177746}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brick (53)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14210,6 +14390,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &470416169862177746
 BoxCollider2D:
   m_ObjectHideFlags: 0
