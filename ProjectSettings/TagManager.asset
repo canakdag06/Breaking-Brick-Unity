@@ -7,6 +7,8 @@ TagManager:
   - Paddle
   - DeathWall
   - Ball
+  - LaserProjectile
+  - Brick
   layers:
   - Default
   - TransparentFX
@@ -18,7 +20,7 @@ TagManager:
   - DeathWall
   - PowerUp
   - Ball
-  - 
+  - LaserProjectile
   - 
   - 
   - 
