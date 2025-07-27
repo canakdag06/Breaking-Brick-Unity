@@ -14,10 +14,12 @@ public class Paddle : MonoBehaviour
     [SerializeField] private SpriteRenderer paddleRenderer;
     [SerializeField] private Transform leftLaser, rightLaser;
     [SerializeField] private Animation lasersEnabledAnimation;
+    [SerializeField] private GameObject laserProjectilePrefab;
 
     [Header("Movement Settings")]
     [SerializeField] private int launchSpeed;
     [SerializeField] private float moveSpeed;
+    [SerializeField] private float shootRate;
 
     [Header("Visuals")]
     [SerializeField] private PaddleVisualData[] visualDatas;
@@ -40,7 +42,7 @@ public class Paddle : MonoBehaviour
     private float halfWallWidth;
 
     private Coroutine disableLaserRoutine;
-
+    private Coroutine shootingRoutine;
 
     // ======================= LIFECYCLE =======================
     private void Awake()
@@ -233,12 +235,13 @@ public class Paddle : MonoBehaviour
     }
 
     // ======================= POWER-UPS =======================
-    
+
     public void EnableLaser(float laserDuration)
     {
         if (disableLaserRoutine != null)
         {
             StopCoroutine(disableLaserRoutine);
+            StopCoroutine(shootingRoutine);
         }
         else
         {
@@ -248,24 +251,43 @@ public class Paddle : MonoBehaviour
             lasersEnabledAnimation.Play();
         }
 
-            // Particle ON
-
-            leftLaser.gameObject.SetActive(true);
+        leftLaser.gameObject.SetActive(true);
         rightLaser.gameObject.SetActive(true);
 
         disableLaserRoutine = StartCoroutine(LaserTimer(laserDuration));
+
+        if (shootingRoutine == null)
+        {
+            shootingRoutine = StartCoroutine(Shoot());
+        }
+    }
+
+    private IEnumerator Shoot()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(shootRate);
+            Vector2 left = leftLaser.position;
+            Vector2 right = rightLaser.position;
+            Instantiate(laserProjectilePrefab, left, Quaternion.identity);
+            Instantiate(laserProjectilePrefab, right, Quaternion.identity);
+        }
     }
 
     private IEnumerator LaserTimer(float laserDuration)
     {
         yield return new WaitForSeconds(laserDuration);
 
-        // Particle OFF
-
         // Animation
         lasersEnabledAnimation[lasersEnabledAnimation.clip.name].speed = -1f;
         lasersEnabledAnimation[lasersEnabledAnimation.clip.name].time = lasersEnabledAnimation[lasersEnabledAnimation.clip.name].length;
         lasersEnabledAnimation.Play();
+
+        if (shootingRoutine != null)
+        {
+            StopCoroutine(shootingRoutine);
+            shootingRoutine = null;
+        }
 
         // Wait for animation to end
         yield return new WaitForSeconds(lasersEnabledAnimation[lasersEnabledAnimation.clip.name].length);
@@ -273,6 +295,7 @@ public class Paddle : MonoBehaviour
         leftLaser.gameObject.SetActive(false);
         rightLaser.gameObject.SetActive(false);
         disableLaserRoutine = null;
+
     }
 
     public void EnableMagnet()

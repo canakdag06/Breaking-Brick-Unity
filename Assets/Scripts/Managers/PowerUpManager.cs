@@ -59,7 +59,6 @@ public class PowerUpManager : MonoBehaviour
 
     private void ApplyFlamingBall()
     {
-        Debug.Log("FLAMING BALL APLIED");
         BallManager.Instance.EnableFlamingBall(flamingBallDuration);
     }
 

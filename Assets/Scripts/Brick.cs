@@ -118,7 +118,7 @@ public class Brick : MonoBehaviour
 
     private void SwitchColliderMode(bool isEnable)
     {
-        if(isEnable)
+        if (isEnable)
         {
             col.isTrigger = true;
         }
@@ -130,15 +130,21 @@ public class Brick : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Ball"))
+        if (!isBreakable)
         {
-            if (!isBreakable)
-            {
-                return;
-            }
+            return;
+        }
+
+        if (collision.gameObject.CompareTag("Ball"))
+        {
             brickCollider.enabled = false;
             StartCoroutine(PlayBreakAnimation());
             ScoreManager.Instance.AddScore(health);
+        }
+        else if (collision.gameObject.CompareTag("LaserProjectile"))
+        {
+            Hit();
+            Destroy(collision.gameObject);
         }
     }
 }
