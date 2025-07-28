@@ -5,6 +5,8 @@ public class Ball : MonoBehaviour
     public Vector2 CurrentDirection => rb.linearVelocity.normalized;
     public float CurrentSpeed => rb.linearVelocity.magnitude;
 
+    public bool IsLaunched { get; private set; }
+
     [SerializeField] private ParticleSystem flamingParticle;
 
     private Rigidbody2D rb;
@@ -18,6 +20,7 @@ public class Ball : MonoBehaviour
     public void Launch(Vector2 direction, float speed)
     {
         rb.linearVelocity = direction.normalized * speed;
+        IsLaunched = true;
     }
 
     //private void Update()
@@ -28,6 +31,7 @@ public class Ball : MonoBehaviour
     public void Stop()
     {
         rb.linearVelocity = Vector2.zero;
+        IsLaunched = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

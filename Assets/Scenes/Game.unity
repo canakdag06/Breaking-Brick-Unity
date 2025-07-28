@@ -2761,6 +2761,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LaserProjectile
       objectReference: {fileID: 0}
+    - target: {fileID: 1675856886724406399, guid: 68db6f6b7457cef4e945f4a6dcf2d179, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9023565807976164345, guid: 68db6f6b7457cef4e945f4a6dcf2d179, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.273

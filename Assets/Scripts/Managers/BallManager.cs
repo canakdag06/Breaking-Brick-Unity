@@ -109,6 +109,9 @@ public class BallManager : MonoBehaviour
         List<Ball> currentBalls = new(activeBalls);
         foreach (var originalBall in currentBalls)
         {
+            if (!originalBall.IsLaunched)
+                continue;
+
             Ball newBall = GetBallFromPool();
             newBall.transform.position = originalBall.transform.position;
 
