@@ -91,7 +91,7 @@ public class BallManager : MonoBehaviour
 
     public bool HasActiveBalls()
     {
-        return activeBalls.Count > 0 ? true : false;
+        return activeBalls.Count > 0;
     }
 
     private Ball InstantiateNewBall()

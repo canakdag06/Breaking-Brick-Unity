@@ -64,7 +64,6 @@ public class PowerUpManager : MonoBehaviour
 
     private void ApplyLaser()
     {
-        Debug.Log("LASER APLIED");
         Paddle.Instance.EnableLaser(laserDuration);
     }
 
