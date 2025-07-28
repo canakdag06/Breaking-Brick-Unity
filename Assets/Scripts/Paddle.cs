@@ -238,28 +238,26 @@ public class Paddle : MonoBehaviour
 
     public void EnableLaser(float laserDuration)
     {
-        if (disableLaserRoutine != null)
+        if (disableLaserRoutine != null && shootingRoutine != null)
         {
             StopCoroutine(disableLaserRoutine);
             StopCoroutine(shootingRoutine);
+            disableLaserRoutine = null;
+            shootingRoutine = null;
         }
         else
         {
             // Animation
             lasersEnabledAnimation[lasersEnabledAnimation.clip.name].speed = 1f;
             lasersEnabledAnimation[lasersEnabledAnimation.clip.name].time = 0f;
+            leftLaser.gameObject.SetActive(true);
+            rightLaser.gameObject.SetActive(true);
             lasersEnabledAnimation.Play();
         }
 
-        leftLaser.gameObject.SetActive(true);
-        rightLaser.gameObject.SetActive(true);
 
         disableLaserRoutine = StartCoroutine(LaserTimer(laserDuration));
-
-        if (shootingRoutine == null)
-        {
-            shootingRoutine = StartCoroutine(Shoot());
-        }
+        shootingRoutine = StartCoroutine(Shoot());
     }
 
     private IEnumerator Shoot()

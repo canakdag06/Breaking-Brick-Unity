@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7913309690406671172}
   - component: {fileID: 6085836804613177917}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: paddle_part_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9044293634030290496}
   - component: {fileID: 4801333392838279629}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: paddle_long_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 6821277453919950300}
   - component: {fileID: 6249127896097942694}
   - component: {fileID: 4193342268656985307}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WallRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 5020809913241008082}
   - component: {fileID: 8030054493091124520}
   - component: {fileID: 8601986021554666271}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WallLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8684690680406118254}
   - component: {fileID: 8527611196400569556}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WallTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -674,7 +674,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6857176734447423863}
   - component: {fileID: 1992311054032129335}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: paddle_part_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
