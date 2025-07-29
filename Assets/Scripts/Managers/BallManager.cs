@@ -100,6 +100,7 @@ public class BallManager : MonoBehaviour
         obj.SetActive(false);
         Ball ball = obj.GetComponent<Ball>();
         ballPool.Add(ball);
+        ball.transform.SetParent(this.transform);
         return ball;
     }
 
