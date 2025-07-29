@@ -12,7 +12,7 @@ public class LaserProjectile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Brick"))
+        if (collision.gameObject.CompareTag("Brick") || collision.gameObject.CompareTag("DeathWall"))
         {
             Destroy(gameObject);
         }
