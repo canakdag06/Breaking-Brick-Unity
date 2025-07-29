@@ -73,7 +73,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.04}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -83,7 +83,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.48, y: 0.1}
+  m_Size: {x: 0.48, y: 0.01}
   m_EdgeRadius: 0
 --- !u!50 &3047797958772637073
 Rigidbody2D:
@@ -139,23 +139,23 @@ MonoBehaviour:
   - sprite: {fileID: 6081121525837946721, guid: 54b0526411b477548b71b310f9b55638, type: 3}
     leftLaserPosition: {x: -0.29, y: 0}
     rightLaserPosition: {x: 0.29, y: 0}
-    colliderSize: {x: 0.48, y: 0.1}
-    colliderOffset: {x: 0, y: 0}
+    colliderSize: {x: 0.48, y: 0.01}
+    colliderOffset: {x: 0, y: 0.04}
   - sprite: {fileID: -4420557365393547033, guid: 54b0526411b477548b71b310f9b55638, type: 3}
     leftLaserPosition: {x: -0.32, y: 0}
     rightLaserPosition: {x: 0.32, y: 0}
-    colliderSize: {x: 0.54, y: 0.1}
-    colliderOffset: {x: 0, y: 0}
+    colliderSize: {x: 0.54, y: 0.01}
+    colliderOffset: {x: 0, y: 0.04}
   - sprite: {fileID: -105948635, guid: 54b0526411b477548b71b310f9b55638, type: 3}
     leftLaserPosition: {x: -0.35, y: 0}
     rightLaserPosition: {x: 0.35, y: 0}
-    colliderSize: {x: 0.6, y: 0.1}
-    colliderOffset: {x: 0, y: 0}
+    colliderSize: {x: 0.6, y: 0.01}
+    colliderOffset: {x: 0, y: 0.04}
   - sprite: {fileID: -4439983971200399806, guid: 54b0526411b477548b71b310f9b55638, type: 3}
     leftLaserPosition: {x: -0.37, y: 0}
     rightLaserPosition: {x: 0.37, y: 0}
-    colliderSize: {x: 0.64, y: 0.1}
-    colliderOffset: {x: 0, y: 0}
+    colliderSize: {x: 0.64, y: 0.01}
+    colliderOffset: {x: 0, y: 0.04}
   expandDuration: 20
 --- !u!111 &2514353212366405806
 Animation:
