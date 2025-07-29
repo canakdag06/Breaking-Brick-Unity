@@ -23,11 +23,6 @@ public class Ball : MonoBehaviour
         IsLaunched = true;
     }
 
-    //private void Update()
-    //{
-    //    Debug.Log(rb.linearVelocity.sqrMagnitude);
-    //}
-
     public void Stop()
     {
         rb.linearVelocity = Vector2.zero;
@@ -53,6 +48,11 @@ public class Ball : MonoBehaviour
 
     private void HandlePaddleCollision(Collision2D collision)
     {
+        if (Paddle.Instance.TryMagnetAttach(this))  // Magnet power-up check
+        {
+            return;
+        }
+
         Bounds paddleBounds = collision.collider.bounds;
         Vector2 contactPoint = collision.GetContact(0).point;
         float offset = (contactPoint.x - paddleBounds.center.x) / (paddleBounds.extents.x);

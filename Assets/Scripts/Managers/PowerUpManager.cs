@@ -6,6 +6,7 @@ public class PowerUpManager : MonoBehaviour
 
     [SerializeField] private float flamingBallDuration = 10f;
     [SerializeField] private float laserDuration = 10f;
+    [SerializeField] private float magnetDuration = 10f;
 
     private void Awake()
     {
@@ -69,7 +70,6 @@ public class PowerUpManager : MonoBehaviour
 
     private void ApplyMagnet()
     {
-        Debug.Log("MAGNET APLIED");
-        Paddle.Instance.EnableMagnet();
+        Paddle.Instance.EnableMagnet(magnetDuration);
     }
 }

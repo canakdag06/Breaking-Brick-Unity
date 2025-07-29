@@ -43,6 +43,10 @@ public class Paddle : MonoBehaviour
 
     private Coroutine disableLaserRoutine;
     private Coroutine shootingRoutine;
+    private Coroutine disableMagnetRoutine;
+
+    private bool isMagnetActive = false;
+    private bool isMagnetLaunchReady = false;
 
     // ======================= LIFECYCLE =======================
     private void Awake()
@@ -84,6 +88,9 @@ public class Paddle : MonoBehaviour
         PaddleMovement();
         ControlBall();
         inputReader.ResetInputs();
+
+        //Debug.Log("isMagnetActive => " + isMagnetActive);
+        //Debug.Log("isMagnetLaunchReady =>" + isMagnetLaunchReady);
     }
 
 
@@ -126,6 +133,7 @@ public class Paddle : MonoBehaviour
 
             Vector2 dir = new Vector2(xDirection, 1f).normalized;
             ball.Launch(dir, launchSpeed);
+            isMagnetLaunchReady = false;
         }
     }
 
@@ -141,23 +149,23 @@ public class Paddle : MonoBehaviour
 
     // ======================= VISUAL CONTROL =======================
 
-    private void ApplyVisual(int level)
-    {
-        if (level < 0 || level > visualDatas.Length)
-        {
-            Debug.LogWarning($"Invalid paddle visual level: {level}");
-        }
-        visualLevel = level;
+    //private void ApplyVisual(int level)
+    //{
+    //    if (level < 0 || level > visualDatas.Length)
+    //    {
+    //        Debug.LogWarning($"Invalid paddle visual level: {level}");
+    //    }
+    //    visualLevel = level;
 
-        var data = visualDatas[level];
-        paddleRenderer.sprite = data.sprite;
-        leftLaser.localPosition = data.leftLaserPosition;
-        rightLaser.localPosition = data.rightLaserPosition;
-        paddleCollider.size = data.colliderSize;
-        paddleCollider.offset = data.colliderOffset;
+    //    var data = visualDatas[level];
+    //    paddleRenderer.sprite = data.sprite;
+    //    leftLaser.localPosition = data.leftLaserPosition;
+    //    rightLaser.localPosition = data.rightLaserPosition;
+    //    paddleCollider.size = data.colliderSize;
+    //    paddleCollider.offset = data.colliderOffset;
 
-        UpdatePaddleHalfWidth();
-    }
+    //    UpdatePaddleHalfWidth();
+    //}
 
 
     private void UpdatePaddleHalfWidth()
@@ -296,9 +304,40 @@ public class Paddle : MonoBehaviour
 
     }
 
-    public void EnableMagnet()
+    public void EnableMagnet(float magnetDuration)
     {
-        return;
+        if(disableMagnetRoutine != null)
+        {
+            StopCoroutine(disableMagnetRoutine);
+            disableMagnetRoutine = null;
+        }
+
+        isMagnetActive = true;
+        disableMagnetRoutine = StartCoroutine(MagnetTimer(magnetDuration));
+    }
+
+    private IEnumerator MagnetTimer(float magnetDuration)
+    {
+        yield return new WaitForSeconds(magnetDuration);
+        disableMagnetRoutine = null;
+        isMagnetActive = false;
+    }
+
+    public bool TryMagnetAttach(Ball ball)
+    {
+        if(!isMagnetActive || isMagnetLaunchReady || disableMagnetRoutine == null)
+        {
+            return false;
+        }
+        isMagnetLaunchReady = true;
+
+        ball.Stop();
+        ball.transform.SetParent(transform);
+        ball.transform.position = ballLocation.position;
+
+        SetBall(ball);
+
+        return true;
     }
 }
 
