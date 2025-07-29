@@ -178,7 +178,6 @@ public class Paddle : MonoBehaviour
         if (visualLevel >= visualDatas.Length - 1)
             return;
 
-        StopAllCoroutines();
         StartCoroutine(PlayExpandAnimation());
 
         if (shrinkRoutine != null)
