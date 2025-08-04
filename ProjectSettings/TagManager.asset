@@ -9,6 +9,7 @@ TagManager:
   - Ball
   - LaserProjectile
   - Brick
+  - Enemy
   layers:
   - Default
   - TransparentFX
