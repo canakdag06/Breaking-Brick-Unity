@@ -33,8 +33,8 @@ public class Enemy : MonoBehaviour
             PickNewDirection();
             directionTimer = directionChangeInterval;
         }
-
-        rb.linearVelocity = currentDirection * moveSpeed;
+        Vector2 targetVelocity = currentDirection * moveSpeed;
+        rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, targetVelocity, Time.deltaTime * 5f);
     }
 
     void PickNewDirection()
