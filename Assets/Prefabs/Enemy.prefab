@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.5
-  directionChangeInterval: 1
+  directionChangeInterval: 3
   noiseStrength: 0.5
   raycastCheckDistance: 1
   obstacleLayers:
