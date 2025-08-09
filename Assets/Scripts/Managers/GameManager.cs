@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -29,8 +30,15 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         LevelManager.Instance.LoadLevel();
-        StartGame();
+        StartCoroutine(StartGameAfterLevelInfo());
         OnLifeChanged?.Invoke(lives);
+    }
+
+    private IEnumerator StartGameAfterLevelInfo()
+    {
+        yield return StartCoroutine(UIManager.Instance.ShowLevelInfo());
+
+        StartGame();
     }
 
     public void UpdateLives(bool isAdd)

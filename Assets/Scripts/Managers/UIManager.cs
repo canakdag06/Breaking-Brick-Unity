@@ -1,11 +1,33 @@
 ﻿using DG.Tweening;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+    public static UIManager Instance { get; private set; }
+
+    [Header("Level UI")]
+    [SerializeField] private TextMeshProUGUI levelInfoText;
+    [SerializeField] private float blinkInterval;
+    [SerializeField] private int blinkCount = 3;
+
+    [Header("Score UI")]
     [SerializeField] private TextMeshProUGUI scoreText;
+
+    [Header("Lives UI")]
     [SerializeField] private Transform[] lives;
+
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -18,6 +40,20 @@ public class UIManager : MonoBehaviour
     {
         ScoreManager.Instance.OnScoreChanged -= UpdateScoreText;
         GameManager.Instance.OnLifeChanged -= UpdateLivesUI;
+    }
+
+    public IEnumerator ShowLevelInfo()
+    {
+        levelInfoText.text = "LEVEL " + LevelManager.Instance.CurrentLevelIndex + "\nBREAK THEM ALL!";
+
+        for (int i = 0; i < blinkCount; i++)
+        {
+            levelInfoText.enabled = true;   // ON
+            yield return new WaitForSeconds(blinkInterval);
+
+            levelInfoText.enabled = false; // OFF
+            yield return new WaitForSeconds(blinkInterval);
+        }
     }
 
     private void UpdateScoreText(int newScore)
