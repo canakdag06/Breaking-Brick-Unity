@@ -4,11 +4,13 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance { get; private set; }
+    public EnemySpawner enemySpawner;
 
     [Header("Levels")]
     [SerializeField] private List<GameObject> levelPrefabs;
 
     private GameObject currentLevel;
+    private int currentLevelIndex = -1;
 
     private void Awake()
     {
@@ -21,29 +23,30 @@ public class LevelManager : MonoBehaviour
         Instance = this;
     }
 
-    public void LoadLevel(int levelIndex)
+    public void LoadLevel()
     {
-        if (currentLevel != null)
-        {
-            Destroy(currentLevel);
-            return;
-        }
+        //if (currentLevel != null)
+        //{
+        //    Destroy(currentLevel);
+        //}
 
-        if (levelIndex < 0 || levelIndex >= levelPrefabs.Count)
+        currentLevelIndex++;
+
+        if (currentLevelIndex < 0 || currentLevelIndex >= levelPrefabs.Count)
         {
             Debug.LogError("Invalid level index!");
             return;
         }
 
-        currentLevel = Instantiate(levelPrefabs[levelIndex], Vector3.zero, Quaternion.identity);
+        currentLevel = Instantiate(levelPrefabs[currentLevelIndex], Vector3.zero, Quaternion.identity);
     }
 
     public void ReloadCurrentLevel()
     {
         if (currentLevel != null)
         {
-            int index = levelPrefabs.IndexOf(currentLevel);
-            LoadLevel(index);
+            currentLevelIndex--;
+            LoadLevel();
         }
     }
 
