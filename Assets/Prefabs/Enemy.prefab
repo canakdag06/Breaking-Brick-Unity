@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ef7a238354815842aab23ae8b2511e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 4794182533369629940}
   moveSpeed: 0.5
   directionChangeInterval: 3
   noiseStrength: 0.5

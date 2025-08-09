@@ -1,19 +1,29 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public SpriteRenderer spriteRenderer;
+
     [Header("Movement Settings")]
     public float moveSpeed;
     public float directionChangeInterval;
     public float noiseStrength;
     public float raycastCheckDistance;
 
+    public LayerMask obstacleLayers;
+
     private Vector2 currentDirection;
     private float directionTimer;
     private Transform paddleTransform;
     private Rigidbody2D rb;
+    private bool canMove = false;
 
-    public LayerMask obstacleLayers;
+
+    private void OnEnable()
+    {
+        SpawnEffect();
+    }
 
     void Start()
     {
@@ -26,6 +36,12 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+
+
+        if (!canMove)
+        {
+            return;
+        }
         directionTimer -= Time.deltaTime;
 
         if (directionTimer <= 0)
@@ -35,6 +51,24 @@ public class Enemy : MonoBehaviour
         }
         Vector2 targetVelocity = currentDirection * moveSpeed;
         rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, targetVelocity, Time.deltaTime * 5f);
+    }
+
+    private void SpawnEffect()
+    {
+        transform.localScale = Vector3.zero;
+        Color startColor = spriteRenderer.color;
+        startColor.a = 0f;
+        spriteRenderer.color = startColor;
+
+        Sequence spawnSequence = DOTween.Sequence();
+        spawnSequence
+            .Append(transform.DOScale(Vector3.one, 2f).SetEase(Ease.Linear))
+            .Join(spriteRenderer.DOFade(1f, 2f))
+            .AppendInterval(1f)
+            .OnComplete(() =>
+            {
+                canMove = true;
+            });
     }
 
     void PickNewDirection()
@@ -76,6 +110,12 @@ public class Enemy : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("LaserProjectile") || collision.gameObject.CompareTag("Ball") || collision.gameObject.CompareTag("Paddle"))
+        {
+            // NEED EXPLOSION EFFECT HERE
+            Destroy(gameObject);
+        }
+
         PickNewDirection();
         directionTimer = directionChangeInterval;
     }
