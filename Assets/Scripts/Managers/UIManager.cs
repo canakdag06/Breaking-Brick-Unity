@@ -44,7 +44,7 @@ public class UIManager : MonoBehaviour
 
     public IEnumerator ShowLevelInfo()
     {
-        levelInfoText.text = "LEVEL " + LevelManager.Instance.CurrentLevelIndex + "\nBREAK THEM ALL!";
+        levelInfoText.text = "LEVEL " + (LevelManager.Instance.CurrentLevelIndex + 1) + "\nBREAK THEM ALL!";
 
         for (int i = 0; i < blinkCount; i++)
         {
