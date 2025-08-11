@@ -1,16 +1,18 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance { get; private set; }
-    public EnemySpawner enemySpawner;
     public int CurrentLevelIndex { get; private set; } = -1;
 
-    [Header("Levels")]
-    [SerializeField] private List<GameObject> levelPrefabs;
+    [Header("Level Data")]
+    [SerializeField] private List<LevelInfo> levels;
+
 
     private GameObject currentLevel;
+    public LevelInfo CurrentLevelInfo { get; private set; }
 
     private void Awake()
     {
@@ -32,13 +34,16 @@ public class LevelManager : MonoBehaviour
 
         CurrentLevelIndex++;
 
-        if (CurrentLevelIndex < 0 || CurrentLevelIndex >= levelPrefabs.Count)
+        if (CurrentLevelIndex < 0 || CurrentLevelIndex >= levels.Count)
         {
             Debug.LogError("Invalid level index!");
             return;
         }
 
-        currentLevel = Instantiate(levelPrefabs[CurrentLevelIndex], Vector3.zero, Quaternion.identity);
+        CurrentLevelInfo = levels[CurrentLevelIndex];
+        currentLevel = Instantiate(CurrentLevelInfo.levelPrefab, Vector3.zero, Quaternion.identity);
+
+        //EnemySpawner.Instance.Setup(levelInfo);  // EnemySpawner'ý level verisi ile ayarla
     }
 
     public void ReloadCurrentLevel()
@@ -50,4 +55,16 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+}
+
+[System.Serializable]
+public class LevelInfo
+{
+    public GameObject levelPrefab;
+
+    [Header("Enemy Settings")]
+    public EnemyType enemyType;
+    public float enemySpawnInterval = 15f;
+    public float enemyMoveSpeed = 0.5f;
+    public int maxEnemiesOnScene = 2;
 }
