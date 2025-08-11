@@ -11,5 +11,5 @@ public class EnemyAnimationSet
 [CreateAssetMenu(fileName = "EnemyAnimations", menuName = "Game/Enemy Animations")]
 public class EnemyAnimations : ScriptableObject
 {
-    public List<EnemyAnimationSet> enemyAnimations;
+    public List<EnemyAnimationSet> sprites;
 }
