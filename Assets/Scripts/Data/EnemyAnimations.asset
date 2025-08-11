@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeebd82868b1f164fafc05877b93fdcd, type: 3}
+  m_Name: EnemyAnimations
+  m_EditorClassIdentifier: 
+  enemyAnimations:
+  - enemyType: 0
+    animationSprites:
+    - {fileID: -1497958749, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 1600593574, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 826597903, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+  - enemyType: 1
+    animationSprites:
+    - {fileID: 1493685831, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 1519284240, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 758759295, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+  - enemyType: 2
+    animationSprites:
+    - {fileID: -2039052019, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -1520624770, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 967221324, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+  - enemyType: 3
+    animationSprites:
+    - {fileID: 1167565036, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 242421839, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -597240420, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+  - enemyType: 4
+    animationSprites:
+    - {fileID: -3764422788339885089, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 7778144325751136126, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 4565035909591317280, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+  - enemyType: 5
+    animationSprites:
+    - {fileID: 1149788983, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 1003408826, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -1191912794, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+  - enemyType: 6
+    animationSprites:
+    - {fileID: -447669038, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 838248109, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 230934744, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+  - enemyType: 7
+    animationSprites:
+    - {fileID: 1898460232, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 1827264927, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 123067124, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+  - enemyType: 8
+    animationSprites:
+    - {fileID: -1796583950, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: -1483202056, guid: 54b0526411b477548b71b310f9b55638, type: 3}
+    - {fileID: 729338088, guid: 54b0526411b477548b71b310f9b55638, type: 3}
