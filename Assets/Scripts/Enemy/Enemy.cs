@@ -71,6 +71,11 @@ public class Enemy : MonoBehaviour
         rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, targetVelocity, Time.deltaTime * 5f);
     }
 
+    public void SetMoveSpeed(float value)
+    {
+        moveSpeed = value;
+    }
+
     private void LoopAnimation()
     {
         if (sprites == null || sprites.Length == 0) return;
