@@ -19,6 +19,15 @@ public class Enemy : MonoBehaviour
     private Rigidbody2D rb;
     private bool canMove = false;
 
+    private Sprite[] sprites;
+    private float frameRate;
+    private int currentFrame;
+    private float animationTimer;
+    private SpriteRenderer sr;
+    private float baseMoveSpeed = 0.5f;
+    private float baseFrameRate = 12f;
+
+
 
     private void OnEnable()
     {
@@ -34,9 +43,18 @@ public class Enemy : MonoBehaviour
         directionTimer = directionChangeInterval;
     }
 
+    public void Initialize(Sprite[] animationSprites)
+    {
+        sprites = animationSprites;
+        frameRate = baseFrameRate * (moveSpeed / baseMoveSpeed);
+        sr = GetComponent<SpriteRenderer>();
+        currentFrame = 0;
+        animationTimer = 0f;
+    }
+
     void Update()
     {
-
+        LoopAnimation();
 
         if (!canMove)
         {
@@ -51,6 +69,19 @@ public class Enemy : MonoBehaviour
         }
         Vector2 targetVelocity = currentDirection * moveSpeed;
         rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, targetVelocity, Time.deltaTime * 5f);
+    }
+
+    private void LoopAnimation()
+    {
+        if (sprites == null || sprites.Length == 0) return;
+
+        animationTimer += Time.deltaTime;
+        if (animationTimer >= frameRate)
+        {
+            animationTimer = 0f;
+            currentFrame = (currentFrame + 1) % sprites.Length;
+            sr.sprite = sprites[currentFrame];
+        }
     }
 
     private void SpawnEffect()
