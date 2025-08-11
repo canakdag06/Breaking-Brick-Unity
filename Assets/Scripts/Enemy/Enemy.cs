@@ -120,3 +120,4 @@ public class Enemy : MonoBehaviour
         directionTimer = directionChangeInterval;
     }
 }
+
