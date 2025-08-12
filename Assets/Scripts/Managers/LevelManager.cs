@@ -6,14 +6,15 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance { get; private set; }
     public EnemySpawner enemySpawner;
+    public LevelInfo CurrentLevelInfo { get; private set; }
     public int CurrentLevelIndex { get; private set; } = -1;
 
     [Header("Level Data")]
     [SerializeField] private List<LevelInfo> levels;
 
-
     private GameObject currentLevel;
-    public LevelInfo CurrentLevelInfo { get; private set; }
+    private int totalBricks;
+
 
     private void Awake()
     {
@@ -26,13 +27,18 @@ public class LevelManager : MonoBehaviour
         Instance = this;
     }
 
+    private void OnEnable()
+    {
+        Brick.OnBrickBreaks += HandleBrickBreaks;
+    }
+
+    private void OnDisable()
+    {
+        Brick.OnBrickBreaks -= HandleBrickBreaks;
+    }
+
     public void LoadLevel()
     {
-        //if (currentLevel != null)
-        //{
-        //    Destroy(currentLevel);
-        //}
-
         CurrentLevelIndex++;
 
         if (CurrentLevelIndex < 0 || CurrentLevelIndex >= levels.Count)
@@ -44,6 +50,8 @@ public class LevelManager : MonoBehaviour
         CurrentLevelInfo = levels[CurrentLevelIndex];
         currentLevel = Instantiate(CurrentLevelInfo.levelPrefab, Vector3.zero, Quaternion.identity);
         enemySpawner.InitializeEnemySpawner(CurrentLevelInfo, currentLevel);
+
+        CheckBrickCount();
     }
 
     public void ReloadCurrentLevel()
@@ -53,6 +61,34 @@ public class LevelManager : MonoBehaviour
             CurrentLevelIndex--;
             LoadLevel();
         }
+    }
+
+    private void CheckBrickCount()
+    {
+        totalBricks = 0;
+        Brick[] bricks = FindObjectsByType<Brick>(FindObjectsSortMode.None);
+        foreach (Brick brick in bricks)
+        {
+            if (brick.IsBreakable)
+            {
+                totalBricks++;
+            }
+        }
+    }
+
+    private void HandleBrickBreaks()
+    {
+        totalBricks--;
+
+        if(totalBricks == 0)
+        {
+            FinishLevel();
+        }
+    }
+
+    private void FinishLevel()
+    {
+        // Info text & Fade out
     }
 
 }
