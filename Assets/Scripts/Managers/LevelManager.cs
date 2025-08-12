@@ -53,6 +53,7 @@ public class LevelManager : MonoBehaviour
         enemySpawner.InitializeEnemySpawner(CurrentLevelInfo, currentLevel);
 
         CheckBrickCount();
+        StartCoroutine(StartLevelSequence());
     }
 
     public void ReloadCurrentLevel()
@@ -91,13 +92,13 @@ public class LevelManager : MonoBehaviour
     {
         yield return UIManager.Instance.ShowMessage("IS COMPLETED!");
         yield return UIManager.Instance.FadeOut(1f);
-
         LoadLevel();
     }
 
-    private void FinishLevel()
+    private IEnumerator StartLevelSequence()
     {
-        // Info text & Fade out
+        yield return UIManager.Instance.ShowMessage("BREAK THEM ALL!");
+        yield return UIManager.Instance.FadeIn(1f);
     }
 
 }

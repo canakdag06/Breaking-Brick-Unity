@@ -73,6 +73,19 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public IEnumerator FadeIn(float duration)
+    {
+        Color c = fadeImage.color;
+        float t = 0f;
+        while (t < duration)
+        {
+            t += Time.deltaTime;
+            c.a = Mathf.Lerp(1f, 0f, t / duration);
+            fadeImage.color = c;
+            yield return null;
+        }
+    }
+
     private void UpdateScoreText(int newScore)
     {
         if (scoreText != null)
@@ -86,14 +99,6 @@ public class UIManager : MonoBehaviour
 
     private void UpdateLivesUI(int currentLives)
     {
-        //for (int i = 0; i < lives.Length; i++)
-        //{
-        //    if (lives[i] != null)
-        //    {
-        //        lives[i].gameObject.SetActive(i < currentLives - 1);
-        //    }
-        //}
-
         for (int i = 0; i < lives.Length; i++)
         {
             GameObject lifeObj = lives[i].gameObject;
