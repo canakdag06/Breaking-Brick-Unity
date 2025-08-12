@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -82,8 +83,16 @@ public class LevelManager : MonoBehaviour
 
         if(totalBricks == 0)
         {
-            FinishLevel();
+            StartCoroutine(FinishLevelSequence());
         }
+    }
+
+    private IEnumerator FinishLevelSequence()
+    {
+        yield return UIManager.Instance.ShowMessage("IS COMPLETED!");
+        yield return UIManager.Instance.FadeOut(1f);
+
+        LoadLevel();
     }
 
     private void FinishLevel()

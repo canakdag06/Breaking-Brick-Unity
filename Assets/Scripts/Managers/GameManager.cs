@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator StartGameAfterLevelInfo()
     {
-        yield return StartCoroutine(UIManager.Instance.ShowLevelInfo());
+        yield return StartCoroutine(UIManager.Instance.ShowMessage("BREAK THEM ALL!"));
 
         StartGame();
     }

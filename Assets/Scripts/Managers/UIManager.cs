@@ -2,6 +2,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class UIManager : MonoBehaviour
 
     [Header("Lives UI")]
     [SerializeField] private Transform[] lives;
+
+    [SerializeField] private Image fadeImage;
 
 
     private void Awake()
@@ -42,9 +45,10 @@ public class UIManager : MonoBehaviour
         GameManager.Instance.OnLifeChanged -= UpdateLivesUI;
     }
 
-    public IEnumerator ShowLevelInfo()
+    public IEnumerator ShowMessage(string message)
     {
-        levelInfoText.text = "LEVEL " + (LevelManager.Instance.CurrentLevelIndex + 1) + "\nBREAK THEM ALL!";
+        levelInfoText.text = "LEVEL " + (LevelManager.Instance.CurrentLevelIndex + 1) + "\n"
+                                      + message;
 
         for (int i = 0; i < blinkCount; i++)
         {
@@ -53,6 +57,19 @@ public class UIManager : MonoBehaviour
 
             levelInfoText.enabled = false; // OFF
             yield return new WaitForSeconds(blinkInterval);
+        }
+    }
+
+    public IEnumerator FadeOut(float duration)
+    {
+        Color c = fadeImage.color;
+        float t = 0f;
+        while (t < duration)
+        {
+            t += Time.deltaTime;
+            c.a = Mathf.Lerp(0f, 1f, t / duration);
+            fadeImage.color = c;
+            yield return null;
         }
     }
 
