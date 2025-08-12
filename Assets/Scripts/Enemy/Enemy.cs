@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
     private float animationTimer;
     private SpriteRenderer sr;
     private float baseMoveSpeed = 0.5f;
-    private float baseFrameRate = 12f;
+    private float baseFrameRate = 1f;
 
 
 
@@ -46,7 +46,7 @@ public class Enemy : MonoBehaviour
     public void Initialize(Sprite[] animationSprites)
     {
         sprites = animationSprites;
-        frameRate = baseFrameRate * (moveSpeed / baseMoveSpeed);
+        frameRate = baseFrameRate * (baseMoveSpeed / moveSpeed);
         sr = GetComponent<SpriteRenderer>();
         currentFrame = 0;
         animationTimer = 0f;
