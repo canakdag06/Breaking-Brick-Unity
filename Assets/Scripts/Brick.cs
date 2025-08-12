@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -5,6 +6,10 @@ public class Brick : MonoBehaviour
 {
     public BrickColor color;
     public BrickData brickData;
+
+    public static event Action OnBrickBreaks;
+    public bool IsBreakable => isBreakable;
+
 
     [SerializeField] private Collider2D brickCollider;
     [SerializeField] private SpriteRenderer spriteRenderer;
@@ -88,7 +93,8 @@ public class Brick : MonoBehaviour
             spriteRenderer.sprite = damageSprites[i];
             yield return new WaitForSeconds(breakFrameDelay);
         }
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+        OnBrickBreaks?.Invoke();
     }
 
     private void OnValidate()
@@ -108,7 +114,7 @@ public class Brick : MonoBehaviour
 
     private void DropPowerUp()
     {
-        if (Random.value <= dropChance)
+        if (UnityEngine.Random.value <= dropChance)
         {
             Instantiate(powerUpPrefab, transform.position, Quaternion.identity);
         }
