@@ -108,6 +108,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7587866535397841084
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -262,6 +264,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7728656146864144977
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -416,6 +420,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &2935349269794906048
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -570,6 +576,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4864562654952558238
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -724,6 +732,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5476355617226232393
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -878,6 +888,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &845357851677271616
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1032,6 +1044,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &6446699580295357152
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1186,6 +1200,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &2627185309526218214
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1340,6 +1356,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &9170569832690110120
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1494,6 +1512,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &2464356771449944729
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1648,6 +1668,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &8448817027789382349
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1802,6 +1824,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &251795431696011539
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1956,6 +1980,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4406108740446565605
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2110,6 +2136,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &9140495015939040014
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2264,6 +2292,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &1208087020800158044
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2418,6 +2448,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &3613853201520345285
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2572,6 +2604,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &1390921505399828269
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2726,6 +2760,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4904673828765267695
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2880,6 +2916,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5430197054355155881
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3034,6 +3072,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4304708498027097891
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3188,6 +3228,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &3695346406117877412
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3342,6 +3384,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &6180168534779704900
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3496,6 +3540,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &8916508608313022644
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3650,6 +3696,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &8270678017216476759
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3804,6 +3852,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7497387909213199027
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3958,6 +4008,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5347007556416800311
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4112,6 +4164,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &478177013504899967
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4266,6 +4320,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &1438189428323609254
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4542,6 +4598,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5793334206048327952
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4696,6 +4754,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &1365815454743504074
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4850,6 +4910,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &188395744270615589
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4896,6 +4958,40 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.32, y: 0.16}
   m_EdgeRadius: 0
+--- !u!1 &3385217562259147302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3655530527475712729}
+  m_Layer: 0
+  m_Name: EnemySpawnPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3655530527475712729
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3385217562259147302}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1282197873819455302}
+  - {fileID: 3703681421935745204}
+  - {fileID: 2691598524637328063}
+  m_Father: {fileID: 5181086499267621761}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3471916759778927760
 GameObject:
   m_ObjectHideFlags: 0
@@ -5004,6 +5100,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &1591533244120192099
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5158,6 +5256,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &3143758017318381674
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5312,6 +5412,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7290299982472687679
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5466,6 +5568,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &3064801437634269519
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5620,6 +5724,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &3503435719473671117
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5774,6 +5880,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &1904550382967704323
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5928,6 +6036,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &2554744224609709748
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6082,6 +6192,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7953296985985775805
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6236,6 +6348,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &266552048450085133
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6390,6 +6504,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4023971557659491234
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6544,6 +6660,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7879215373328607157
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6698,6 +6816,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &1310909428869237717
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6852,6 +6972,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &9161153199159130393
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7006,6 +7128,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4677605953496981471
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7052,6 +7176,50 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.32, y: 0.16}
   m_EdgeRadius: 0
+--- !u!1 &4517340782396941217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3703681421935745204}
+  - component: {fileID: 2250019084670827140}
+  m_Layer: 0
+  m_Name: 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3703681421935745204
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4517340782396941217}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 1.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3655530527475712729}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2250019084670827140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4517340782396941217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf31423d45268949b8f727a11ea0273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4584944231106652450
 GameObject:
   m_ObjectHideFlags: 0
@@ -7160,6 +7328,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &2948658808282788173
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7314,6 +7484,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &8525299899620140043
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7468,6 +7640,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &6505868305245876949
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7622,6 +7796,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &6696341461046722907
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7776,6 +7952,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5366237664943445459
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7930,6 +8108,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4203820350086338933
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8084,6 +8264,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5554160100303759251
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8238,6 +8420,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7275461476928012324
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8392,6 +8576,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4744230757595029934
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8469,6 +8655,7 @@ Transform:
   m_Children:
   - {fileID: 4493671115025117539}
   - {fileID: 7034375188352574452}
+  - {fileID: 3655530527475712729}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5548176291156129756
@@ -8579,6 +8766,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4749794290038217931
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8733,6 +8922,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &750263193714955148
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8887,6 +9078,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &8972309937631822673
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9041,6 +9234,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5266858296310646081
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9195,6 +9390,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &1376776614184180397
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9349,6 +9546,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &6959323014406820222
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9503,6 +9702,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &548030491382962336
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9657,6 +9858,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5445980116420138876
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9811,6 +10014,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &935152205263524400
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9965,6 +10170,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &2389197748869037716
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10119,6 +10326,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7551465377172941750
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10273,6 +10482,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &3417170033194273295
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10427,6 +10638,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7868948729127775511
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10581,6 +10794,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &3178531265091243233
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10735,6 +10950,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5656336595023187654
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10781,6 +10998,50 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.32, y: 0.16}
   m_EdgeRadius: 0
+--- !u!1 &6945620460888896722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1282197873819455302}
+  - component: {fileID: 8741995324505269189}
+  m_Layer: 0
+  m_Name: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1282197873819455302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6945620460888896722}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3655530527475712729}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8741995324505269189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6945620460888896722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf31423d45268949b8f727a11ea0273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7005934815166806497
 GameObject:
   m_ObjectHideFlags: 0
@@ -10976,6 +11237,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &2026262215993874033
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11022,6 +11285,50 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.32, y: 0.16}
   m_EdgeRadius: 0
+--- !u!1 &7148750387968408566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2691598524637328063}
+  - component: {fileID: 4644038737369476704}
+  m_Layer: 0
+  m_Name: 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2691598524637328063
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7148750387968408566}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 0.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3655530527475712729}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4644038737369476704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7148750387968408566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf31423d45268949b8f727a11ea0273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7233667091148746269
 GameObject:
   m_ObjectHideFlags: 0
@@ -11130,6 +11437,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7314514583942320282
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11284,6 +11593,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7280649754444213047
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11438,6 +11749,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5014842710798552427
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11592,6 +11905,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4993782120256576229
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11746,6 +12061,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &2307020070905704148
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11900,6 +12217,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7364618036045844262
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12054,6 +12373,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4895433911665830161
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12208,6 +12529,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &986151838852567549
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12362,6 +12685,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &3968691719227172417
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12516,6 +12841,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7603274051333887752
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12670,6 +12997,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &1279977532425523883
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12824,6 +13153,8 @@ MonoBehaviour:
   health: 3
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &2906517842967207237
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12978,6 +13309,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5277229803635870684
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13132,6 +13465,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &4354626330432383923
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13286,6 +13621,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &3865883867229848675
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13440,6 +13777,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &5961220574791428893
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13594,6 +13933,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &2917324179545735855
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13748,6 +14089,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &3009715436860031252
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13902,6 +14245,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &7271495888364733048
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14056,6 +14401,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &8699887637990149001
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14210,6 +14557,8 @@ MonoBehaviour:
   health: 1
   isBreakable: 1
   breakFrameDelay: 0.05
+  powerUpPrefab: {fileID: 0}
+  dropChance: 0.2
 --- !u!61 &470416169862177746
 BoxCollider2D:
   m_ObjectHideFlags: 0

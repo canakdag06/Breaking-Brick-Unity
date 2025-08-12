@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance { get; private set; }
+    public EnemySpawner enemySpawner;
     public int CurrentLevelIndex { get; private set; } = -1;
 
     [Header("Level Data")]
@@ -42,8 +43,7 @@ public class LevelManager : MonoBehaviour
 
         CurrentLevelInfo = levels[CurrentLevelIndex];
         currentLevel = Instantiate(CurrentLevelInfo.levelPrefab, Vector3.zero, Quaternion.identity);
-
-        //EnemySpawner.Instance.Setup(levelInfo);  // EnemySpawner'ý level verisi ile ayarla
+        enemySpawner.InitializeEnemySpawner(CurrentLevelInfo, currentLevel);
     }
 
     public void ReloadCurrentLevel()
@@ -64,7 +64,7 @@ public class LevelInfo
 
     [Header("Enemy Settings")]
     public EnemyType enemyType;
-    public float enemySpawnInterval = 15f;
+    public float averageSpawnInterval = 15f;
     public float enemyMoveSpeed = 0.5f;
     public int maxEnemiesOnScene = 2;
 }
