@@ -97,8 +97,8 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator StartLevelSequence()
     {
-        yield return UIManager.Instance.ShowMessage("BREAK THEM ALL!");
         yield return UIManager.Instance.FadeIn(1f);
+        yield return StartCoroutine(UIManager.Instance.ShowMessage("BREAK THEM ALL!"));
     }
 
 }
