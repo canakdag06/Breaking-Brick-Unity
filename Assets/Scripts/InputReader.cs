@@ -15,7 +15,7 @@ public class InputReader : MonoBehaviour
     public GameInput InputActions => input;
     private GameInput input;
 
-    public event Action OnPause;
+    //public event Action OnPause;
 
     private void Awake()
     {
