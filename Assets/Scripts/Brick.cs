@@ -153,6 +153,7 @@ public class Brick : MonoBehaviour
         else if (collision.gameObject.CompareTag("LaserProjectile"))
         {
             Hit();
+            Destroy(collision.gameObject);
         }
     }
 }
