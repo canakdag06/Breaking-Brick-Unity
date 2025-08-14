@@ -13,6 +13,10 @@ public class LevelManager : MonoBehaviour
     [Header("Level Data")]
     [SerializeField] private List<LevelInfo> levels;
 
+    private BallManager ballManager;
+    private PowerUpManager powerUpManager;
+    private UIManager uiManager;
+
     private GameObject currentLevel;
     private int totalBricks;
 
@@ -26,6 +30,13 @@ public class LevelManager : MonoBehaviour
         }
 
         Instance = this;
+    }
+
+    private void Start()
+    {
+        ballManager = BallManager.Instance;
+        powerUpManager = PowerUpManager.Instance;
+        uiManager = UIManager.Instance;
     }
 
     private void OnEnable()
@@ -90,18 +101,18 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator FinishLevelSequence()
     {
-        BallManager.Instance.SpawnInitialBall();    // it has ClearAllBalls() in it
-        PowerUpManager.Instance.ResetPowerUps();
+        ballManager.SpawnInitialBall();    // it has ClearAllBalls() in it
+        powerUpManager.ResetAndDestroyPowerUps();
 
-        yield return UIManager.Instance.ShowMessage("IS COMPLETED!");
-        yield return UIManager.Instance.FadeOut(1f);
+        yield return uiManager.ShowMessage("IS COMPLETED!");
+        yield return uiManager.FadeOut(1f);
         LoadLevel();
     }
 
     private IEnumerator StartLevelSequence()
     {
-        yield return UIManager.Instance.FadeIn(1f);
-        yield return StartCoroutine(UIManager.Instance.ShowMessage("BREAK THEM ALL!"));
+        yield return uiManager.FadeIn(1f);
+        yield return StartCoroutine(uiManager.ShowMessage("BREAK THEM ALL!"));
     }
 
 }

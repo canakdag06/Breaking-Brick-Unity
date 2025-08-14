@@ -20,6 +20,10 @@ public class Brick : MonoBehaviour
     [SerializeField] private GameObject powerUpPrefab;
     [SerializeField] private float dropChance = 0.2f;
 
+    private ScoreManager scoreManager;
+    private BallManager ballManager;
+    private PowerUpManager powerUpManager;
+
     private Collider2D col;
     private Sprite[] damageSprites;
     private int hits = 0;
@@ -31,7 +35,11 @@ public class Brick : MonoBehaviour
 
     private void Start()
     {
-        BallManager.Instance.OnFlamingBallSwitch += SwitchColliderMode;
+        scoreManager = ScoreManager.Instance;
+        ballManager = BallManager.Instance;
+        powerUpManager = PowerUpManager.Instance;
+
+        ballManager.OnFlamingBallSwitch += SwitchColliderMode;
 
         var data = brickData.bricks.Find(b => b.color == color);
 
@@ -61,7 +69,7 @@ public class Brick : MonoBehaviour
         {
             brickCollider.enabled = false;
             StartCoroutine(PlayBreakAnimation());
-            ScoreManager.Instance.AddScore(hits);
+            scoreManager.AddScore(hits);
         }
         else
         {
@@ -116,13 +124,14 @@ public class Brick : MonoBehaviour
     {
         if (UnityEngine.Random.value <= dropChance)
         {
-            Instantiate(powerUpPrefab, transform.position, Quaternion.identity);
+            GameObject newPowerUp = Instantiate(powerUpPrefab, transform.position, Quaternion.identity);
+            newPowerUp.transform.parent = powerUpManager.transform;
         }
     }
 
     private void OnDisable()
     {
-        BallManager.Instance.OnFlamingBallSwitch -= SwitchColliderMode;
+        ballManager.OnFlamingBallSwitch -= SwitchColliderMode;
     }
 
     private void SwitchColliderMode(bool isEnable)
@@ -148,7 +157,7 @@ public class Brick : MonoBehaviour
         {
             brickCollider.enabled = false;
             StartCoroutine(PlayBreakAnimation());
-            ScoreManager.Instance.AddScore(health);
+            scoreManager.AddScore(health);
         }
         else if (collision.gameObject.CompareTag("LaserProjectile"))
         {

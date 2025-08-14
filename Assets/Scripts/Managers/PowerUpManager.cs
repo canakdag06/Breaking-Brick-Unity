@@ -60,10 +60,15 @@ public class PowerUpManager : MonoBehaviour
         }
     }
 
-    public void ResetPowerUps()
+    public void ResetAndDestroyPowerUps()
     {
         paddle.ShrinkAfterDelay(3f);
         paddle.DisableMagnet();
         paddle.LaserTimer(3f);
+
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
     }
 }
