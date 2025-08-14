@@ -91,7 +91,7 @@ public class LevelManager : MonoBehaviour
     private IEnumerator FinishLevelSequence()
     {
         BallManager.Instance.SpawnInitialBall();    // it has ClearAllBalls() in it
-
+        PowerUpManager.Instance.ResetPowerUps();
 
         yield return UIManager.Instance.ShowMessage("IS COMPLETED!");
         yield return UIManager.Instance.FadeOut(1f);

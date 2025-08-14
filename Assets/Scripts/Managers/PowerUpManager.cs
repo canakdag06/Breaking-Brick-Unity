@@ -43,6 +43,16 @@ public class PowerUpManager : MonoBehaviour
         }
     }
 
+    public void ResetPowerUps()
+    {
+        Paddle.Instance.ShrinkAfterDelay(3f);
+        Debug.Log("RESET EXPAND PADDLE POWERUP");
+        //Paddle.Instance.DisableMagnet();
+        //Paddle.Instance.DisableLaser();
+
+        //BallManager.Instance.DisableFlamingBall();
+    }
+
     private void ApplyDuplicateBalls()
     {
         BallManager.Instance.DuplicateBalls();

@@ -183,7 +183,7 @@ public class Paddle : MonoBehaviour
         if (shrinkRoutine != null)
             StopCoroutine(shrinkRoutine);
 
-        shrinkRoutine = StartCoroutine(ShrinkAfterDelay());
+        ShrinkAfterDelay();
     }
 
     private IEnumerator PlayExpandAnimation()
@@ -202,9 +202,16 @@ public class Paddle : MonoBehaviour
         visualLevel = targetIndex;
     }
 
-    private IEnumerator ShrinkAfterDelay()
+    public void ShrinkAfterDelay(float? delay = null)
     {
-        yield return new WaitForSeconds(expandDuration);
+        float finalDelay = delay ?? expandDuration; // use expandDuration if delay is null
+
+        shrinkRoutine = StartCoroutine(ShrinkCoroutine(finalDelay));
+    }
+
+    private IEnumerator ShrinkCoroutine(float delay)
+    {
+        yield return new WaitForSeconds(delay);
 
         for (int i = visualLevel - 1; i >= 0; i--)
         {
