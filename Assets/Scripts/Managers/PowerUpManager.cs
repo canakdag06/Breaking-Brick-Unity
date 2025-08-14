@@ -13,6 +13,10 @@ public class PowerUpManager : MonoBehaviour
     [SerializeField] private float laserDuration = 10f;
     [SerializeField] private float magnetDuration = 10f;
 
+    private Paddle paddle;
+    private BallManager ballManager;
+    private GameManager gameManager;
+
 
     private void Awake()
     {
@@ -22,6 +26,13 @@ public class PowerUpManager : MonoBehaviour
             return;
         }
         Instance = this;
+    }
+
+    private void Start()
+    {
+        paddle = Paddle.Instance;
+        ballManager = BallManager.Instance;
+        gameManager = GameManager.Instance;
     }
 
     public void ApplyPowerUp(PowerUpType type)
@@ -51,41 +62,40 @@ public class PowerUpManager : MonoBehaviour
 
     public void ResetPowerUps()
     {
-        Paddle.Instance.ShrinkAfterDelay(3f);
-        Debug.Log("RESET EXPAND PADDLE POWERUP");
-        Paddle.Instance.DisableMagnet();
-        //Paddle.Instance.DisableLaser();
+        paddle.ShrinkAfterDelay(3f);
+        paddle.DisableMagnet();
+        paddle.LaserTimer(0f);
 
         //BallManager.Instance.DisableFlamingBall();
     }
 
     private void ApplyDuplicateBalls()
     {
-        BallManager.Instance.DuplicateBalls();
+        ballManager.DuplicateBalls();
     }
 
     private void ApplyExpandPaddle()
     {
-        Paddle.Instance.ExpandPaddle(expandDuration);
+        paddle.ExpandPaddle(expandDuration);
     }
 
     private void ApplyExtraLife()
     {
-        GameManager.Instance.UpdateLives(true);
+        gameManager.UpdateLives(true);
     }
 
     private void ApplyFlamingBall()
     {
-        BallManager.Instance.EnableFlamingBall(flamingBallDuration);
+        ballManager.EnableFlamingBall(flamingBallDuration);
     }
 
     private void ApplyLaser()
     {
-        Paddle.Instance.EnableLaser(laserDuration);
+        paddle.EnableLaser(laserDuration);
     }
 
     private void ApplyMagnet()
     {
-        Paddle.Instance.EnableMagnet(magnetDuration);
+        paddle.EnableMagnet(magnetDuration);
     }
 }
