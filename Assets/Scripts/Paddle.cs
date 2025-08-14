@@ -173,7 +173,7 @@ public class Paddle : MonoBehaviour
         halfWidth = paddleRenderer.bounds.extents.x;
     }
 
-    public void ExpandPaddle()
+    public void ExpandPaddle(float expandDuration)
     {
         if (visualLevel >= visualDatas.Length - 1)
             return;
@@ -183,7 +183,7 @@ public class Paddle : MonoBehaviour
         if (shrinkRoutine != null)
             StopCoroutine(shrinkRoutine);
 
-        ShrinkAfterDelay();
+        ShrinkAfterDelay(expandDuration);
     }
 
     private IEnumerator PlayExpandAnimation()
@@ -203,7 +203,7 @@ public class Paddle : MonoBehaviour
         isExpanded = true;
     }
 
-    public void ShrinkAfterDelay(float? delay = null)
+    public void ShrinkAfterDelay(float delay)
     {
         if (!isExpanded)
             return;
@@ -214,9 +214,7 @@ public class Paddle : MonoBehaviour
             shrinkRoutine = null;
         }
 
-        float finalDelay = delay ?? PowerUpManager.Instance.ExpandDuration;
-
-        shrinkRoutine = StartCoroutine(ShrinkCoroutine(finalDelay));
+        shrinkRoutine = StartCoroutine(ShrinkCoroutine(delay));
     }
 
     private IEnumerator ShrinkCoroutine(float delay)

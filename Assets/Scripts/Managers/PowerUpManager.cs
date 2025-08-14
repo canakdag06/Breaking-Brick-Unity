@@ -66,7 +66,7 @@ public class PowerUpManager : MonoBehaviour
 
     private void ApplyExpandPaddle()
     {
-        Paddle.Instance.ExpandPaddle();
+        Paddle.Instance.ExpandPaddle(expandDuration);
     }
 
     private void ApplyExtraLife()
