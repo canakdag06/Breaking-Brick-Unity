@@ -3,10 +3,16 @@ using UnityEngine;
 public class PowerUpManager : MonoBehaviour
 {
     public static PowerUpManager Instance { get; private set; }
+    public float ExpandDuration => expandDuration;
+    public float FlamingBallDuration => flamingBallDuration;
+    public float LaserDuration => laserDuration;
+    public float MagnetDuration => magnetDuration;
 
+    [SerializeField] private float expandDuration = 20f;
     [SerializeField] private float flamingBallDuration = 10f;
     [SerializeField] private float laserDuration = 10f;
     [SerializeField] private float magnetDuration = 10f;
+
 
     private void Awake()
     {
@@ -47,7 +53,7 @@ public class PowerUpManager : MonoBehaviour
     {
         Paddle.Instance.ShrinkAfterDelay(3f);
         Debug.Log("RESET EXPAND PADDLE POWERUP");
-        //Paddle.Instance.DisableMagnet();
+        Paddle.Instance.DisableMagnet();
         //Paddle.Instance.DisableLaser();
 
         //BallManager.Instance.DisableFlamingBall();
