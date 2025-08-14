@@ -28,8 +28,8 @@ public class Paddle : MonoBehaviour
     private InputReader inputReader;
     private Vector2 moveInput;
 
-    [SerializeField] private float expandDuration = 20f;
     private Coroutine shrinkRoutine;
+    private bool isExpanded;
 
     private Ball ball;
     private bool ballLaunched;
@@ -200,11 +200,21 @@ public class Paddle : MonoBehaviour
         }
 
         visualLevel = targetIndex;
+        isExpanded = true;
     }
 
     public void ShrinkAfterDelay(float? delay = null)
     {
-        float finalDelay = delay ?? expandDuration; // use expandDuration if delay is null
+        if (!isExpanded)
+            return;
+
+        if (shrinkRoutine != null)
+        {
+            StopCoroutine(shrinkRoutine);
+            shrinkRoutine = null;
+        }
+
+        float finalDelay = delay ?? PowerUpManager.Instance.ExpandDuration;
 
         shrinkRoutine = StartCoroutine(ShrinkCoroutine(finalDelay));
     }
@@ -224,6 +234,7 @@ public class Paddle : MonoBehaviour
 
         visualLevel = 0;
         shrinkRoutine = null;
+        isExpanded = false;
     }
 
     private void UpdateLaserPositions(int index)
@@ -312,7 +323,7 @@ public class Paddle : MonoBehaviour
 
     public void EnableMagnet(float magnetDuration)
     {
-        if(disableMagnetRoutine != null)
+        if (disableMagnetRoutine != null)
         {
             StopCoroutine(disableMagnetRoutine);
             disableMagnetRoutine = null;
@@ -329,9 +340,20 @@ public class Paddle : MonoBehaviour
         isMagnetActive = false;
     }
 
+    public void DisableMagnet()
+    {
+        if (disableMagnetRoutine != null)
+        {
+            StopCoroutine(disableMagnetRoutine);
+            disableMagnetRoutine = null;
+        }
+        isMagnetActive = false;
+        isMagnetLaunchReady = false;
+    }
+
     public bool TryMagnetAttach(Ball ball)
     {
-        if(!isMagnetActive || isMagnetLaunchReady || disableMagnetRoutine == null)
+        if (!isMagnetActive || isMagnetLaunchReady || disableMagnetRoutine == null)
         {
             return false;
         }
