@@ -44,6 +44,7 @@ public class Paddle : MonoBehaviour
     private Coroutine disableLaserRoutine;
     private Coroutine shootingRoutine;
     private Coroutine disableMagnetRoutine;
+    private bool isLaserActive;
 
     private bool isMagnetActive = false;
     private bool isMagnetLaunchReady = false;
@@ -278,9 +279,9 @@ public class Paddle : MonoBehaviour
             lasersEnabledAnimation.Play();
         }
 
-
-        disableLaserRoutine = StartCoroutine(LaserTimer(laserDuration));
+        disableLaserRoutine = StartCoroutine(LaserTimerCoroutine(laserDuration));
         shootingRoutine = StartCoroutine(Shoot());
+        isLaserActive = true;
     }
 
     private IEnumerator Shoot()
@@ -295,7 +296,22 @@ public class Paddle : MonoBehaviour
         }
     }
 
-    private IEnumerator LaserTimer(float laserDuration)
+    public void LaserTimer(float laserDuration)
+    {
+        if (!isLaserActive)
+            return;
+
+        if (disableLaserRoutine != null)
+        {
+            StopCoroutine(shrinkRoutine);
+            shrinkRoutine = null;
+        }
+
+        shrinkRoutine = StartCoroutine(LaserTimerCoroutine(laserDuration));
+    }
+
+
+    private IEnumerator LaserTimerCoroutine(float laserDuration)
     {
         yield return new WaitForSeconds(laserDuration);
 
@@ -316,7 +332,7 @@ public class Paddle : MonoBehaviour
         leftLaser.gameObject.SetActive(false);
         rightLaser.gameObject.SetActive(false);
         disableLaserRoutine = null;
-
+        isLaserActive = false;
     }
 
     public void EnableMagnet(float magnetDuration)
