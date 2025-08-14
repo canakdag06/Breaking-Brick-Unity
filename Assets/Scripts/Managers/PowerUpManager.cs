@@ -40,22 +40,22 @@ public class PowerUpManager : MonoBehaviour
         switch(type)
         {
             case PowerUpType.DuplicateBall:
-                ApplyDuplicateBalls();
+                ballManager.DuplicateBalls();
                 break;
             case PowerUpType.Expand:
-                ApplyExpandPaddle();
+                paddle.ExpandPaddle(expandDuration);
                 break;
             case PowerUpType.ExtraLife:
-                ApplyExtraLife();
+                gameManager.UpdateLives(true);
                 break;
             case PowerUpType.FlamingBall:
-                ApplyFlamingBall();
+                ballManager.EnableFlamingBall(flamingBallDuration);
                 break;
             case PowerUpType.Laser:
-                ApplyLaser();
+                paddle.EnableLaser(laserDuration);
                 break;
             case PowerUpType.Magnet:
-                ApplyMagnet();
+                paddle.EnableMagnet(magnetDuration);
                 break;
         }
     }
@@ -65,36 +65,5 @@ public class PowerUpManager : MonoBehaviour
         paddle.ShrinkAfterDelay(3f);
         paddle.DisableMagnet();
         paddle.LaserTimer(3f);
-        //ballManager.DisableFlamingBall();
-    }
-
-    private void ApplyDuplicateBalls()
-    {
-        ballManager.DuplicateBalls();
-    }
-
-    private void ApplyExpandPaddle()
-    {
-        paddle.ExpandPaddle(expandDuration);
-    }
-
-    private void ApplyExtraLife()
-    {
-        gameManager.UpdateLives(true);
-    }
-
-    private void ApplyFlamingBall()
-    {
-        ballManager.EnableFlamingBall(flamingBallDuration);
-    }
-
-    private void ApplyLaser()
-    {
-        paddle.EnableLaser(laserDuration);
-    }
-
-    private void ApplyMagnet()
-    {
-        paddle.EnableMagnet(magnetDuration);
     }
 }
