@@ -77,6 +77,12 @@ public class BallManager : MonoBehaviour
         ball.gameObject.SetActive(false);
         ball.transform.SetParent(this.transform);
         activeBalls.Remove(ball);
+
+        if (activeBalls.Count == 0 && IsFlaming)
+        {
+            IsFlaming = false;
+            OnFlamingBallSwitch?.Invoke(false);
+        }
     }
 
     public void ClearAllBalls()

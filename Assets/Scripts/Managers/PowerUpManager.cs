@@ -65,7 +65,7 @@ public class PowerUpManager : MonoBehaviour
         paddle.ShrinkAfterDelay(3f);
         paddle.DisableMagnet();
         paddle.LaserTimer(3f);
-        ballManager.DisableFlamingBall();
+        //ballManager.DisableFlamingBall();
     }
 
     private void ApplyDuplicateBalls()
