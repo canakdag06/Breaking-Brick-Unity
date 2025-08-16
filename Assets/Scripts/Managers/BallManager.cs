@@ -32,7 +32,6 @@ public class BallManager : MonoBehaviour
     private void Start()
     {
         InitializePool();
-        SpawnInitialBall();
     }
 
     private void InitializePool()
@@ -93,6 +92,11 @@ public class BallManager : MonoBehaviour
         }
 
         activeBalls.Clear();
+        var paddleBall = Paddle.Instance.GetComponentInChildren<Ball>()?.gameObject;
+        if (paddleBall != null)
+        {
+            Destroy(paddleBall);
+        }
     }
 
     public bool HasActiveBalls()
