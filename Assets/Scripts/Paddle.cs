@@ -153,8 +153,13 @@ public class Paddle : MonoBehaviour
 
     public void ExpandPaddle(float expandDuration)
     {
-        if (visualLevel >= visualDatas.Length - 1)
+        //if (visualLevel >= visualDatas.Length - 1)
+        //    return;
+
+        if(isExpanded)
+        {
             return;
+        }
 
         StartCoroutine(PlayExpandAnimation());
 
@@ -167,6 +172,7 @@ public class Paddle : MonoBehaviour
     private IEnumerator PlayExpandAnimation()
     {
         int targetIndex = visualDatas.Length - 1;
+        isExpanded = true;
 
         for (int i = visualLevel + 1; i <= targetIndex; i++)
         {
@@ -178,7 +184,6 @@ public class Paddle : MonoBehaviour
         }
 
         visualLevel = targetIndex;
-        isExpanded = true;
     }
 
     public void ShrinkAfterDelay(float delay)
