@@ -149,6 +149,7 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("LaserProjectile") || collision.gameObject.CompareTag("Ball") || collision.gameObject.CompareTag("Paddle"))
         {
             // NEED EXPLOSION EFFECT HERE
+            transform.DOKill();
             Destroy(gameObject);
         }
 

@@ -1,6 +1,5 @@
 ﻿using DG.Tweening;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using Sequence = DG.Tweening.Sequence;
 
@@ -68,6 +67,8 @@ public class Paddle : MonoBehaviour
         {
             GameManager.Instance.OnLifeLostEffectRequested -= PlayLifeLostEffect;
         }
+
+        transform.DOKill();
     }
 
     void Start()

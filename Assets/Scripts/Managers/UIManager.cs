@@ -43,6 +43,8 @@ public class UIManager : MonoBehaviour
     {
         ScoreManager.Instance.OnScoreChanged -= UpdateScoreText;
         GameManager.Instance.OnLifeChanged -= UpdateLivesUI;
+
+        transform.DOKill();
     }
 
     public IEnumerator ShowMessage(string message)

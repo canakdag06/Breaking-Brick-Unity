@@ -20,4 +20,9 @@ public class UIButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
     {
         transform.DOScale(1f, 0.2f).SetEase(Ease.OutBack).SetLink(gameObject);
     }
+
+    private void OnDisable()
+    {
+        transform.DOKill();
+    }
 }
