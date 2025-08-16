@@ -46,7 +46,7 @@ public class EnemySpawner : MonoBehaviour
 
         Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
 
-        var enemyGO = Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
+        var enemyGO = Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity, this.transform);
         var enemy = enemyGO.GetComponent<Enemy>();
         enemy.Initialize(set.animationSprites);
         enemy.SetMoveSpeed(info.enemyMoveSpeed);

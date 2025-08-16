@@ -93,6 +93,11 @@ public class LevelManager : MonoBehaviour
     {
         BallManager.Instance.ClearAllBalls();
         PowerUpManager.Instance.ResetAndDestroyPowerUps();
+        
+        foreach(Transform enemy in enemySpawner.transform)  // Destroying enemies when level finished
+        {
+            Destroy(enemy.gameObject);
+        }
 
         yield return UIManager.Instance.ShowMessage("IS COMPLETED!");
         yield return UIManager.Instance.FadeOut(1f);
