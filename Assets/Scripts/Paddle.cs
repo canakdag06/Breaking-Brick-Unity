@@ -89,9 +89,6 @@ public class Paddle : MonoBehaviour
         PaddleMovement();
         ControlBall();
         inputReader.ResetInputs();
-
-        //Debug.Log("isMagnetActive => " + isMagnetActive);
-        //Debug.Log("isMagnetLaunchReady =>" + isMagnetLaunchReady);
     }
 
 
@@ -149,26 +146,6 @@ public class Paddle : MonoBehaviour
     }
 
     // ======================= VISUAL CONTROL =======================
-
-    //private void ApplyVisual(int level)
-    //{
-    //    if (level < 0 || level > visualDatas.Length)
-    //    {
-    //        Debug.LogWarning($"Invalid paddle visual level: {level}");
-    //    }
-    //    visualLevel = level;
-
-    //    var data = visualDatas[level];
-    //    paddleRenderer.sprite = data.sprite;
-    //    leftLaser.localPosition = data.leftLaserPosition;
-    //    rightLaser.localPosition = data.rightLaserPosition;
-    //    paddleCollider.size = data.colliderSize;
-    //    paddleCollider.offset = data.colliderOffset;
-
-    //    UpdatePaddleHalfWidth();
-    //}
-
-
     private void UpdatePaddleHalfWidth()
     {
         halfWidth = paddleRenderer.bounds.extents.x;
@@ -303,11 +280,11 @@ public class Paddle : MonoBehaviour
 
         if (disableLaserRoutine != null)
         {
-            StopCoroutine(shrinkRoutine);
-            shrinkRoutine = null;
+            StopCoroutine(disableLaserRoutine);
+            disableLaserRoutine = null;
         }
 
-        shrinkRoutine = StartCoroutine(LaserTimerCoroutine(laserDuration));
+        disableLaserRoutine = StartCoroutine(LaserTimerCoroutine(laserDuration));
     }
 
 
