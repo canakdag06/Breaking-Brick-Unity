@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     private float directionTimer;
     private Transform paddleTransform;
     private Rigidbody2D rb;
+    private Collider2D enemyCollider;
     private bool canMove = false;
 
     private Sprite[] sprites;
@@ -28,16 +29,17 @@ public class Enemy : MonoBehaviour
     private float baseFrameRate = 1f;
 
 
-
-    private void OnEnable()
+    private void Awake()
     {
-        SpawnEffect();
+        rb = GetComponent<Rigidbody2D>();
+        enemyCollider = GetComponent<Collider2D>();
     }
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         paddleTransform = GameObject.FindWithTag("Paddle").transform;
+
+        SpawnEffect();
 
         PickNewDirection();
         directionTimer = directionChangeInterval;
@@ -45,6 +47,7 @@ public class Enemy : MonoBehaviour
 
     public void Initialize(Sprite[] animationSprites)
     {
+        enemyCollider.enabled = false;
         sprites = animationSprites;
         frameRate = baseFrameRate * (baseMoveSpeed / moveSpeed);
         sr = GetComponent<SpriteRenderer>();
@@ -103,6 +106,7 @@ public class Enemy : MonoBehaviour
             .AppendInterval(1f)
             .OnComplete(() =>
             {
+                enemyCollider.enabled = true;
                 canMove = true;
             });
     }
