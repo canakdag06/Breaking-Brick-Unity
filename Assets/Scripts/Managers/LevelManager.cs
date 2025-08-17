@@ -104,7 +104,8 @@ public class LevelManager : MonoBehaviour
     private IEnumerator StartLevelSequence()
     {
         yield return UIManager.Instance.FadeIn(1f);
-        yield return StartCoroutine(UIManager.Instance.ShowMessage("BREAK THEM ALL!"));
+        StartCoroutine(UIManager.Instance.ShowMessage("BREAK THEM ALL!"));
+        yield return new WaitForSeconds(1f);
         BallManager.Instance.SpawnInitialBall();
         enemySpawner.ResetTimer();
     }
