@@ -10,6 +10,8 @@ public class LevelManager : MonoBehaviour
     public LevelInfo CurrentLevelInfo { get; private set; }
     public int CurrentLevelIndex { get; private set; } = -1;
 
+    public static event Action OnLevelFinished;
+
     [Header("Level Data")]
     [SerializeField] private List<LevelInfo> levels;
 
@@ -85,6 +87,7 @@ public class LevelManager : MonoBehaviour
 
         if(totalBricks == 0)
         {
+            OnLevelFinished?.Invoke();
             StartCoroutine(FinishLevelSequence());
         }
     }
@@ -93,12 +96,6 @@ public class LevelManager : MonoBehaviour
     {
         BallManager.Instance.ClearAllBalls();
         PowerUpManager.Instance.ResetAndDestroyPowerUps();
-        
-        foreach(Transform enemy in enemySpawner.transform)  // Destroying enemies when level finished
-        {
-            Destroy(enemy.gameObject);
-        }
-
         yield return UIManager.Instance.ShowMessage("IS COMPLETED!");
         yield return UIManager.Instance.FadeOut(1f);
         LoadLevel();
@@ -109,6 +106,7 @@ public class LevelManager : MonoBehaviour
         yield return UIManager.Instance.FadeIn(1f);
         yield return StartCoroutine(UIManager.Instance.ShowMessage("BREAK THEM ALL!"));
         BallManager.Instance.SpawnInitialBall();
+        enemySpawner.ResetTimer();
     }
 
 }

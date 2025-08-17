@@ -17,6 +17,17 @@ public class EnemySpawner : MonoBehaviour
     private float maxSpawnDelay;
     private float spawnDelayPercentage = 0.25f;
 
+    private bool isLevelActive = true;
+
+    private void OnEnable()
+    {
+        LevelManager.OnLevelFinished += ClearEnemies;
+    }
+
+    private void OnDisable()
+    {
+        LevelManager.OnLevelFinished -= ClearEnemies;
+    }
 
 
     void Update()
@@ -24,10 +35,10 @@ public class EnemySpawner : MonoBehaviour
         if (info == null) return;
 
         spawnTimer -= Time.deltaTime;
-        if (spawnTimer <= 0 && currentEnemyCount < maxEnemyCount)
+        if (spawnTimer <= 0 && currentEnemyCount < maxEnemyCount && isLevelActive)
         {
             SpawnEnemy();
-            spawnTimer = Random.Range(minSpawnDelay, maxSpawnDelay);
+            ResetTimer();
         }
     }
 
@@ -65,6 +76,7 @@ public class EnemySpawner : MonoBehaviour
             minSpawnDelay = 0f;
 
         spawnTimer = Random.Range(minSpawnDelay, maxSpawnDelay);
+        isLevelActive = true;
 
         maxEnemyCount = info.maxEnemiesOnScene;
         currentEnemyCount = 0;
@@ -74,6 +86,20 @@ public class EnemySpawner : MonoBehaviour
         for (int i = 0; i < markers.Length; i++)
         {
             spawnPoints[i] = markers[i].transform;
+        }
+    }
+
+    public void ResetTimer()
+    {
+        spawnTimer = Random.Range(minSpawnDelay, maxSpawnDelay);
+    }
+
+    private void ClearEnemies()
+    {
+        isLevelActive = false;
+        foreach (Transform enemy in transform)
+        {
+            Destroy(enemy.gameObject);
         }
     }
 }
