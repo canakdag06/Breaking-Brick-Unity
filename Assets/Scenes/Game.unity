@@ -2394,14 +2394,19 @@ MonoBehaviour:
     maxEnemiesOnScene: 2
   - levelPrefab: {fileID: 6621651825527511359, guid: 358de662fdfbf5344ad50d7ed4c3a4ed, type: 3}
     enemyType: 1
-    averageSpawnInterval: 16
+    averageSpawnInterval: 14
     enemyMoveSpeed: 0.6
     maxEnemiesOnScene: 2
   - levelPrefab: {fileID: 1248741832756702297, guid: 5cef802abf9d3dd468abe07f3e3fce07, type: 3}
     enemyType: 2
-    averageSpawnInterval: 16
+    averageSpawnInterval: 13
     enemyMoveSpeed: 0.7
     maxEnemiesOnScene: 2
+  - levelPrefab: {fileID: 2925101102083201415, guid: 1cc74d4bcc0a15641b653fb92ddec38a, type: 3}
+    enemyType: 3
+    averageSpawnInterval: 12
+    enemyMoveSpeed: 0.8
+    maxEnemiesOnScene: 3
 --- !u!4 &1631755628
 Transform:
   m_ObjectHideFlags: 0
