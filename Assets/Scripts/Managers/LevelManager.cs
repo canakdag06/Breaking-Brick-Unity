@@ -52,6 +52,7 @@ public class LevelManager : MonoBehaviour
         }
 
         CurrentLevelInfo = levels[CurrentLevelIndex];
+        Destroy(currentLevel);
         currentLevel = Instantiate(CurrentLevelInfo.levelPrefab, Vector3.zero, Quaternion.identity);
         enemySpawner.InitializeEnemySpawner(CurrentLevelInfo, currentLevel);
 
