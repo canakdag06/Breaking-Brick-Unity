@@ -109,6 +109,13 @@ public class Brick : MonoBehaviour
     {
         if (brickData == null) return;
 
+        Vector3 pos = transform.position;
+        transform.position = new Vector3(
+            Mathf.Round(pos.x * 100f) / 100f,
+            Mathf.Round(pos.y * 100f) / 100f,
+            Mathf.Round(pos.z * 100f) / 100f
+        );
+
         var data = brickData.bricks.Find(b => b.color == color);
         if (data != null)
         {
@@ -136,6 +143,11 @@ public class Brick : MonoBehaviour
 
     private void SwitchColliderMode(bool isEnable)
     {
+        if(!IsBreakable)
+        {
+            return;
+        }
+
         if (isEnable)
         {
             col.isTrigger = true;
@@ -148,10 +160,10 @@ public class Brick : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!isBreakable)
-        {
-            return;
-        }
+        //if (!isBreakable)
+        //{
+        //    return;
+        //}
 
         if (collision.gameObject.CompareTag("Ball"))
         {
