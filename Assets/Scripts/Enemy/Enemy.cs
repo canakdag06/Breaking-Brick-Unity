@@ -1,6 +1,8 @@
 using DG.Tweening;
+using System;
 using System.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
 {
@@ -17,6 +19,8 @@ public class Enemy : MonoBehaviour
     [Header("Effects")]
     [SerializeField] private Sprite[] enemyExplosionSprites;
     [SerializeField] private float explosionFrameDelay;
+
+    public static event Action OnEnemyExplode;
 
     private Vector2 currentDirection;
     private float directionTimer;
@@ -178,6 +182,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("LaserProjectile") || collision.gameObject.CompareTag("Ball") || collision.gameObject.CompareTag("Paddle"))
         {
+            OnEnemyExplode.Invoke();
             StartCoroutine(ExplodeEnemy());
         }
 

@@ -8,7 +8,6 @@ public class EnemySpawner : MonoBehaviour
     private LevelInfo info;
     private Transform[] spawnPoints;
 
-    private float spawnInterval;
     private float spawnTimer;
 
     private float maxEnemyCount;
@@ -22,11 +21,13 @@ public class EnemySpawner : MonoBehaviour
     private void OnEnable()
     {
         LevelManager.OnLevelFinished += ClearEnemies;
+        Enemy.OnEnemyExplode += DecreaseEnemyCount;
     }
 
     private void OnDisable()
     {
         LevelManager.OnLevelFinished -= ClearEnemies;
+        Enemy.OnEnemyExplode -= DecreaseEnemyCount;
     }
 
 
@@ -92,6 +93,12 @@ public class EnemySpawner : MonoBehaviour
     public void ResetTimer()
     {
         spawnTimer = Random.Range(minSpawnDelay, maxSpawnDelay);
+    }
+
+    private void DecreaseEnemyCount()
+    {
+        currentEnemyCount--;
+        ResetTimer();
     }
 
     private void ClearEnemies()
