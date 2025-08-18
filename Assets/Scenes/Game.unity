@@ -2407,6 +2407,11 @@ MonoBehaviour:
     averageSpawnInterval: 12
     enemyMoveSpeed: 0.8
     maxEnemiesOnScene: 3
+  - levelPrefab: {fileID: 4389748913652190526, guid: fba28e750a297a64e9d85c1924eea226, type: 3}
+    enemyType: 4
+    averageSpawnInterval: 11
+    enemyMoveSpeed: 0.9
+    maxEnemiesOnScene: 3
 --- !u!4 &1631755628
 Transform:
   m_ObjectHideFlags: 0
