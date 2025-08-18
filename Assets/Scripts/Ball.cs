@@ -31,7 +31,6 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        rb.linearVelocity = rb.linearVelocity.normalized * speed;
         if (collision.gameObject.CompareTag("Paddle"))
         {
             HandlePaddleCollision(collision);
@@ -43,6 +42,21 @@ public class Ball : MonoBehaviour
             {
                 GameManager.Instance.UpdateLives(false);
             }
+        }
+        else
+        {
+            rb.linearVelocity = rb.linearVelocity.normalized * speed;
+
+            Vector2 v = rb.linearVelocity.normalized;
+            if (Mathf.Abs(v.x) < 0.01f)
+            {
+                v.x = 0.1f * Mathf.Sign(Random.Range(-1f, 1f));
+            }
+            if (Mathf.Abs(v.y) < 0.01f)
+            {
+                v.y = 0.1f * Mathf.Sign(Random.Range(-1f, 1f));
+            }
+            rb.linearVelocity = v.normalized * speed;
         }
     }
 
