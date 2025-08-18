@@ -55,6 +55,16 @@ MonoBehaviour:
   obstacleLayers:
     serializedVersion: 2
     m_Bits: 6144
+  enemyExplosionSprites:
+  - {fileID: 148855514572692485, guid: e2810c24007307f46b379db513c766bd, type: 3}
+  - {fileID: 7001277157756379124, guid: e2810c24007307f46b379db513c766bd, type: 3}
+  - {fileID: -5988232404634493797, guid: e2810c24007307f46b379db513c766bd, type: 3}
+  - {fileID: 2914492228689805512, guid: e2810c24007307f46b379db513c766bd, type: 3}
+  - {fileID: -8614424996090945412, guid: e2810c24007307f46b379db513c766bd, type: 3}
+  - {fileID: -2657473689363721499, guid: e2810c24007307f46b379db513c766bd, type: 3}
+  - {fileID: 6493086957008289108, guid: e2810c24007307f46b379db513c766bd, type: 3}
+  - {fileID: -8458551917295554, guid: e2810c24007307f46b379db513c766bd, type: 3}
+  explosionFrameDelay: 0.15
 --- !u!212 &4794182533369629940
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -122,7 +132,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0

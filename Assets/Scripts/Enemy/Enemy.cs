@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System.Collections;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -12,6 +13,10 @@ public class Enemy : MonoBehaviour
     public float raycastCheckDistance;
 
     public LayerMask obstacleLayers;
+
+    [Header("Effects")]
+    [SerializeField] private Sprite[] enemyExplosionSprites;
+    [SerializeField] private float explosionFrameDelay;
 
     private Vector2 currentDirection;
     private float directionTimer;
@@ -27,6 +32,8 @@ public class Enemy : MonoBehaviour
     private SpriteRenderer sr;
     private float baseMoveSpeed = 0.5f;
     private float baseFrameRate = 1f;
+
+    private bool isDying = false;
 
 
     private void Awake()
@@ -57,6 +64,11 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        if(isDying)
+        {
+            return;
+        }
+
         LoopAnimation();
 
         if (!canMove)
@@ -111,6 +123,20 @@ public class Enemy : MonoBehaviour
             });
     }
 
+    private IEnumerator ExplodeEnemy()
+    {
+        isDying = true;
+        rb.linearVelocity = Vector2.zero;
+        rb.bodyType = RigidbodyType2D.Kinematic;
+        enemyCollider.enabled = false;
+        for (int i = 0; i < enemyExplosionSprites.Length; i++)
+        {
+            spriteRenderer.sprite = enemyExplosionSprites[i];
+            yield return new WaitForSeconds(explosionFrameDelay);
+        }
+        Destroy(gameObject);
+    }
+
     void PickNewDirection()
     {
         Vector2 toPaddle = (paddleTransform.position - transform.position).normalized;
@@ -152,10 +178,13 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("LaserProjectile") || collision.gameObject.CompareTag("Ball") || collision.gameObject.CompareTag("Paddle"))
         {
-            // NEED EXPLOSION EFFECT HERE
-            Destroy(gameObject);
+            StartCoroutine(ExplodeEnemy());
         }
 
+        if(isDying)
+        {
+            return;
+        }
         PickNewDirection();
         directionTimer = directionChangeInterval;
     }
