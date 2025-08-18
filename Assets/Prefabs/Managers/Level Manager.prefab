@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6805500391592115851
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4154543735538621557}
+  - component: {fileID: 6435228754085002928}
+  m_Layer: 0
+  m_Name: Level Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4154543735538621557
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6805500391592115851}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6435228754085002928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6805500391592115851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7df1474ae498c45a0ceba4919a4928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySpawner: {fileID: 0}
+  levels:
+  - levelPrefab: {fileID: 4675412783043094802, guid: 44a1a888ce8bd054292b019b8dd9fc14, type: 3}
+    enemyType: 0
+    averageSpawnInterval: 15
+    enemyMoveSpeed: 0.5
+    maxEnemiesOnScene: 2
+  - levelPrefab: {fileID: 6621651825527511359, guid: 358de662fdfbf5344ad50d7ed4c3a4ed, type: 3}
+    enemyType: 1
+    averageSpawnInterval: 14
+    enemyMoveSpeed: 0.6
+    maxEnemiesOnScene: 2
+  - levelPrefab: {fileID: 1248741832756702297, guid: 5cef802abf9d3dd468abe07f3e3fce07, type: 3}
+    enemyType: 2
+    averageSpawnInterval: 13
+    enemyMoveSpeed: 0.7
+    maxEnemiesOnScene: 2
+  - levelPrefab: {fileID: 2925101102083201415, guid: 1cc74d4bcc0a15641b653fb92ddec38a, type: 3}
+    enemyType: 3
+    averageSpawnInterval: 12
+    enemyMoveSpeed: 0.8
+    maxEnemiesOnScene: 3
+  - levelPrefab: {fileID: 4389748913652190526, guid: fba28e750a297a64e9d85c1924eea226, type: 3}
+    enemyType: 4
+    averageSpawnInterval: 11
+    enemyMoveSpeed: 0.9
+    maxEnemiesOnScene: 3
