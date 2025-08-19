@@ -1961,9 +1961,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6960425472979280549, guid: fafed07e1b917d74fa683d78ee9383a8, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6960425472979280549, guid: fafed07e1b917d74fa683d78ee9383a8, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9da8acd80096a8f428612bbfcb42413c, type: 3}
+      objectReference: {fileID: 21300000, guid: dc7a0ff98c9b8804ba11edd8b1510aa1, type: 3}
+    - target: {fileID: 6960425472979280549, guid: fafed07e1b917d74fa683d78ee9383a8, type: 3}
+      propertyPath: m_Color.a
+      value: 0.47843137
+      objectReference: {fileID: 0}
     - target: {fileID: 6960425472979280549, guid: fafed07e1b917d74fa683d78ee9383a8, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
