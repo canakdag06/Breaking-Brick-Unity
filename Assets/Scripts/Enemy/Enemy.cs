@@ -34,8 +34,8 @@ public class Enemy : MonoBehaviour
     private int currentFrame;
     private float animationTimer;
     private SpriteRenderer sr;
-    private float baseMoveSpeed = 0.5f;
-    private float baseFrameRate = 1f;
+    private readonly float baseMoveSpeed = 0.5f;
+    private readonly float baseFrameRate = 1f;
 
     private bool isDying = false;
 
@@ -44,6 +44,7 @@ public class Enemy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         enemyCollider = GetComponent<Collider2D>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     void Start()
@@ -61,7 +62,6 @@ public class Enemy : MonoBehaviour
         enemyCollider.enabled = false;
         sprites = animationSprites;
         frameRate = baseFrameRate * (baseMoveSpeed / moveSpeed);
-        sr = GetComponent<SpriteRenderer>();
         currentFrame = 0;
         animationTimer = 0f;
     }
