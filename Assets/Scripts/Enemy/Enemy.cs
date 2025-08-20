@@ -120,6 +120,7 @@ public class Enemy : MonoBehaviour
             .Append(transform.DOScale(Vector3.one, 2f).SetEase(Ease.Linear))
             .Join(spriteRenderer.DOFade(1f, 2f))
             .AppendInterval(1f)
+            .SetLink(gameObject, LinkBehaviour.KillOnDestroy)
             .OnComplete(() =>
             {
                 enemyCollider.enabled = true;
@@ -192,11 +193,6 @@ public class Enemy : MonoBehaviour
         }
         PickNewDirection();
         directionTimer = directionChangeInterval;
-    }
-
-    private void OnDestroy()
-    {
-        transform.DOKill();
     }
 }
 
