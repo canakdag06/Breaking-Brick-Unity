@@ -106,3 +106,93 @@ MonoBehaviour:
     averageSpawnInterval: 9
     enemyMoveSpeed: 1.1
     maxEnemiesOnScene: 3
+  - levelPrefab: {fileID: 2180063089626653560, guid: 3373c6b8d20c62742b6e91f681c7898d, type: 3}
+    enemyType: 6
+    averageSpawnInterval: 9
+    enemyMoveSpeed: 1.1
+    maxEnemiesOnScene: 3
+  - levelPrefab: {fileID: 5244579051661172071, guid: 63bd4148919bcca49bd7f32c4b6dec20, type: 3}
+    enemyType: 6
+    averageSpawnInterval: 9
+    enemyMoveSpeed: 1.1
+    maxEnemiesOnScene: 3
+  - levelPrefab: {fileID: 829607190421166925, guid: 3ba602e170108fc479dca347328fdf55, type: 3}
+    enemyType: 7
+    averageSpawnInterval: 9
+    enemyMoveSpeed: 1.1
+    maxEnemiesOnScene: 3
+  - levelPrefab: {fileID: 3875465777779205971, guid: 72b0a9262be151142a4a83d7ea90c381, type: 3}
+    enemyType: 7
+    averageSpawnInterval: 9
+    enemyMoveSpeed: 1.1
+    maxEnemiesOnScene: 3
+  - levelPrefab: {fileID: 615663588670549149, guid: bef15289778604542bbab4f3f92faffc, type: 3}
+    enemyType: 8
+    averageSpawnInterval: 9
+    enemyMoveSpeed: 1.1
+    maxEnemiesOnScene: 3
+  - levelPrefab: {fileID: 5323755846054032432, guid: ff66ad3ff2e225c47898d9c794da9941, type: 3}
+    enemyType: 8
+    averageSpawnInterval: 9
+    enemyMoveSpeed: 1.1
+    maxEnemiesOnScene: 3
+  - levelPrefab: {fileID: 8008968420043994175, guid: 2fd71d569bd333b41991baf9b8b0761d, type: 3}
+    enemyType: 5
+    averageSpawnInterval: 9
+    enemyMoveSpeed: 1.1
+    maxEnemiesOnScene: 3
+  - levelPrefab: {fileID: 8008968420043994175, guid: 2fd71d569bd333b41991baf9b8b0761d, type: 3}
+    enemyType: 5
+    averageSpawnInterval: 9
+    enemyMoveSpeed: 1.1
+    maxEnemiesOnScene: 3
+  - levelPrefab: {fileID: 8008968420043994175, guid: 2fd71d569bd333b41991baf9b8b0761d, type: 3}
+    enemyType: 5
+    averageSpawnInterval: 9
+    enemyMoveSpeed: 1.1
+    maxEnemiesOnScene: 3
+  - levelPrefab: {fileID: 8008968420043994175, guid: 2fd71d569bd333b41991baf9b8b0761d, type: 3}
+    enemyType: 5
+    averageSpawnInterval: 9
+    enemyMoveSpeed: 1.1
+    maxEnemiesOnScene: 3
+  - levelPrefab: {fileID: 8008968420043994175, guid: 2fd71d569bd333b41991baf9b8b0761d, type: 3}
+    enemyType: 5
+    averageSpawnInterval: 9
+    enemyMoveSpeed: 1.1
+    maxEnemiesOnScene: 3
+  - levelPrefab: {fileID: 8008968420043994175, guid: 2fd71d569bd333b41991baf9b8b0761d, type: 3}
+    enemyType: 5
+    averageSpawnInterval: 9
+    enemyMoveSpeed: 1.1
+    maxEnemiesOnScene: 3
+  - levelPrefab: {fileID: 8008968420043994175, guid: 2fd71d569bd333b41991baf9b8b0761d, type: 3}
+    enemyType: 5
+    averageSpawnInterval: 9
+    enemyMoveSpeed: 1.1
+    maxEnemiesOnScene: 3
+  - levelPrefab: {fileID: 8008968420043994175, guid: 2fd71d569bd333b41991baf9b8b0761d, type: 3}
+    enemyType: 5
+    averageSpawnInterval: 9
+    enemyMoveSpeed: 1.1
+    maxEnemiesOnScene: 3
+  - levelPrefab: {fileID: 8008968420043994175, guid: 2fd71d569bd333b41991baf9b8b0761d, type: 3}
+    enemyType: 5
+    averageSpawnInterval: 9
+    enemyMoveSpeed: 1.1
+    maxEnemiesOnScene: 3
+  - levelPrefab: {fileID: 8008968420043994175, guid: 2fd71d569bd333b41991baf9b8b0761d, type: 3}
+    enemyType: 5
+    averageSpawnInterval: 9
+    enemyMoveSpeed: 1.1
+    maxEnemiesOnScene: 3
+  - levelPrefab: {fileID: 8008968420043994175, guid: 2fd71d569bd333b41991baf9b8b0761d, type: 3}
+    enemyType: 5
+    averageSpawnInterval: 9
+    enemyMoveSpeed: 1.1
+    maxEnemiesOnScene: 3
+  - levelPrefab: {fileID: 8008968420043994175, guid: 2fd71d569bd333b41991baf9b8b0761d, type: 3}
+    enemyType: 5
+    averageSpawnInterval: 9
+    enemyMoveSpeed: 1.1
+    maxEnemiesOnScene: 3
