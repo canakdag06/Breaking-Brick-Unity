@@ -12,11 +12,17 @@ public class LevelManager : MonoBehaviour
 
     public static event Action OnLevelFinished;
 
+    private const string HighestLevelKey = "HighestLevel";
+    private const string LastPlayedLevelKey = "LastPlayedLevel";
+
     [Header("Level Data")]
     [SerializeField] private List<LevelInfo> levels;
 
     private GameObject currentLevel;
     private int totalBricks;
+
+    private int highestLevelReached;
+    private int lastPlayedLevel;
 
 
     private void Awake()
@@ -28,6 +34,7 @@ public class LevelManager : MonoBehaviour
         }
 
         Instance = this;
+        LoadProgress();
     }
 
 
@@ -86,7 +93,7 @@ public class LevelManager : MonoBehaviour
     {
         totalBricks--;
 
-        if(totalBricks == 0)
+        if (totalBricks == 0)
         {
             OnLevelFinished?.Invoke();
             StartCoroutine(FinishLevelSequence());
@@ -100,6 +107,7 @@ public class LevelManager : MonoBehaviour
         yield return UIManager.Instance.ShowMessage("IS COMPLETED!");
         yield return UIManager.Instance.FadeOut(1f);
         LoadLevel();
+        SaveProgress();
     }
 
     private IEnumerator StartLevelSequence()
@@ -109,6 +117,29 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         BallManager.Instance.SpawnInitialBall();
         enemySpawner.ResetTimer();
+    }
+
+    private void SaveProgress()
+    {
+        if (highestLevelReached < CurrentLevelIndex)
+        {
+            highestLevelReached = CurrentLevelIndex;
+        }
+
+        lastPlayedLevel = CurrentLevelIndex;
+
+
+        PlayerPrefs.SetInt(HighestLevelKey, highestLevelReached);
+        PlayerPrefs.SetInt(LastPlayedLevelKey, lastPlayedLevel);
+        PlayerPrefs.Save();
+        Debug.Log("HIGHEST LEVEL => " + highestLevelReached);
+        Debug.Log("LAST PLAYED LEVEL => " + lastPlayedLevel);
+    }
+
+    private void LoadProgress()
+    {
+        highestLevelReached = PlayerPrefs.GetInt("HighestLevel", 0);
+        lastPlayedLevel = PlayerPrefs.GetInt("LastPlayedLevel", 0);
     }
 
 }
