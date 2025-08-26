@@ -21,9 +21,6 @@ public class LevelManager : MonoBehaviour
     private GameObject currentLevel;
     private int totalBricks;
 
-    private int highestLevelReached;
-    private int lastPlayedLevel;
-
 
     private void Awake()
     {
@@ -34,7 +31,7 @@ public class LevelManager : MonoBehaviour
         }
 
         Instance = this;
-        LoadProgress();
+        LoadLevel();
     }
 
 
@@ -50,9 +47,10 @@ public class LevelManager : MonoBehaviour
 
     public void LoadLevel()
     {
-        CurrentLevelIndex++;
+        if (CurrentLevelIndex < 0)
+            CurrentLevelIndex = GameManager.Instance.LastPlayedLevel;
 
-        if (CurrentLevelIndex < 0 || CurrentLevelIndex >= levels.Count)
+        if (CurrentLevelIndex >= levels.Count)
         {
             Debug.LogError("Invalid level index!");
             return;
@@ -107,7 +105,7 @@ public class LevelManager : MonoBehaviour
         yield return UIManager.Instance.ShowMessage("IS COMPLETED!");
         yield return UIManager.Instance.FadeOut(1f);
         LoadLevel();
-        SaveProgress();
+        GameManager.Instance.SaveProgress(CurrentLevelIndex);
     }
 
     private IEnumerator StartLevelSequence()
@@ -118,30 +116,6 @@ public class LevelManager : MonoBehaviour
         BallManager.Instance.SpawnInitialBall();
         enemySpawner.ResetTimer();
     }
-
-    private void SaveProgress()
-    {
-        if (highestLevelReached < CurrentLevelIndex)
-        {
-            highestLevelReached = CurrentLevelIndex;
-        }
-
-        lastPlayedLevel = CurrentLevelIndex;
-
-
-        PlayerPrefs.SetInt(HighestLevelKey, highestLevelReached);
-        PlayerPrefs.SetInt(LastPlayedLevelKey, lastPlayedLevel);
-        PlayerPrefs.Save();
-        Debug.Log("HIGHEST LEVEL => " + highestLevelReached);
-        Debug.Log("LAST PLAYED LEVEL => " + lastPlayedLevel);
-    }
-
-    private void LoadProgress()
-    {
-        highestLevelReached = PlayerPrefs.GetInt("HighestLevel", 0);
-        lastPlayedLevel = PlayerPrefs.GetInt("LastPlayedLevel", 0);
-    }
-
 }
 
 [System.Serializable]
