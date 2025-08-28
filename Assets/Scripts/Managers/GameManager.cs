@@ -65,6 +65,11 @@ public class GameManager : MonoBehaviour
         OnLifeChanged?.Invoke(lives);
     }
 
+    public void SetLastPlayedLevel(int levelIndex)
+    {
+        LastPlayedLevel = levelIndex;
+    }
+
     private void HandleGameOver()
     {
         throw new NotImplementedException();

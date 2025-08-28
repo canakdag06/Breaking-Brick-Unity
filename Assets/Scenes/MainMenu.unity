@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!224 &133817189 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5597673807315005732, guid: b5e14781459e2ab438eff74a21b33061, type: 3}
+  m_PrefabInstance: {fileID: 2183762125729190603}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &147549439
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,6 +408,8 @@ MonoBehaviour:
   mainMenuPanel: {fileID: 969921502}
   levelsPanel: {fileID: 7894470175739760789}
   settingsPanel: {fileID: 0}
+  levelButtonPrefab: {fileID: 8119264959632459353, guid: f15f650d42caa6a4faa84c6b0e61d0a8, type: 3}
+  levelsContainer: {fileID: 133817189}
   fadeImage: {fileID: 429844720}
   fadeDuration: 0.5
 --- !u!1 &1306931445
