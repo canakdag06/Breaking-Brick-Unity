@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     public int LastPlayedLevel { get; private set; }
     public int HighestLevelReached { get; private set; }
+    public int Score { get; private set; }
 
     public int Lives => lives;
     public bool IsPaused => isPaused;
@@ -34,8 +35,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        LevelManager.Instance.LoadLevel();
-        StartCoroutine(StartGameAfterLevelInfo());
+        //LevelManager.Instance.LoadLevel();
+        //StartCoroutine(StartGameAfterLevelInfo());
         OnLifeChanged?.Invoke(lives);
     }
 
@@ -84,6 +85,8 @@ public class GameManager : MonoBehaviour
 
         PlayerPrefs.SetInt("LastPlayedLevel", LastPlayedLevel);
         PlayerPrefs.SetInt("HighestLevel", HighestLevelReached);
+        PlayerPrefs.SetInt("Score", ScoreManager.Instance.GetScore());
+        PlayerPrefs.SetInt("Lives", lives);
         PlayerPrefs.Save();
     }
 
@@ -91,5 +94,9 @@ public class GameManager : MonoBehaviour
     {
         LastPlayedLevel = PlayerPrefs.GetInt("LastPlayedLevel", 0);
         HighestLevelReached = PlayerPrefs.GetInt("HighestLevel", 0);
+        Score = PlayerPrefs.GetInt("Score", 0);
+        lives = PlayerPrefs.GetInt("Lives", 3);
+
+        OnLifeChanged?.Invoke(lives);
     }
 }

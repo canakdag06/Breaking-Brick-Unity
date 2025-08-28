@@ -31,13 +31,17 @@ public class LevelManager : MonoBehaviour
         }
 
         Instance = this;
-        LoadLevel();
     }
 
 
     private void OnEnable()
     {
         Brick.OnBrickBreaks += HandleBrickBreaks;
+    }
+
+    private void Start()
+    {
+        LoadLevel();
     }
 
     private void OnDisable()
@@ -104,8 +108,9 @@ public class LevelManager : MonoBehaviour
         PowerUpManager.Instance.ResetAndDestroyPowerUps();
         yield return UIManager.Instance.ShowMessage("IS COMPLETED!");
         yield return UIManager.Instance.FadeOut(1f);
-        LoadLevel();
+        CurrentLevelIndex++;
         GameManager.Instance.SaveProgress(CurrentLevelIndex);
+        LoadLevel();
     }
 
     private IEnumerator StartLevelSequence()

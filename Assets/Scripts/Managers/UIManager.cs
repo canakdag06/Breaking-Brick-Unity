@@ -37,6 +37,8 @@ public class UIManager : MonoBehaviour
         ScoreManager.Instance.OnScoreChanged += UpdateScoreText;
         GameManager.Instance.OnLifeChanged += UpdateLivesUI;
 
+        UpdateScoreText(GameManager.Instance.Score);
+        UpdateLivesUI(GameManager.Instance.Lives);
     }
 
     private void OnDisable()
@@ -49,6 +51,7 @@ public class UIManager : MonoBehaviour
 
     public IEnumerator ShowMessage(string message)
     {
+        levelInfoText.gameObject.SetActive(true);
         levelInfoText.text = "LEVEL " + (LevelManager.Instance.CurrentLevelIndex + 1) + "\n"
                                       + message;
 

@@ -17,8 +17,8 @@ public class ScoreManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
         Instance = this;
+        score = GameManager.Instance.Score;
     }
 
     public void AddScore(int hits)
