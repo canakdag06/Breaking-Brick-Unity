@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,6 +9,7 @@ public class MenuPanels : MonoBehaviour
 {
     public GameObject mainMenuPanel;
     public GameObject levelsPanel;
+    public LevelInfoSO levelData;
     public GameObject settingsPanel;
     [SerializeField] private GameObject levelButtonPrefab;
     [SerializeField] private Transform levelsContainer;
@@ -73,6 +75,10 @@ public class MenuPanels : MonoBehaviour
             TextMeshProUGUI text = buttonObj.GetComponentInChildren<TextMeshProUGUI>();
             if (text != null)
                 text.text = (i + 1).ToString();
+
+            Image levelImg = buttonObj.GetComponentsInChildren<Image>()
+                          .FirstOrDefault(img => img.gameObject != buttonObj);
+            levelImg.sprite = levelData.levels[i].previewImage;
 
             Button btn = buttonObj.GetComponent<Button>();
             int levelIndex = i;

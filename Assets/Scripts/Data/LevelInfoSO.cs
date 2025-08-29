@@ -11,7 +11,7 @@ public class LevelInfoSO : ScriptableObject
 public class LevelInfo
 {
     public GameObject levelPrefab;
-
+    public Sprite previewImage;
     [Header("Enemy Settings")]
     public EnemyType enemyType;
     public float averageSpawnInterval = 15f;
