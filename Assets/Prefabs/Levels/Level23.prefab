@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2629220568429862034}
   m_Layer: 0
   m_Name: Stone Bricks
-  m_TagString: Untagged
+  m_TagString: Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 7897833900303896965}
   m_Layer: 0
   m_Name: Stone Bricks 2
-  m_TagString: Untagged
+  m_TagString: Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5958,7 +5958,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8061921228702837825, guid: fafed07e1b917d74fa683d78ee9383a8, type: 3}
       propertyPath: m_Name
-      value: Level23 Variant
+      value: Level23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
