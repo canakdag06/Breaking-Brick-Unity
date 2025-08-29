@@ -151,12 +151,6 @@ MonoBehaviour:
     averageSpawnInterval: 20
     enemyMoveSpeed: 0.51
     maxEnemiesOnScene: 2
-  - levelPrefab: {fileID: 7659953195627951649, guid: 1122a7dd5be541e40859d7f7f1945e9e, type: 3}
-    previewImage: {fileID: 0}
-    enemyType: 3
-    averageSpawnInterval: 20
-    enemyMoveSpeed: 0.51
-    maxEnemiesOnScene: 2
   - levelPrefab: {fileID: 752713856853476663, guid: 28f29a88f9232a34580f045d53877481, type: 3}
     previewImage: {fileID: 21300000, guid: 6f64aed64e15ced48bdca830494fe241, type: 3}
     enemyType: 2

@@ -69,7 +69,7 @@ public class MenuPanels : MonoBehaviour
         for (int i = 0; i <= lastLevel; i++)
         {
             GameObject buttonObj = Instantiate(levelButtonPrefab, levelsContainer);
-            buttonObj.name = "LevelButton_" + i;
+            buttonObj.name = "LevelButton_" + (i + 1);
 
 
             TextMeshProUGUI text = buttonObj.GetComponentInChildren<TextMeshProUGUI>();
