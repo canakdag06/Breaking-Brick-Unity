@@ -16,7 +16,8 @@ public class LevelManager : MonoBehaviour
     private const string LastPlayedLevelKey = "LastPlayedLevel";
 
     [Header("Level Data")]
-    [SerializeField] private List<LevelInfo> levels;
+    [SerializeField] private LevelInfoSO levelDatabase;
+    //[SerializeField] private List<LevelInfo> levels;
 
     private GameObject currentLevel;
     private int totalBricks;
@@ -54,13 +55,13 @@ public class LevelManager : MonoBehaviour
         if (CurrentLevelIndex < 0)
             CurrentLevelIndex = GameManager.Instance.LastPlayedLevel;
 
-        if (CurrentLevelIndex >= levels.Count)
+        if (CurrentLevelIndex >= levelDatabase.levels.Count)
         {
             Debug.LogError("Invalid level index!");
             return;
         }
 
-        CurrentLevelInfo = levels[CurrentLevelIndex];
+        CurrentLevelInfo = levelDatabase.levels[CurrentLevelIndex];
         Destroy(currentLevel);
         currentLevel = Instantiate(CurrentLevelInfo.levelPrefab, Vector3.zero, Quaternion.identity);
         enemySpawner.InitializeEnemySpawner(CurrentLevelInfo, currentLevel);
@@ -121,16 +122,4 @@ public class LevelManager : MonoBehaviour
         BallManager.Instance.SpawnInitialBall();
         enemySpawner.ResetTimer();
     }
-}
-
-[System.Serializable]
-public class LevelInfo
-{
-    public GameObject levelPrefab;
-
-    [Header("Enemy Settings")]
-    public EnemyType enemyType;
-    public float averageSpawnInterval = 15f;
-    public float enemyMoveSpeed = 0.5f;
-    public int maxEnemiesOnScene = 2;
 }
