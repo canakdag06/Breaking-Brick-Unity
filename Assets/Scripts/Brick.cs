@@ -79,7 +79,6 @@ public class Brick : MonoBehaviour
         {
             UpdateSprite();
             ParticlePool.Instance.Play(ParticleType.BrickHit, collisionPos, particleColor);
-            Debug.Log("Particle Effect");
         }
     }
 
