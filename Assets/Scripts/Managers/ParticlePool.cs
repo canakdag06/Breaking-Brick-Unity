@@ -6,7 +6,7 @@ public enum ParticleType
 {
     BrickHit,
     BrickBreak,
-    UnBreakableHit
+    UnbreakableHit
 }
 
 
