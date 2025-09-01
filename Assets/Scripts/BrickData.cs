@@ -9,6 +9,7 @@ public class BrickData : ScriptableObject
     public class BrickColorData
     {
         public BrickColor color;
+        public Color particleColor;
         public Sprite defaultSprite;
         public Sprite[] damageSprites;
         public bool isBreakable;
