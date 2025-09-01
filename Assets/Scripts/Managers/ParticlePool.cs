@@ -70,7 +70,7 @@ public class ParticlePool : MonoBehaviour
         ps.Play();
 
         float duration = obj.GetComponent<ParticleSystem>()?.main.duration ?? 1f;
-        StartCoroutine(DisableAfter(obj, duration));
+        //StartCoroutine(DisableAfter(obj, duration));
 
         poolDictionary[type].Enqueue(obj);
     }
