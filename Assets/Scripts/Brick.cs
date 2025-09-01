@@ -62,7 +62,7 @@ public class Brick : MonoBehaviour
     {
         if (!isBreakable)
         {
-            ParticlePool.Instance.Play(ParticleType.UnBreakableHit, collisionPos, particleColor);
+            ParticlePool.Instance.Play(ParticleType.UnbreakableHit, collisionPos, particleColor);
             return;
         }
 
@@ -165,10 +165,11 @@ public class Brick : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //if (!isBreakable)
-        //{
-        //    return;
-        //}
+        if (!isBreakable)
+        {
+            ParticlePool.Instance.Play(ParticleType.UnbreakableHit, collision.transform.position, particleColor);
+            return;
+        }
 
         if (collision.gameObject.CompareTag("Ball"))
         {
