@@ -28,6 +28,8 @@ public class Brick : MonoBehaviour
     private Sprite[] damageSprites;
     private int hits = 0;
 
+    private Color particleColor;
+
     private void Awake()
     {
         col = GetComponent<Collider2D>();
@@ -52,14 +54,15 @@ public class Brick : MonoBehaviour
         damageSprites = data.damageSprites;
         isBreakable = data.isBreakable;
         spriteRenderer.sprite = data.defaultSprite;
-
+        particleColor = data.particleColor;
         UpdateSprite();
     }
 
-    public void Hit()
+    public void Hit(Vector2 collisionPos)
     {
         if (!isBreakable)
         {
+            ParticlePool.Instance.Play(ParticleType.UnBreakableHit, collisionPos, particleColor);
             return;
         }
 
@@ -70,10 +73,13 @@ public class Brick : MonoBehaviour
             brickCollider.enabled = false;
             StartCoroutine(PlayBreakAnimation());
             scoreManager.AddScore(hits);
+            ParticlePool.Instance.Play(ParticleType.BrickBreak, transform.position, particleColor);
         }
         else
         {
             UpdateSprite();
+            ParticlePool.Instance.Play(ParticleType.BrickHit, collisionPos, particleColor);
+            Debug.Log("Particle Effect");
         }
     }
 
@@ -90,7 +96,7 @@ public class Brick : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
             return;
 
-        Hit();
+        Hit(collision.GetContact(0).point);
     }
 
     private IEnumerator PlayBreakAnimation()
@@ -169,11 +175,12 @@ public class Brick : MonoBehaviour
         {
             brickCollider.enabled = false;
             StartCoroutine(PlayBreakAnimation());
+            ParticlePool.Instance.Play(ParticleType.BrickBreak, transform.position, particleColor);
             scoreManager.AddScore(health);
         }
         else if (collision.gameObject.CompareTag("LaserProjectile"))
         {
-            Hit();
+            Hit(transform.position);
             Destroy(collision.gameObject);
         }
     }
