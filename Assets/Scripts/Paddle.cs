@@ -43,7 +43,7 @@ public class Paddle : MonoBehaviour
     private Coroutine disableLaserRoutine;
     private Coroutine shootingRoutine;
     private Coroutine disableMagnetRoutine;
-    private bool isLaserActive;
+    private bool isLaserActive = false;
 
     private bool isMagnetActive = false;
     private bool isMagnetLaunchReady = false;
@@ -157,7 +157,7 @@ public class Paddle : MonoBehaviour
         //if (visualLevel >= visualDatas.Length - 1)
         //    return;
 
-        if(isExpanded)
+        if (isExpanded)
         {
             return;
         }
@@ -245,26 +245,24 @@ public class Paddle : MonoBehaviour
 
     public void EnableLaser(float laserDuration)
     {
-        if (disableLaserRoutine != null && shootingRoutine != null)
+        if (!isLaserActive)
         {
-            StopCoroutine(disableLaserRoutine);
-            StopCoroutine(shootingRoutine);
-            disableLaserRoutine = null;
-            shootingRoutine = null;
-        }
-        else
-        {
-            // Animation
             lasersEnabledAnimation[lasersEnabledAnimation.clip.name].speed = 1f;
             lasersEnabledAnimation[lasersEnabledAnimation.clip.name].time = 0f;
             leftLaser.gameObject.SetActive(true);
             rightLaser.gameObject.SetActive(true);
             lasersEnabledAnimation.Play();
+
+            shootingRoutine = StartCoroutine(Shoot());
+            isLaserActive = true;
+        }
+
+        if (disableLaserRoutine != null)
+        {
+            StopCoroutine(disableLaserRoutine);
         }
 
         disableLaserRoutine = StartCoroutine(LaserTimerCoroutine(laserDuration));
-        shootingRoutine = StartCoroutine(Shoot());
-        isLaserActive = true;
     }
 
     private IEnumerator Shoot()
@@ -281,27 +279,11 @@ public class Paddle : MonoBehaviour
 
     public void LaserTimer(float laserDuration)
     {
-        if (!isLaserActive)
-            return;
-
         if (disableLaserRoutine != null)
         {
             StopCoroutine(disableLaserRoutine);
             disableLaserRoutine = null;
         }
-
-        disableLaserRoutine = StartCoroutine(LaserTimerCoroutine(laserDuration));
-    }
-
-
-    private IEnumerator LaserTimerCoroutine(float laserDuration)
-    {
-        yield return new WaitForSeconds(laserDuration);
-
-        // Animation
-        lasersEnabledAnimation[lasersEnabledAnimation.clip.name].speed = -1f;
-        lasersEnabledAnimation[lasersEnabledAnimation.clip.name].time = lasersEnabledAnimation[lasersEnabledAnimation.clip.name].length;
-        lasersEnabledAnimation.Play();
 
         if (shootingRoutine != null)
         {
@@ -309,13 +291,38 @@ public class Paddle : MonoBehaviour
             shootingRoutine = null;
         }
 
+        if (isLaserActive)
+        {
+            disableLaserRoutine = StartCoroutine(LaserTimerCoroutine(laserDuration));
+        }
+    }
+
+
+    private IEnumerator LaserTimerCoroutine(float laserDuration)
+    {
+        yield return new WaitForSeconds(laserDuration);
+        isLaserActive = false;
+
+        if (shootingRoutine != null)
+        {
+            StopCoroutine(shootingRoutine);
+            shootingRoutine = null;
+        }
+        disableLaserRoutine = null;
+
+        // Animation
+        lasersEnabledAnimation[lasersEnabledAnimation.clip.name].speed = -1f;
+        lasersEnabledAnimation[lasersEnabledAnimation.clip.name].time = lasersEnabledAnimation[lasersEnabledAnimation.clip.name].length;
+        lasersEnabledAnimation.Play();
+
         // Wait for animation to end
         yield return new WaitForSeconds(lasersEnabledAnimation[lasersEnabledAnimation.clip.name].length);
 
-        leftLaser.gameObject.SetActive(false);
-        rightLaser.gameObject.SetActive(false);
-        disableLaserRoutine = null;
-        isLaserActive = false;
+        if (!isLaserActive)
+        {
+            leftLaser.gameObject.SetActive(false);
+            rightLaser.gameObject.SetActive(false);
+        }
     }
 
     public void EnableMagnet(float magnetDuration)

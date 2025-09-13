@@ -64,7 +64,7 @@ public class PowerUpManager : MonoBehaviour
     {
         paddle.ShrinkAfterDelay(3f);
         paddle.DisableMagnet();
-        paddle.LaserTimer(3f);
+        paddle.LaserTimer(1.5f);
 
         foreach (Transform child in transform)
         {
