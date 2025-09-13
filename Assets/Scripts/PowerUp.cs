@@ -26,6 +26,10 @@ public class PowerUp : MonoBehaviour
 
     private SpriteRenderer sr;
 
+    private float pulseSpeed = 4f;
+    private float pulseAmount = 0.05f;
+    private Vector3 initialScale;
+
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -38,11 +42,15 @@ public class PowerUp : MonoBehaviour
         type = selectedData.type;
 
         sr.sprite = selectedData.sprite;
+
+        initialScale = transform.localScale;
     }
 
     void Update()
     {
         transform.Translate(Vector2.down * fallSpeed * Time.deltaTime);
+        float scaleFactor = 1f + Mathf.Sin(Time.time * pulseSpeed) * pulseAmount;
+        transform.localScale = initialScale * scaleFactor;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
