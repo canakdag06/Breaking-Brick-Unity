@@ -2,7 +2,6 @@ using System.Collections;
 using System.Linq;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuPanels : MonoBehaviour
@@ -88,8 +87,6 @@ public class MenuPanels : MonoBehaviour
 
     private void OnLevelSelected(int levelIndex)
     {
-        Debug.Log("Seçilen Level: " + levelIndex);
-
         GameManager.Instance.SetLastPlayedLevel(levelIndex);
         GameManager.Instance.StartGame();
     }
