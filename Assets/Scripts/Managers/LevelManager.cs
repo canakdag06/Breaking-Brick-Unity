@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -11,9 +11,6 @@ public class LevelManager : MonoBehaviour
     public int CurrentLevelIndex { get; private set; } = -1;
 
     public static event Action OnLevelFinished;
-
-    private const string HighestLevelKey = "HighestLevel";
-    private const string LastPlayedLevelKey = "LastPlayedLevel";
 
     [Header("Level Data")]
     [SerializeField] private LevelInfoSO levelDatabase;
@@ -68,6 +65,10 @@ public class LevelManager : MonoBehaviour
 
         CheckBrickCount();
         StartCoroutine(StartLevelSequence());
+
+        //Debug.Log("LastPlayedLevel: " + GameManager.Instance.LastPlayedLevel);
+        //Debug.Log("HighestLevelReached: " + GameManager.Instance.HighestLevelReached);
+        //Debug.Log("currentLevelIndex: " + CurrentLevelIndex);
     }
 
     public void ReloadCurrentLevel()
@@ -115,6 +116,9 @@ public class LevelManager : MonoBehaviour
         {
             yield return UIManager.Instance.ShowMessage("GAME COMPLETED! THANKS FOR PLAYING");
             GameManager.Instance.SetLastPlayedLevel(levelDatabase.levels.Count - 1);
+            //Debug.Log("LastPlayedLevel: " + GameManager.Instance.LastPlayedLevel);
+            //Debug.Log("HighestLevelReached: " + GameManager.Instance.HighestLevelReached);
+            SceneManager.LoadScene("MainMenu");
             yield break;
         }
 
