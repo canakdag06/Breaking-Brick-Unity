@@ -48,6 +48,11 @@ public class BallManager : MonoBehaviour
 
     public void SpawnInitialBall()
     {
+        if (GameManager.Instance.IsGameOver)
+        {
+            return;
+        }
+
         ClearAllBalls();
 
         Ball ball = GetBallFromPool();

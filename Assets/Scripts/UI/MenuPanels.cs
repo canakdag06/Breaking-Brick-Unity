@@ -59,7 +59,7 @@ public class MenuPanels : MonoBehaviour
             yield return null;
         }
 
-        SceneManager.LoadScene("Game");
+        GameManager.Instance.StartGame();
     }
 
     private void UpdateLevelButtons()
@@ -90,7 +90,7 @@ public class MenuPanels : MonoBehaviour
     {
         Debug.Log("Seçilen Level: " + levelIndex);
 
-        GameManager.Instance.SetLastPlayedLevel(levelIndex);
-        SceneManager.LoadScene("Game");
+        //GameManager.Instance.SetLastPlayedLevel(levelIndex);
+        GameManager.Instance.StartGame();
     }
 }

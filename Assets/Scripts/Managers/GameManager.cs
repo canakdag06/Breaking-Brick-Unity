@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -38,6 +40,12 @@ public class GameManager : MonoBehaviour
         //PlayerPrefs.SetInt("HighestLevel", 28);
     }
 
+    public void StartGame()
+    {
+        isGameOver = false;
+        SceneManager.LoadScene("Game");
+    }
+
     public void UpdateLives(bool isAdd)
     {
         if (isAdd)
@@ -63,15 +71,28 @@ public class GameManager : MonoBehaviour
 
     private void HandleGameOver()
     {
-        throw new NotImplementedException();
+        isGameOver = true;
+        StartCoroutine(GameOverSequence());
     }
 
-    private void StartGame()
+    private IEnumerator GameOverSequence()
     {
-        isPaused = false;
-        isGameOver = false;
-        Time.timeScale = 1f;
+        yield return UIManager.Instance.ShowMessage("GAME OVER");
+        PlayerPrefs.SetInt("LastPlayedLevel", 0);
+        PlayerPrefs.SetInt("Score", 0);
+        PlayerPrefs.SetInt("Lives", 1);
+        PlayerPrefs.Save();
+        yield return UIManager.Instance.FadeOut(1f);
+        SceneManager.LoadScene("MainMenu");
+
     }
+
+    //private void StartGame()
+    //{
+    //    isPaused = false;
+    //    isGameOver = false;
+    //    Time.timeScale = 1f;
+    //}
 
     public void SaveProgress(int levelIndex)
     {
