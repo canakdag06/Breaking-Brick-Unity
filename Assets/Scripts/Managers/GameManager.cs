@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
     {
         isGameOver = false;
         SceneManager.LoadScene("Game");
+        //LoadProgress();
     }
 
     public void UpdateLives(bool isAdd)
@@ -67,6 +68,7 @@ public class GameManager : MonoBehaviour
     public void SetLastPlayedLevel(int levelIndex)
     {
         LastPlayedLevel = levelIndex;
+        //PlayerPrefs.SetInt("LastPlayedLevel", LastPlayedLevel);
     }
 
     private void HandleGameOver()
@@ -86,13 +88,6 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
 
     }
-
-    //private void StartGame()
-    //{
-    //    isPaused = false;
-    //    isGameOver = false;
-    //    Time.timeScale = 1f;
-    //}
 
     public void SaveProgress(int levelIndex)
     {

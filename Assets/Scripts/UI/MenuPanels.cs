@@ -64,7 +64,7 @@ public class MenuPanels : MonoBehaviour
 
     private void UpdateLevelButtons()
     {
-        int lastLevel = GameManager.Instance.LastPlayedLevel;
+        int lastLevel = GameManager.Instance.HighestLevelReached;
 
         for (int i = 0; i <= lastLevel; i++)
         {
@@ -90,7 +90,7 @@ public class MenuPanels : MonoBehaviour
     {
         Debug.Log("Seçilen Level: " + levelIndex);
 
-        //GameManager.Instance.SetLastPlayedLevel(levelIndex);
+        GameManager.Instance.SetLastPlayedLevel(levelIndex);
         GameManager.Instance.StartGame();
     }
 }
