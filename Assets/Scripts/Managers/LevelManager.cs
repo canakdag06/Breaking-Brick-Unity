@@ -109,6 +109,17 @@ public class LevelManager : MonoBehaviour
         PowerUpManager.Instance.ResetAndDestroyPowerUps();
         yield return UIManager.Instance.ShowMessage("IS COMPLETED!");
         yield return UIManager.Instance.FadeOut(1f);
+
+
+        if (CurrentLevelIndex >= levelDatabase.levels.Count - 1)
+        {
+            yield return UIManager.Instance.ShowMessage("GAME COMPLETED! THANKS FOR PLAYING");
+            GameManager.Instance.SetLastPlayedLevel(levelDatabase.levels.Count - 1);
+            yield break;
+        }
+
+
+
         CurrentLevelIndex++;
         GameManager.Instance.SaveProgress(CurrentLevelIndex);
         LoadLevel();
