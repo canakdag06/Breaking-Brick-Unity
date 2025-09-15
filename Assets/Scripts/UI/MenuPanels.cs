@@ -30,7 +30,13 @@ public class MenuPanels : MonoBehaviour
         //settingsPanel.SetActive(false);
 
         UpdateLevelButtons();
+    }
 
+    public void CloseLevelsMenu()
+    {
+        levelsPanel.SetActive(false);
+        ClearLevelButtons();
+        mainMenuPanel.SetActive(true);
     }
 
     public void OpenSettings()
@@ -82,6 +88,14 @@ public class MenuPanels : MonoBehaviour
             Button btn = buttonObj.GetComponent<Button>();
             int levelIndex = i;
             btn.onClick.AddListener(() => OnLevelSelected(levelIndex));
+        }
+    }
+
+    private void ClearLevelButtons()
+    {
+        foreach (Transform child in levelsContainer)
+        {
+            Destroy(child.gameObject);
         }
     }
 
