@@ -56,6 +56,12 @@ public class BallManager : MonoBehaviour
         ClearAllBalls();
 
         Ball ball = GetBallFromPool();
+        if(IsFlaming)
+        {
+            ball.SetFlaming(true);
+        }
+
+
         Paddle.Instance.SetBall(ball);
         activeBalls.Add(ball);
     }
