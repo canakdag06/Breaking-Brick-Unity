@@ -102,6 +102,18 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
+    public void ResetProgressForLevelSelection()
+    {
+        lives = 3;
+        Score = 0;
+
+        PlayerPrefs.SetInt("Lives", lives);
+        PlayerPrefs.SetInt("Score", Score);
+        PlayerPrefs.Save();
+
+        OnLifeChanged?.Invoke(lives);
+    }
+
     private void LoadProgress()
     {
         LastPlayedLevel = PlayerPrefs.GetInt("LastPlayedLevel", 0);

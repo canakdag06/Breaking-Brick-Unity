@@ -102,6 +102,9 @@ public class MenuPanels : MonoBehaviour
     private void OnLevelSelected(int levelIndex)
     {
         GameManager.Instance.SetLastPlayedLevel(levelIndex);
+
+        GameManager.Instance.ResetProgressForLevelSelection();
+
         GameManager.Instance.StartGame();
     }
 }
