@@ -30,6 +30,8 @@ public class Brick : MonoBehaviour
 
     private Color particleColor;
 
+    private SoundType impactSoundType;
+
     private void Awake()
     {
         col = GetComponent<Collider2D>();
@@ -55,7 +57,15 @@ public class Brick : MonoBehaviour
         isBreakable = data.isBreakable;
         spriteRenderer.sprite = data.defaultSprite;
         particleColor = data.particleColor;
+
+        switch (isBreakable)
+        {
+            case true: impactSoundType = SoundType.ImpactBrick; break;
+            case false: impactSoundType = SoundType.ImpactObstacle; break;
+        }
         UpdateSprite();
+
+
     }
 
     public void Hit(Vector2 collisionPos)
@@ -96,6 +106,7 @@ public class Brick : MonoBehaviour
             return;
 
         Hit(collision.GetContact(0).point);
+        AudioManager.Instance.PlaySFX(impactSoundType);
     }
 
     private IEnumerator PlayBreakAnimation()
@@ -148,7 +159,7 @@ public class Brick : MonoBehaviour
 
     private void SwitchColliderMode(bool isEnable)
     {
-        if(!IsBreakable)
+        if (!IsBreakable)
         {
             return;
         }
