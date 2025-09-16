@@ -45,6 +45,8 @@ public class Ball : MonoBehaviour
             {
                 FixBallDirection();
             }
+
+            AudioManager.Instance.PlaySFX(SoundType.ImpactPaddle);
         }
         else if (collision.gameObject.CompareTag("DeathWall"))
         {
@@ -57,6 +59,10 @@ public class Ball : MonoBehaviour
         else
         {
             FixBallDirection();
+            if(collision.gameObject.CompareTag("Wall"))
+            {
+                AudioManager.Instance.PlaySFX(SoundType.ImpactWall);
+            }
         }
     }
 
