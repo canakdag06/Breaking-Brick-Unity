@@ -274,6 +274,7 @@ public class Paddle : MonoBehaviour
             Vector2 right = rightLaser.position;
             Instantiate(laserProjectilePrefab, left, Quaternion.identity);
             Instantiate(laserProjectilePrefab, right, Quaternion.identity);
+            AudioManager.Instance.PlaySFX(SoundType.Laser);
         }
     }
 

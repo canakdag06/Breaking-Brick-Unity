@@ -5,5 +5,6 @@ public enum SoundType
     ImpactBrick,
     ImpactObstacle,
     ImpactPaddle,
-    ImpactWall
+    ImpactWall,
+    Laser
 }
