@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     [Header("Effects")]
     [SerializeField] private Sprite[] enemyExplosionSprites;
     [SerializeField] private float explosionFrameDelay;
+    [SerializeField] private AudioSource source;
 
     public static event Action OnEnemyExplode;
 
@@ -131,6 +132,7 @@ public class Enemy : MonoBehaviour
     private IEnumerator ExplodeEnemy()
     {
         isDying = true;
+        source.Play();
         rb.linearVelocity = Vector2.zero;
         rb.bodyType = RigidbodyType2D.Kinematic;
         enemyCollider.enabled = false;
