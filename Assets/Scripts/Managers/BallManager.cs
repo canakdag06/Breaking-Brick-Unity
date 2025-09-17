@@ -91,6 +91,7 @@ public class BallManager : MonoBehaviour
         if (activeBalls.Count == 0 && IsFlaming)
         {
             IsFlaming = false;
+            AudioManager.Instance.StopLoopSound();
             OnFlamingBallSwitch?.Invoke(false);
         }
     }
