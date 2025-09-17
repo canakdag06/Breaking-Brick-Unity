@@ -108,6 +108,7 @@ public class LevelManager : MonoBehaviour
     {
         BallManager.Instance.ClearAllBalls();
         PowerUpManager.Instance.ResetAndDestroyPowerUps();
+        AudioManager.Instance.PlaySFX(SoundType.LevelCompleted);
         yield return UIManager.Instance.ShowMessage("IS COMPLETED!");
         yield return UIManager.Instance.FadeOut(1f);
 
@@ -116,8 +117,6 @@ public class LevelManager : MonoBehaviour
         {
             yield return UIManager.Instance.ShowMessage("GAME COMPLETED! THANKS FOR PLAYING");
             GameManager.Instance.SetLastPlayedLevel(levelDatabase.levels.Count - 1);
-            //Debug.Log("LastPlayedLevel: " + GameManager.Instance.LastPlayedLevel);
-            //Debug.Log("HighestLevelReached: " + GameManager.Instance.HighestLevelReached);
             SceneManager.LoadScene("MainMenu");
             yield break;
         }

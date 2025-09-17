@@ -37,7 +37,9 @@ public class PowerUpManager : MonoBehaviour
 
     public void ApplyPowerUp(PowerUpType type)
     {
-        switch(type)
+        AudioManager.Instance.PlaySFX(SoundType.PowerUp);
+
+        switch (type)
         {
             case PowerUpType.DuplicateBall:
                 ballManager.DuplicateBalls();

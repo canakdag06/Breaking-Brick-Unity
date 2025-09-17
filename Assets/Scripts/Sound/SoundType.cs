@@ -9,5 +9,7 @@ public enum SoundType
     ImpactPaddle,
     ImpactWall,
     Laser,
-    FlamesLoop
+    FlamesLoop,
+    LevelCompleted,
+    PowerUp
 }
