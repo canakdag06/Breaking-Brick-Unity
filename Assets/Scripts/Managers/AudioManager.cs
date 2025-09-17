@@ -29,7 +29,8 @@ public class AudioManager : MonoBehaviour
 
         if (entry != null)
         {
-            sfxSource.PlayOneShot(entry.clip, entry.volume);
+            var clip = entry.GetRandomClip();
+            sfxSource.PlayOneShot(clip, entry.volume);
         }
         else
         {
@@ -42,7 +43,7 @@ public class AudioManager : MonoBehaviour
         var entry = soundData.Get(type);
         if (entry != null)
         {
-            musicSource.clip = entry.clip;
+            musicSource.clip = entry.GetRandomClip();
             musicSource.volume = entry.volume;
             musicSource.Play();
         }
