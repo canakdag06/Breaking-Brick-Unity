@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -7,8 +8,11 @@ public class AudioManager : MonoBehaviour
 
     public AudioMixer mixer;
     public SoundData soundData;
-    public AudioSource sfxSource;
     public AudioSource musicSource;
+    public AudioSource loopSfxSource;
+
+    [SerializeField] private int sfxPoolSize = 10;
+    private List<AudioSource> sfxSources;
 
     private void Awake()
     {
@@ -16,6 +20,15 @@ public class AudioManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+
+            sfxSources = new List<AudioSource>();
+            for (int i = 0; i < sfxPoolSize; i++)
+            {
+                var obj = new GameObject("SFXSource_" + i);
+                obj.transform.SetParent(transform);
+                var source = obj.AddComponent<AudioSource>();
+                sfxSources.Add(source);
+            }
         }
         else
         {
@@ -26,16 +39,21 @@ public class AudioManager : MonoBehaviour
     public void PlaySFX(SoundType type)
     {
         var entry = soundData.Get(type);
+        if (entry == null) return;
 
-        if (entry != null)
+        AudioSource src = null;
+        for (int i = 0; i < sfxSources.Count; i++)
         {
-            var clip = entry.GetRandomClip();
-            sfxSource.PlayOneShot(clip, entry.volume);
+            if (!sfxSources[i].isPlaying)
+            {
+                src = sfxSources[i];
+                break;
+            }
         }
-        else
-        {
-            Debug.Log($"SFX not found: {type}");
-        }
+        if (src == null) src = sfxSources[0];
+
+        src.PlayOneShot(entry.GetRandomClip(), entry.volume);
+        Debug.Log(src);
     }
 
     public void PlayMusic(SoundType type)
@@ -50,6 +68,27 @@ public class AudioManager : MonoBehaviour
         else
         {
             Debug.Log($"Music not found: {type}");
+        }
+    }
+
+    public void PlayLoopSound(SoundType type)
+    {
+        var entry = soundData.Get(type);
+        if (entry != null && !loopSfxSource.isPlaying)
+        {
+            loopSfxSource.clip = entry.GetRandomClip();
+            loopSfxSource.volume = entry.volume;
+            loopSfxSource.loop = true;
+            loopSfxSource.Play();
+        }
+    }
+
+    public void StopLoopSound()
+    {
+        if (loopSfxSource.isPlaying)
+        {
+            loopSfxSource.Stop();
+            loopSfxSource.clip = null;
         }
     }
 

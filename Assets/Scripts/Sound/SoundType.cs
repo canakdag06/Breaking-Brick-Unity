@@ -8,5 +8,6 @@ public enum SoundType
     ImpactObstacle,
     ImpactPaddle,
     ImpactWall,
-    Laser
+    Laser,
+    FlamesLoop
 }

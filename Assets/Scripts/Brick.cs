@@ -23,6 +23,7 @@ public class Brick : MonoBehaviour
     private ScoreManager scoreManager;
     private BallManager ballManager;
     private PowerUpManager powerUpManager;
+    private AudioManager audioManager;
 
     private Collider2D col;
     private Sprite[] damageSprites;
@@ -42,6 +43,7 @@ public class Brick : MonoBehaviour
         scoreManager = ScoreManager.Instance;
         ballManager = BallManager.Instance;
         powerUpManager = PowerUpManager.Instance;
+        audioManager = AudioManager.Instance;
 
         ballManager.OnFlamingBallSwitch += SwitchColliderMode;
 
@@ -89,6 +91,7 @@ public class Brick : MonoBehaviour
         {
             UpdateSprite();
             ParticlePool.Instance.Play(ParticleType.BrickHit, collisionPos, particleColor);
+            audioManager.PlaySFX(SoundType.Cracking);
         }
     }
 
@@ -106,11 +109,12 @@ public class Brick : MonoBehaviour
             return;
 
         Hit(collision.GetContact(0).point);
-        AudioManager.Instance.PlaySFX(impactSoundType);
+        audioManager.PlaySFX(impactSoundType);
     }
 
     private IEnumerator PlayBreakAnimation()
     {
+        audioManager.PlaySFX(SoundType.Breaking);
         DropPowerUp();
         for (int i = hits; i < damageSprites.Length; ++i)
         {

@@ -172,11 +172,12 @@ public class BallManager : MonoBehaviour
 
     private IEnumerator FlamingBallTimer(float flamingBallDuration)
     {
+        AudioManager.Instance.PlayLoopSound(SoundType.FlamesLoop);
         yield return new WaitForSeconds(flamingBallDuration);
         IsFlaming = false;
         OnFlamingBallSwitch?.Invoke(false);
         SetFlamingStatusOnBalls();
-
+        AudioManager.Instance.StopLoopSound();
         disableFlameRoutine = null;
     }
 }
