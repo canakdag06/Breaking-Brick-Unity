@@ -14,17 +14,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - type: 1
-    clip: {fileID: 8300000, guid: 77aa5cd5425c20848bb0056368f52b6b, type: 3}
+    clips:
+    - {fileID: 8300000, guid: 84d47f9ed62d97a4ea48fd3af4bf51a9, type: 3}
+    - {fileID: 8300000, guid: f6beb483f98d407488889e15be9e72f3, type: 3}
+    - {fileID: 8300000, guid: 4833e2d18f60fb948bb96e2324541dca, type: 3}
     volume: 1
-  - type: 2
-    clip: {fileID: 8300000, guid: c020875bb86ece6419af12ad6a963c3e, type: 3}
-    volume: 1
+  - type: 7
+    clips:
+    - {fileID: 8300000, guid: 8c1b7cad060acca4e882aab5c7e4cdcf, type: 3}
+    - {fileID: 8300000, guid: 90115ac121e08d84cb0fb1636afd8e9d, type: 3}
+    volume: 0.15
   - type: 3
-    clip: {fileID: 8300000, guid: 2e407bdcc2235f4468a43b3c589e8222, type: 3}
+    clips:
+    - {fileID: 8300000, guid: 77aa5cd5425c20848bb0056368f52b6b, type: 3}
     volume: 1
   - type: 4
-    clip: {fileID: 8300000, guid: 0ca338616f50a6145b8069671ffc2eaa, type: 3}
+    clips:
+    - {fileID: 8300000, guid: c020875bb86ece6419af12ad6a963c3e, type: 3}
     volume: 1
   - type: 5
-    clip: {fileID: 8300000, guid: d3f8f8b0a8baf49469ac88e66b04f5a8, type: 3}
+    clips:
+    - {fileID: 8300000, guid: 2e407bdcc2235f4468a43b3c589e8222, type: 3}
+    volume: 1
+  - type: 6
+    clips:
+    - {fileID: 8300000, guid: 0ca338616f50a6145b8069671ffc2eaa, type: 3}
+    volume: 1
+  - type: 7
+    clips:
+    - {fileID: 8300000, guid: d3f8f8b0a8baf49469ac88e66b04f5a8, type: 3}
     volume: 0.15
