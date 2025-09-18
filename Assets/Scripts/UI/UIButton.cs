@@ -4,11 +4,11 @@ using UnityEngine.EventSystems;
 
 public class UIButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    //private SoundType soundType = SoundType.UIClick;
+    private SoundType soundType = SoundType.UIClick;
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        //AudioManager.Instance.PlaySFX(soundType);
+        AudioManager.Instance.PlaySFX(soundType);
     }
 
     public void OnPointerEnter(PointerEventData eventData)

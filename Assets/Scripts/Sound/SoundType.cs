@@ -11,5 +11,6 @@ public enum SoundType
     Laser,
     FlamesLoop,
     LevelCompleted,
-    PowerUp
+    PowerUp,
+    UIClick
 }
