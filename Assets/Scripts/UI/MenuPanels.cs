@@ -15,6 +15,14 @@ public class MenuPanels : MonoBehaviour
     [SerializeField] private Image fadeImage;
     [SerializeField] private float fadeDuration;
 
+    public Slider musicSlider;
+    public Slider sfxSlider;
+
+
+    private void Start()
+    {
+        LoadVolumes();
+    }
 
     public void OpenMainMenu()
     {
@@ -106,5 +114,30 @@ public class MenuPanels : MonoBehaviour
         GameManager.Instance.ResetProgressForLevelSelection();
 
         GameManager.Instance.StartGame();
+    }
+
+    public void SetMusicVolume(float value)
+    {
+        AudioManager.Instance.mixer.SetFloat("MusicVolume", Mathf.Log10(Mathf.Clamp(value, 0.0001f, 1)) * 20f);
+        PlayerPrefs.SetFloat("MusicVolume", value);
+        PlayerPrefs.Save();
+    }
+
+    public void SetSFXVolume(float value)
+    {
+        AudioManager.Instance.mixer.SetFloat("SFXVolume", Mathf.Log10(Mathf.Clamp(value, 0.0001f, 1)) * 20f);
+        PlayerPrefs.SetFloat("SFXVolume", value);
+        PlayerPrefs.Save();
+    }
+
+    public void LoadVolumes()
+    {
+        float saved = PlayerPrefs.GetFloat("MusicVolume", 1f);  // default: 1
+        musicSlider.value = saved;
+        AudioManager.Instance.mixer.SetFloat("MusicVolume", Mathf.Log10(Mathf.Clamp(saved, 0.0001f, 1f)) * 20f);
+
+        saved = PlayerPrefs.GetFloat("SFXVolume", 1f);  // default: 1
+        sfxSlider.value = saved;
+        AudioManager.Instance.mixer.SetFloat("SFXVolume", Mathf.Log10(Mathf.Clamp(saved, 0.0001f, 1f)) * 20f);
     }
 }
