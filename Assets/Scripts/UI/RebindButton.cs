@@ -16,6 +16,9 @@ public class RebindButton : MonoBehaviour
 
     public void StartRebinding()
     {
+        var action = actionReference.action;
+        action.Disable();
+
         bindingText.text = "Press a key";
 
         actionReference.action.PerformInteractiveRebinding(bindingIndex)
@@ -28,6 +31,7 @@ public class RebindButton : MonoBehaviour
                 PlayerPrefs.SetString(actionReference.action.name + "_binding_" + bindingIndex,
                     actionReference.action.bindings[bindingIndex].effectivePath);
                 PlayerPrefs.Save();
+                action.Enable();
             }).Start();
     }
 
