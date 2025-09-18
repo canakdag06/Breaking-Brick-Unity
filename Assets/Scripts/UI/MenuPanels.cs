@@ -20,14 +20,14 @@ public class MenuPanels : MonoBehaviour
     {
         mainMenuPanel.SetActive(true);
         levelsPanel.SetActive(false);
-        //settingsPanel.SetActive(false);
+        settingsPanel.SetActive(false);
     }
 
     public void OpenLevelsMenu()
     {
         mainMenuPanel.SetActive(false);
         levelsPanel.SetActive(true);
-        //settingsPanel.SetActive(false);
+        settingsPanel.SetActive(false);
 
         UpdateLevelButtons();
     }
@@ -43,7 +43,7 @@ public class MenuPanels : MonoBehaviour
     {
         mainMenuPanel.SetActive(false);
         levelsPanel.SetActive(false);
-        //settingsPanel.SetActive(true);
+        settingsPanel.SetActive(true);
     }
 
     public void PlayGame()
