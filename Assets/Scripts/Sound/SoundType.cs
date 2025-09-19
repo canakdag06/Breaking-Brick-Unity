@@ -12,5 +12,7 @@ public enum SoundType
     FlamesLoop,
     LevelCompleted,
     PowerUp,
-    UIClick
+    UIClick,
+    LifeLost,
+    AllLivesLost
 }
