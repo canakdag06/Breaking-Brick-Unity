@@ -2,6 +2,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -19,8 +20,10 @@ public class UIManager : MonoBehaviour
     [Header("Lives UI")]
     [SerializeField] private Transform[] lives;
 
+    [SerializeField] private GameObject exitGamePanel;
     [SerializeField] private Image fadeImage;
 
+    private bool isPaused = false;
 
     private void Awake()
     {
@@ -36,6 +39,7 @@ public class UIManager : MonoBehaviour
     {
         ScoreManager.Instance.OnScoreChanged += UpdateScoreText;
         GameManager.Instance.OnLifeChanged += UpdateLivesUI;
+        InputReader.Instance.OnPause += TogglePause;
 
         UpdateScoreText(GameManager.Instance.Score);
         UpdateLivesUI(GameManager.Instance.Lives);
@@ -45,6 +49,7 @@ public class UIManager : MonoBehaviour
     {
         ScoreManager.Instance.OnScoreChanged -= UpdateScoreText;
         GameManager.Instance.OnLifeChanged -= UpdateLivesUI;
+        InputReader.Instance.OnPause -= TogglePause;
 
         transform.DOKill();
     }
@@ -136,5 +141,45 @@ public class UIManager : MonoBehaviour
                     });
             }
         }
+    }
+
+    public void TogglePause()
+    {
+        isPaused = !isPaused;
+
+        if (isPaused)
+        {
+            InputReader.Instance.InputActions.Gameplay.Disable();
+            Time.timeScale = 0f;
+            ShowExitGamePanel();
+        }
+        else
+        {
+            InputReader.Instance.InputActions.Gameplay.Enable();
+            Time.timeScale = 1f;
+            exitGamePanel.SetActive(false);
+        }
+    }
+
+    private void ShowExitGamePanel()
+    {
+        exitGamePanel.SetActive(true);
+        exitGamePanel.transform.localScale = Vector3.zero;
+        exitGamePanel.transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBack)
+        .SetUpdate(true);
+    }
+
+    public void ConfirmExit()
+    {
+        InputReader.Instance.InputActions.Enable();
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void CancelExit()
+    {
+        TogglePause();
+        exitGamePanel.transform.DOScale(Vector3.zero, 0.25f)
+            .OnComplete(() => exitGamePanel.SetActive(false)).SetUpdate(true);
     }
 }

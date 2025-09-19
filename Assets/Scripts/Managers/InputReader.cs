@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -15,7 +16,7 @@ public class InputReader : MonoBehaviour
     public GameInput InputActions => input;
     private GameInput input;
 
-    //public event Action OnPause;
+    public event Action OnPause;
 
     private void Awake()
     {
@@ -29,21 +30,27 @@ public class InputReader : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         input = new GameInput();
-        input?.Gameplay.Enable();
+        //input?.Gameplay.Enable();
+        input?.Enable();
         input.Gameplay.Move.performed += ctx => MoveInput = ctx.ReadValue<Vector2>();
         input.Gameplay.Move.canceled += ctx => MoveInput = Vector2.zero;
-
         input.Gameplay.Throw.performed += ctx => Throw = true;
+        input.UI.Escape.performed += ctx => OnPause?.Invoke();
 
         SceneManager.activeSceneChanged += OnSceneChanged; // listen scene changes & load bindings
         InitializeBindings();
     }
 
-    private void OnDisable() => input?.Gameplay.Disable();
+    private void OnDisable()
+    {
+        input?.Gameplay.Disable();
+        input?.UI.Disable();
+    }
 
     public void ResetInputs()
     {
         Throw = false;
+        Escape = false;
     }
 
     public void InitializeBindings()
