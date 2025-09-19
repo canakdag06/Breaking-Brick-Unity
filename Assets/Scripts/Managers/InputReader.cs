@@ -1,5 +1,5 @@
-using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class InputReader : MonoBehaviour
@@ -35,14 +35,6 @@ public class InputReader : MonoBehaviour
 
         input.Gameplay.Throw.performed += ctx => Throw = true;
 
-        //input.Gameplay.RotateCCW.performed += ctx => RotateCCW = true;
-
-        //input.Gameplay.HardDrop.performed += ctx => HardDrop = true;
-
-        //input.Gameplay.Hold.performed += ctx => Hold = true;
-
-        //input.Gameplay.Escape.performed += ctx => OnPause?.Invoke();
-
         SceneManager.activeSceneChanged += OnSceneChanged; // listen scene changes & load bindings
         InitializeBindings();
     }
@@ -52,10 +44,6 @@ public class InputReader : MonoBehaviour
     public void ResetInputs()
     {
         Throw = false;
-        //RotateCCW = false;
-        //HardDrop = false;
-        //Hold = false;
-        //Escape = false;
     }
 
     public void InitializeBindings()
@@ -68,7 +56,7 @@ public class InputReader : MonoBehaviour
                 if (PlayerPrefs.HasKey(key))
                 {
                     string overridePath = PlayerPrefs.GetString(key);
-                    //action.ApplyBindingOverride(i, overridePath);
+                    action.ApplyBindingOverride(i, overridePath);
                 }
             }
         }
