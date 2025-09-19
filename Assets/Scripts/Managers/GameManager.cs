@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
     {
         isGameOver = false;
         SceneManager.LoadScene("Game");
-        //LoadProgress();
+        LoadProgress();
     }
 
     public void UpdateLives(bool isAdd)
@@ -59,6 +59,10 @@ public class GameManager : MonoBehaviour
             if (lives <= 0)
             {
                 HandleGameOver();
+            }
+            else
+            {
+                AudioManager.Instance.PlaySFX(SoundType.LifeLost);
             }
             OnLifeLostEffectRequested?.Invoke();
         }
@@ -79,10 +83,11 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator GameOverSequence()
     {
+        AudioManager.Instance.PlaySFX(SoundType.AllLivesLost);
         yield return UIManager.Instance.ShowMessage("GAME OVER");
         PlayerPrefs.SetInt("LastPlayedLevel", 0);
         PlayerPrefs.SetInt("Score", 0);
-        PlayerPrefs.SetInt("Lives", 1);
+        PlayerPrefs.SetInt("Lives", 3);
         PlayerPrefs.Save();
         yield return UIManager.Instance.FadeOut(1f);
         SceneManager.LoadScene("MainMenu");

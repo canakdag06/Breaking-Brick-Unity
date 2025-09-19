@@ -121,8 +121,6 @@ public class LevelManager : MonoBehaviour
             yield break;
         }
 
-
-
         CurrentLevelIndex++;
         GameManager.Instance.SaveProgress(CurrentLevelIndex);
         LoadLevel();
